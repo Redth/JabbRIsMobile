@@ -1,0 +1,32 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="JabbRIsMobile.Common/App.cs">
+    <Files>
+      <File FileName="JabbRIsMobile.Common/App.cs" Line="21" Column="2" />
+      <File FileName="JabbRIsMobile.Common/ViewModels/StartViewModel.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/Services/IJabbRService.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/Services/JabbRService.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/Services/ISettingsService.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/Services/SettingsService.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/ViewModels/SettingsViewModel.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.Common/ViewModels/AccountsViewModel.cs" Line="1" Column="1" />
+      <File FileName="JabbRIsMobile.UI.Android/Setup.cs" Line="1" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State expanded="True">
+          <Node name="JabbRIsMobile.Common.Android" expanded="True">
+            <Node name="Models" expanded="True" />
+          </Node>
+          <Node name="JabbRIsMobile.UI.Android" expanded="True" selected="True">
+            <Node name="References" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
