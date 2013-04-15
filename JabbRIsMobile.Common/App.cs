@@ -9,7 +9,6 @@ namespace JabbRIsMobile
 	{
 		public App()
 		{
-
 			CreatableTypes()
 				.EndingWith("Service")
 					.AsInterfaces()
