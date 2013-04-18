@@ -4,3 +4,6 @@
 [submodule "MvvmCross-Binaries"]
 	path = MvvmCross-Binaries
 	url = https://github.com/slodge/MvvmCross-Binaries
+[submodule "JabbR.Client"]
+	path = JabbR.Client
+	url = https://github.com/Redth/JabbR.Client
