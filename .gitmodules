@@ -1,0 +1,3 @@
+[submodule "SignalR"]
+	path = SignalR
+	url = https://github.com/SignalR/SignalR/
