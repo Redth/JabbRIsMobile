@@ -14,6 +14,7 @@
     <MonoAndroidResourcePrefix>Resources</MonoAndroidResourcePrefix>
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>JabbrMobile.Common.Android</AssemblyName>
+    <newfilesearch>OnLoad</newfilesearch>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -194,6 +195,9 @@
     </Compile>
     <Compile Include="..\JabbrMobile.Common\Messages\AccountMessage.cs">
       <Link>Messages\AccountMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\Messages\JabbrMessage.cs">
+      <Link>Messages\JabbrMessage.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

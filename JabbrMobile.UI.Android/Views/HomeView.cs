@@ -26,7 +26,7 @@ namespace JabbrMobile.Android.Views
 			SetContentView (Resource.Layout.Content_Frame);
 
 			slidingMenu = new SlidingMenu (this) {
-		
+				TouchModeAbove = TouchMode.Margin
 			};
 		
 			slidingMenu.AttachToActivity (this, SlideStyle.Content);

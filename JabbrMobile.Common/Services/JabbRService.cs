@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using JabbrMobile.Common.Messages;
 using JabbrMobile.Common.Models;
+using JabbR.Client.Models;
 
 namespace JabbrMobile.Common.Services
 {
@@ -64,7 +65,7 @@ namespace JabbrMobile.Common.Services
 		public string UserId { get; private set; }
 		public List<JabbR.Client.Models.Room> RoomsIn { get; private set; }
 
-		public void Connect()
+		async void Connect()
 		{
 			client = new JabbRClient (this.Account.Url);
 			client.AddMessageContent += HandleAddMessageContent;
@@ -89,67 +90,79 @@ namespace JabbrMobile.Common.Services
 			client.UsersInactive += HandleUsersInactive;
 			client.UserTyping += HandleUserTyping;
 
-			client.Connect (Account.Username, Account.Password).ContinueWith(t => {
+			LogOnInfo logonInfo = null;
 
-				var ex = t.Exception;
+			try
+			{
+				logonInfo = await client.Connect (Account.Username, Account.Password);
+			}
+			catch (Exception ex)
+			{
 
-				var result = t.Result;
+			}
 
-				if (result != null)
-				{
-					this.UserId = result.UserId;
+			if (logonInfo != null)
+			{
+				this.UserId = logonInfo.UserId;
 
-					//Add us into the result's Rooms
-					RoomsIn.AddRange (result.Rooms);
+				//Add us into the result's Rooms
+				RoomsIn.AddRange (logonInfo.Rooms);
 
-					Log ("Connected> " + this.UserId ?? "" + " -> Rooms: " + RoomsIn.Count);
-				}
-			});
+				Log ("Connected> " + this.UserId ?? "" + " -> Rooms: " + RoomsIn.Count);
+			}
 		}
 
 		void HandleFlagChanged (JabbR.Client.Models.User user, string flag)
 		{
 			Log ("FlagChanged> " + user.Name + " -> " + flag);
+			Messenger.Publish (new JabbrFlagChangedMessage (this, this, user, flag));
 		}
 
-		void HandleAddMessageContent (string arg1, string arg2, string arg3)
+		void HandleAddMessageContent (string messageId, string extractedContent, string roomName)
 		{
-			Log ("AddMessageContent> " + arg1 + " -> " + arg2  + " -> " + arg3);
+			Log ("AddMessageContent> " + messageId + " -> " + extractedContent  + " -> " + roomName);
+			Messenger.Publish (new JabbrAddMessageContentMessage (this, this, messageId, extractedContent, roomName));
 		}
 
-		void HandleUserTyping (JabbR.Client.Models.User user, string arg2)
+		void HandleUserTyping (JabbR.Client.Models.User user, string roomName)
 		{
-
+			Messenger.Publish (new JabbrUserTypingMessage (this, this, user, roomName));
 		}
 
-		void HandleUsersInactive (IEnumerable<JabbR.Client.Models.User> users)
+		void HandleUsersInactive (IEnumerable<User> users)
 		{
 			Log ("UsersInactive> " + string.Join (", ", (from u in users select u.Name)));
+			Messenger.Publish (new JabbrUsersInactiveMessage (this, this, users.ToList()));
 		}
 
-		void HandleUsernameChanged (string arg1, JabbR.Client.Models.User user, string arg3)
+		void HandleUsernameChanged (string oldUsername, JabbR.Client.Models.User user, string roomName)
 		{
-			Log ("UsernameChanged> " + arg1 + " -> " + user.Name + " -> " + arg3);
+			Log ("UsernameChanged> " + oldUsername + " -> " + user.Name + " -> " + roomName);
+			Messenger.Publish(new JabbrUsernameChangedMessage(this, this, oldUsername, user, roomName)); 
 		}
 
-		void HandleUserLeft (JabbR.Client.Models.User user, string arg2)
+		void HandleUserLeft (JabbR.Client.Models.User user, string roomName)
 		{
-			Log ("UserLeft> " + user.Name + " -> " + arg2);
+			Log ("UserLeft> " + user.Name + " -> " + roomName);
+			Messenger.Publish(new JabbrUserLeftMessage(this, this, user, roomName));
 		}
 
-		void HandleUserJoined (JabbR.Client.Models.User user, string arg2, bool arg3)
+		void HandleUserJoined (JabbR.Client.Models.User user, string roomName, bool isOwner)
 		{
-			Log ("UserJoined> " + user.Name + " -> " + arg2 + " -> " + arg3);
+			Log ("UserJoined> " + user.Name + " -> " + roomName + " -> " + isOwner);
+			Messenger.Publish(new JabbrUserJoinedMessage(this, this, user, roomName, isOwner));
 		}
 
 		void HandleUserActivityChanged (JabbR.Client.Models.User user)
 		{
 			Log ("UserActivityChanged> " + user.Name);
+			Messenger.Publish(new JabbrUserActivityChangedMessage(this, this, user));
 		}
 
 		void HandleTopicChanged (JabbR.Client.Models.Room room)
 		{
 			Log ("TopicChanged> " + room.Name);
+			Messenger.Publish(new JabbrTopicChangedMessage(this, this, room));
 		}
 
 		/*void HandleStateChanged (Microsoft.StateChange obj)
@@ -160,56 +173,67 @@ namespace JabbrMobile.Common.Services
 		void HandleRoomCountChanged (JabbR.Client.Models.Room room, int count)
 		{
 			Log ("RoomCountChanged> " + room.Name + " -> " + count);
+			Messenger.Publish(new JabbrRoomCountChangedMessage(this, this, room, count));
 		}
 
-		void HandlePrivateMessage (string arg1, string arg2, string arg3)
+		void HandlePrivateMessage (string fromUser, string toUser, string message)
 		{
-			Log ("PrivateMessage> " + arg1 + " -> " + arg2 + " -> " + arg3);
+			Log ("PrivateMessage> " + fromUser + " -> " + toUser + " -> " + message);
+			Messenger.Publish(new JabbrPrivateMessageMessage(this, this, fromUser, toUser, message));
 		}
 
-		void HandleOwnerRemoved (JabbR.Client.Models.User user, string arg2)
+		void HandleOwnerRemoved (JabbR.Client.Models.User user, string roomName)
 		{
-			Log ("OwnerRemoved> " + user.Name + " -> " + arg2);
+			Log ("OwnerRemoved> " + user.Name + " -> " + roomName);
+			Messenger.Publish(new JabbrOwnerRemovedMessage(this, this, user, roomName));
 		}
 
-		void HandleOwnerAdded (JabbR.Client.Models.User user, string arg2)
+		void HandleOwnerAdded (JabbR.Client.Models.User user, string roomName)
 		{
-			Log ("OwnerAdded> " + user.Name + " -> " + arg2);
+			Log ("OwnerAdded> " + user.Name + " -> " + roomName);
+			Messenger.Publish(new JabbrOwnerAddedMessage(this, this, user, roomName));
 		}
 
 		void HandleNoteChanged (JabbR.Client.Models.User user, string note)
 		{
 			Log ("NoteChanged> " + user.Name + " -> " + note);
+			Messenger.Publish(new JabbrNoteChangedMessage(this, this, user, note));
 		}
 
-		void HandleMessageReceived (JabbR.Client.Models.Message message, string arg2)
+		void HandleMessageReceived (JabbR.Client.Models.Message message, string roomName)
 		{
-			Log ("MessageReceived> " + message.User.Name + ": " + message.Content + " -> " + arg2);
+			Log ("MessageReceived> " + message.User.Name + ": " + message.Content + " -> " + roomName);
+			Messenger.Publish(new JabbrMessageReceivedMessage(this, this, message, roomName));
 		}
 
-		void HandleMeMessageReceived (string arg1, string arg2, string arg3)
+		void HandleMeMessageReceived (string user, string content, string roomName)
 		{
-			Log ("MeMessageReceived> " + arg1 + " -> " + arg2 + " -> " + arg3);
+			Log ("MeMessageReceived> " + user + " -> " + content + " -> " + roomName);
+			Messenger.Publish (new JabbrMeMessageReceivedMessage (this, this, user, content, roomName));
 		}
 
-		void HandleLoggedOut (IEnumerable<string> arg1)
+		void HandleLoggedOut (IEnumerable<string> roomNames)
 		{
-			Log ("LoggedOut> " + string.Join(", ", arg1));
+			Log ("LoggedOut> " + string.Join(", ", roomNames));
+			Messenger.Publish (new JabbrLoggedOutMessage (this, this, roomNames.ToList()));
 		}
 
-		void HandleKicked (string obj)
+		void HandleKicked (string roomName)
 		{
-			Log ("Kicked> " + obj);
+			Log ("Kicked> " + roomName);
+			Messenger.Publish (new JabbrKickedMessage (this, this, roomName));
 		}
 
 		void HandleJoinedRoom (JabbR.Client.Models.Room room)
 		{
 			Log ("JoinedRoom> " + room.Name);
+			Messenger.Publish(new JabbrJoinedRoomMessage(this, this, room));
 		}
 
 		void HandleDisconnected ()
 		{
 			Log ("Disconnected>");
+			Messenger.Publish(new JabbrDisconnectedMessage(this, this));
 		}
 
 		public void Disconnect()
