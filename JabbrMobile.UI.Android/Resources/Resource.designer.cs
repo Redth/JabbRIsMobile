@@ -167,8 +167,8 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050002
 			public const int margin = 2131034114;
 			
-			// aapt resource value: 0x7f050007
-			public const int menu_frame = 2131034119;
+			// aapt resource value: 0x7f050009
+			public const int menu_frame = 2131034121;
 			
 			// aapt resource value: 0x7f050001
 			public const int right = 2131034113;
@@ -176,8 +176,14 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050004
 			public const int selected_view = 2131034116;
 			
+			// aapt resource value: 0x7f05000a
+			public const int slidingmenumain = 2131034122;
+			
+			// aapt resource value: 0x7f050007
+			public const int textViewRoomName = 2131034119;
+			
 			// aapt resource value: 0x7f050008
-			public const int slidingmenumain = 2131034120;
+			public const int textViewServer = 2131034120;
 			
 			static Id()
 			{
@@ -199,10 +205,13 @@ namespace JabbrMobile.Android
 			public const int Fragment_Menu = 2130903041;
 			
 			// aapt resource value: 0x7f030002
-			public const int Menu_Frame = 2130903042;
+			public const int ListItem_Menu_Room = 2130903042;
 			
 			// aapt resource value: 0x7f030003
-			public const int slidingmenumain = 2130903043;
+			public const int Menu_Frame = 2130903043;
+			
+			// aapt resource value: 0x7f030004
+			public const int slidingmenumain = 2130903044;
 			
 			static Layout()
 			{

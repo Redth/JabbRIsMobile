@@ -172,14 +172,8 @@
     <Compile Include="..\JabbrMobile.Common\Models\Account.cs">
       <Link>Models\Account.cs</Link>
     </Compile>
-    <Compile Include="..\JabbrMobile.Common\Services\IJabbRService.cs">
-      <Link>Services\IJabbrService.cs</Link>
-    </Compile>
     <Compile Include="..\JabbrMobile.Common\Services\ISettingsService.cs">
       <Link>Services\ISettingsService.cs</Link>
-    </Compile>
-    <Compile Include="..\JabbrMobile.Common\Services\JabbRService.cs">
-      <Link>Services\JabbrService.cs</Link>
     </Compile>
     <Compile Include="..\JabbrMobile.Common\Services\SettingsService.cs">
       <Link>Services\SettingsService.cs</Link>
@@ -190,14 +184,23 @@
     <Compile Include="..\JabbrMobile.Common\ViewModels\SettingsViewModel.cs">
       <Link>ViewModels\SettingsViewModel.cs</Link>
     </Compile>
-    <Compile Include="..\JabbrMobile.Common\ViewModels\StartViewModel.cs">
-      <Link>ViewModels\HomeViewModel.cs</Link>
-    </Compile>
     <Compile Include="..\JabbrMobile.Common\Messages\AccountMessage.cs">
       <Link>Messages\AccountMessage.cs</Link>
     </Compile>
     <Compile Include="..\JabbrMobile.Common\Messages\JabbrMessage.cs">
       <Link>Messages\JabbrMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\Models\RoomInfo.cs">
+      <Link>Models\RoomInfo.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\Services\IJabbrService.cs">
+      <Link>Services\IJabbrService.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\Services\JabbrService.cs">
+      <Link>Services\JabbrService.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\HomeViewModel.cs">
+      <Link>ViewModels\HomeViewModel.cs</Link>
     </Compile>
   </ItemGroup>
   <ItemGroup>

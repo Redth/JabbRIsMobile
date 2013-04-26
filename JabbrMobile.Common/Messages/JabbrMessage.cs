@@ -31,6 +31,20 @@ namespace JabbrMobile.Common.Messages
 		public string RoomName { get;set; }
 	}
 
+	public class JabbrConnectedMessage : JabbrMessage
+	{
+		public JabbrConnectedMessage(object sender, JabbrClientWrapper jabbr, string userId, IEnumerable<Room> rooms)
+			: base(sender, jabbr)
+		{
+			this.UserId = userId;
+			this.Rooms = rooms;
+		}
+
+		public string UserId { get;set; }
+		public IEnumerable<Room> Rooms { get;set; }
+	}
+
+
 	public class JabbrDisconnectedMessage : JabbrMessage
 	{
 		public JabbrDisconnectedMessage(object sender, JabbrClientWrapper jabbr)

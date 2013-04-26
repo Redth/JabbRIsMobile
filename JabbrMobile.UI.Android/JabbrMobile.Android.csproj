@@ -197,6 +197,7 @@
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\layout\Content_Frame.axml" />
     <AndroidResource Include="Resources\layout\Menu_Frame.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Menu_Room.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

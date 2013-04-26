@@ -20,20 +20,36 @@ namespace JabbrMobile.Android.Views
 	public class HomeView : MvxFragmentActivity
 	{
 		SlidingMenu slidingMenu;
+		MenuFragment menuFragment;
 
 		protected override void OnViewModelSet ()
 		{
 			SetContentView (Resource.Layout.Content_Frame);
 
 			slidingMenu = new SlidingMenu (this) {
-				TouchModeAbove = TouchMode.Margin
+				TouchModeAbove = TouchMode.Fullscreen,
+				BehindWidth = 300
+
 			};
 		
 			slidingMenu.AttachToActivity (this, SlideStyle.Content);
 			slidingMenu.SetMenu (Resource.Layout.Menu_Frame);
 
+
+			menuFragment = new MenuFragment ();
+			menuFragment.ViewModel = ViewModel;
+
 			SupportFragmentManager.BeginTransaction ()
-				.Replace (Resource.Id.menu_frame, new MenuFragment ()).Commit ();
+				.Replace (Resource.Id.menu_frame, menuFragment).Commit ();
+		}
+
+	
+		public override void OnBackPressed ()
+		{
+			if (slidingMenu.IsMenuShowing)
+				slidingMenu.ShowContent ();
+			else
+				base.OnBackPressed ();
 		}
 
 	}
