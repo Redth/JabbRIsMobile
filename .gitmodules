@@ -9,3 +9,6 @@
 [submodule "JabbR"]
 	path = JabbR
 	url = https://github.com/Redth/JabbR
+[submodule "SlidingMenuSharp"]
+	path = SlidingMenuSharp
+	url = https://github.com/Cheesebaron/SlidingMenuSharp.git
