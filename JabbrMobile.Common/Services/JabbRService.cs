@@ -7,23 +7,25 @@ using Cirrious.MvvmCross.Plugins.Messenger;
 using JabbrMobile.Common.Messages;
 using JabbrMobile.Common.Models;
 using JabbR.Client.Models;
+using System.Collections.ObjectModel;
 
 namespace JabbrMobile.Common.Services
 {
 	public class JabbrService : IJabbrService
 	{
 		IMvxMessenger _messenger;
-		ISettingsService _settings;
+		//ISettingsService _settings;
 
 		public JabbrService(IMvxMessenger messenger)
 		{
+			Clients = new ObservableCollection<JabbrClientWrapper> ();
+
 			_messenger = messenger;
 			//_settings = settings;
 
 			_messenger.Subscribe<AccountMessage> (msg => {
 
-				if (msg.Type == AccountMessage.ActionType.Add
-				    && !clients.ContainsKey(msg.Account.Id))
+				if (msg.Type == AccountMessage.ActionType.Add)
 				{
 					AddClient(msg.Account);
 				}
@@ -31,16 +33,16 @@ namespace JabbrMobile.Common.Services
 		}
 
 
-		Dictionary<string, JabbrClientWrapper> clients = new Dictionary<string, JabbrClientWrapper>();
 
-		public IEnumerable<JabbrClientWrapper> Clients
+		public ObservableCollection<JabbrClientWrapper> Clients 
 		{
-			get { return clients.Values; }
+			get;
+			set;
 		}
 
 		public void AddClient(Account account)
 		{
-			clients.Add(account.Id, new JabbrClientWrapper(account));
+			Clients.Add(new JabbrClientWrapper(account));
 		}
 
 	}
@@ -56,14 +58,14 @@ namespace JabbrMobile.Common.Services
 
 		public JabbrClientWrapper(Account account)
 		{
-			RoomsIn = new List<JabbR.Client.Models.Room> ();
+			RoomsIn = new ObservableCollection<Room> ();
 
 			this.Account = account;
 			Connect ();
 		}
 
 		public string UserId { get; private set; }
-		public List<JabbR.Client.Models.Room> RoomsIn { get; private set; }
+		public ObservableCollection<JabbR.Client.Models.Room> RoomsIn { get; private set; }
 
 		async void Connect()
 		{
@@ -98,7 +100,7 @@ namespace JabbrMobile.Common.Services
 			}
 			catch (Exception ex)
 			{
-
+				Log ("Connect Exception: " + ex);
 			}
 
 			if (logonInfo != null)
@@ -106,9 +108,11 @@ namespace JabbrMobile.Common.Services
 				this.UserId = logonInfo.UserId;
 
 				//Add us into the result's Rooms
-				RoomsIn.AddRange (logonInfo.Rooms);
+				foreach (var r in logonInfo.Rooms)
+					RoomsIn.Add (r);
 
 				Log ("Connected> " + this.UserId ?? "" + " -> Rooms: " + RoomsIn.Count);
+				Messenger.Publish (new JabbrConnectedMessage (this, this, this.UserId, RoomsIn));
 			}
 		}
 

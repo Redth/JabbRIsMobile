@@ -3,12 +3,13 @@ using Cirrious.MvvmCross;
 using JabbR.Client;
 using System.Collections.Generic;
 using JabbrMobile.Common.Models;
+using System.Collections.ObjectModel;
 
 namespace JabbrMobile.Common.Services
 {
 	public interface IJabbrService
 	{
-		IEnumerable<JabbrClientWrapper> Clients { get; }
+		ObservableCollection<JabbrClientWrapper> Clients { get; }
 	
 		void AddClient(Account account);
 
