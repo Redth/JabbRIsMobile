@@ -8,17 +8,17 @@ namespace JabbrMobile.Common.Messages
 {
 	public class JabbrMessage : MvxMessage
 	{
-		public JabbrMessage(object sender, JabbrClientWrapper jabbr) : base(sender)
+		public JabbrMessage(object sender, JabbrConnection jabbr) : base(sender)
 		{
 			this.Jabbr = jabbr;
 		}
 
-		public JabbrClientWrapper Jabbr { get;set; }
+		public JabbrConnection Jabbr { get;set; }
 	}
 	
 	public class JabbrAddMessageContentMessage : JabbrMessage
 	{
-		public JabbrAddMessageContentMessage(object sender, JabbrClientWrapper jabbr, string messageId, string extractedContent, string roomName)
+		public JabbrAddMessageContentMessage(object sender, JabbrConnection jabbr, string messageId, string extractedContent, string roomName)
 			: base (sender, jabbr)
 		{
 			this.MessageId = messageId;
@@ -33,7 +33,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrConnectedMessage : JabbrMessage
 	{
-		public JabbrConnectedMessage(object sender, JabbrClientWrapper jabbr, string userId, IEnumerable<Room> rooms)
+		public JabbrConnectedMessage(object sender, JabbrConnection jabbr, string userId, IEnumerable<Room> rooms)
 			: base(sender, jabbr)
 		{
 			this.UserId = userId;
@@ -47,7 +47,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrDisconnectedMessage : JabbrMessage
 	{
-		public JabbrDisconnectedMessage(object sender, JabbrClientWrapper jabbr)
+		public JabbrDisconnectedMessage(object sender, JabbrConnection jabbr)
 			: base(sender, jabbr)
 		{
 
@@ -57,7 +57,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrFlagChangedMessage : JabbrMessage
 	{
-		public JabbrFlagChangedMessage(object sender, JabbrClientWrapper jabbr, User user, string flag)
+		public JabbrFlagChangedMessage(object sender, JabbrConnection jabbr, User user, string flag)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -70,7 +70,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrJoinedRoomMessage : JabbrMessage
 	{
-		public JabbrJoinedRoomMessage(object sender, JabbrClientWrapper jabbr, Room room)
+		public JabbrJoinedRoomMessage(object sender, JabbrConnection jabbr, Room room)
 			: base(sender, jabbr)
 		{
 			this.Room = room;
@@ -81,7 +81,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrKickedMessage : JabbrMessage
 	{
-		public JabbrKickedMessage(object sender, JabbrClientWrapper jabbr, string roomName)
+		public JabbrKickedMessage(object sender, JabbrConnection jabbr, string roomName)
 			: base(sender, jabbr)
 		{
 			this.RoomName = roomName;
@@ -92,7 +92,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrLoggedOutMessage : JabbrMessage
 	{
-		public JabbrLoggedOutMessage(object sender, JabbrClientWrapper jabbr, List<string> roomNames)
+		public JabbrLoggedOutMessage(object sender, JabbrConnection jabbr, List<string> roomNames)
 			: base(sender, jabbr)
 		{
 			this.RoomNames = roomNames;
@@ -103,7 +103,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrMeMessageReceivedMessage : JabbrMessage
 	{
-		public JabbrMeMessageReceivedMessage(object sender, JabbrClientWrapper jabbr, string user, string content, string roomName)
+		public JabbrMeMessageReceivedMessage(object sender, JabbrConnection jabbr, string user, string content, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -118,7 +118,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrMessageReceivedMessage : JabbrMessage
 	{
-		public JabbrMessageReceivedMessage(object sender, JabbrClientWrapper jabbr, JabbR.Client.Models.Message message, string roomName)
+		public JabbrMessageReceivedMessage(object sender, JabbrConnection jabbr, JabbR.Client.Models.Message message, string roomName)
 			: base(sender, jabbr)
 		{
 			this.Message = message;
@@ -131,7 +131,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrNoteChangedMessage : JabbrMessage
 	{
-		public JabbrNoteChangedMessage(object sender, JabbrClientWrapper jabbr, User user, string note)
+		public JabbrNoteChangedMessage(object sender, JabbrConnection jabbr, User user, string note)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -144,7 +144,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrOwnerAddedMessage : JabbrMessage
 	{
-		public JabbrOwnerAddedMessage(object sender, JabbrClientWrapper jabbr, User user, string roomName)
+		public JabbrOwnerAddedMessage(object sender, JabbrConnection jabbr, User user, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -157,7 +157,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrOwnerRemovedMessage : JabbrMessage
 	{
-		public JabbrOwnerRemovedMessage(object sender, JabbrClientWrapper jabbr, User user, string roomName)
+		public JabbrOwnerRemovedMessage(object sender, JabbrConnection jabbr, User user, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -170,7 +170,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrPrivateMessageMessage : JabbrMessage
 	{
-		public JabbrPrivateMessageMessage(object sender, JabbrClientWrapper jabbr, string fromUser, string toUser, string message)
+		public JabbrPrivateMessageMessage(object sender, JabbrConnection jabbr, string fromUser, string toUser, string message)
 			: base(sender, jabbr)
 		{
 			this.From = fromUser;
@@ -185,7 +185,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrRoomCountChangedMessage : JabbrMessage
 	{
-		public JabbrRoomCountChangedMessage(object sender, JabbrClientWrapper jabbr, Room room, int count)
+		public JabbrRoomCountChangedMessage(object sender, JabbrConnection jabbr, Room room, int count)
 			: base(sender, jabbr)
 		{
 			this.Room = room;
@@ -198,7 +198,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrStateChangedMessage : JabbrMessage
 	{
-		public JabbrStateChangedMessage(object sender, JabbrClientWrapper jabbr)
+		public JabbrStateChangedMessage(object sender, JabbrConnection jabbr)
 			: base(sender, jabbr)
 		{
 		}
@@ -206,7 +206,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrTopicChangedMessage : JabbrMessage
 	{
-		public JabbrTopicChangedMessage(object sender, JabbrClientWrapper jabbr, Room room)
+		public JabbrTopicChangedMessage(object sender, JabbrConnection jabbr, Room room)
 			: base(sender, jabbr)
 		{
 			this.Room = room;
@@ -217,7 +217,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUserActivityChangedMessage : JabbrMessage
 	{
-		public JabbrUserActivityChangedMessage(object sender, JabbrClientWrapper jabbr, User user)
+		public JabbrUserActivityChangedMessage(object sender, JabbrConnection jabbr, User user)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -228,7 +228,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUserJoinedMessage : JabbrMessage
 	{
-		public JabbrUserJoinedMessage(object sender, JabbrClientWrapper jabbr, User user, string roomName, bool isOwner)
+		public JabbrUserJoinedMessage(object sender, JabbrConnection jabbr, User user, string roomName, bool isOwner)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -243,7 +243,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUserLeftMessage : JabbrMessage
 	{
-		public JabbrUserLeftMessage(object sender, JabbrClientWrapper jabbr, User user, string roomName)
+		public JabbrUserLeftMessage(object sender, JabbrConnection jabbr, User user, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -256,7 +256,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUsernameChangedMessage : JabbrMessage
 	{
-		public JabbrUsernameChangedMessage(object sender, JabbrClientWrapper jabbr, string oldUsername, User user, string roomName)
+		public JabbrUsernameChangedMessage(object sender, JabbrConnection jabbr, string oldUsername, User user, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;
@@ -271,7 +271,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUsersInactiveMessage : JabbrMessage
 	{
-		public JabbrUsersInactiveMessage(object sender, JabbrClientWrapper jabbr, List<User> users)
+		public JabbrUsersInactiveMessage(object sender, JabbrConnection jabbr, List<User> users)
 			: base(sender, jabbr)
 		{
 			this.Users = users;
@@ -282,7 +282,7 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrUserTypingMessage : JabbrMessage
 	{
-		public JabbrUserTypingMessage(object sender, JabbrClientWrapper jabbr, User user, string roomName)
+		public JabbrUserTypingMessage(object sender, JabbrConnection jabbr, User user, string roomName)
 			: base(sender, jabbr)
 		{
 			this.User = user;

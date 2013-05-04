@@ -9,7 +9,7 @@ namespace JabbrMobile.Common.Services
 {
 	public interface IJabbrService
 	{
-		ObservableCollection<JabbrClientWrapper> Clients { get; }
+		ObservableCollection<JabbrConnection> Connections { get; }
 	
 		void AddClient(Account account);
 

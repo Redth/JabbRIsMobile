@@ -10,16 +10,17 @@ using System.Collections.Generic;
 using JabbrMobile.Common.Models;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using JabbrMobile.Common.Messages;
+using Cirrious.CrossCore;
 
 namespace JabbrMobile.Common.ViewModels
 {
 	public class BaseViewModel : MvxViewModel
 	{
-		public BaseViewModel(ISettingsService settings, IJabbrService service, IMvxMessenger messenger)
+		public BaseViewModel()
 		{
-			Settings = settings;
-			Service = service;
-			Messenger = messenger;
+			Settings = Mvx.Resolve<ISettingsService>();
+			Service = Mvx.Resolve<IJabbrService>();
+			Messenger = Mvx.Resolve<IMvxMessenger>();
 
 			Commands = new MvxCommandCollectionBuilder().BuildCollectionFor(this);
 		}

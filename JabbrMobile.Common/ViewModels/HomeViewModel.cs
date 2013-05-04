@@ -17,7 +17,7 @@ namespace JabbrMobile.Common.ViewModels
 	{
 		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
 
-		public HomeViewModel(ISettingsService settings, IJabbrService service, IMvxMessenger messenger) : base(settings, service, messenger)
+		public HomeViewModel() : base()
 		{
 			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
 
@@ -37,24 +37,24 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		public void SwitchVisibleRoomCommand(RoomInfo room)
+		public void SwitchVisibleRoomCommand(RoomViewModel room)
 		{
 			this.VisibleRoom = room;
 			RaisePropertyChanged (() => VisibleRoom);
 		}
 
-		public RoomInfo VisibleRoom { get; private set; }
+		public RoomViewModel VisibleRoom { get; private set; }
 
-		public List<RoomInfo> Rooms
+		public List<RoomViewModel> Rooms
 		{
 			get
 			{
-				var rooms = new List<RoomInfo> ();
+				var rooms = new List<RoomViewModel> ();
 
-				foreach (var c in Service.Clients)
+				foreach (var c in Service.Connections)
 				{
 					foreach (var r in c.RoomsIn)
-						rooms.Add(new RoomInfo () { Room = r, Jabbr = c });
+						rooms.Add(new RoomViewModel () { Room = r, Jabbr = c });
 				}
 
 				return rooms;

@@ -1,24 +1,16 @@
 using System;
 using Cirrious.MvvmCross.ViewModels;
 using JabbrMobile.Common.Services;
+using Cirrious.MvvmCross.Plugins.Messenger;
+using JabbR.Client.Models;
 
 namespace JabbrMobile.Common.ViewModels
 {
-	public class AccountsViewModel : MvxViewModel
+	public class AccountsViewModel : BaseViewModel
 	{
-		public AccountsViewModel(ISettingsService settings)
+		public AccountsViewModel() : base()
 		{
-			_settings = settings;
-		}
-
-		ISettingsService _settings;
-
-
-		public ISettingsService Settings 
-		{ 
-			get { return _settings; }
-			set { _settings = value; }
 		}
 	}
-	
+
 }
