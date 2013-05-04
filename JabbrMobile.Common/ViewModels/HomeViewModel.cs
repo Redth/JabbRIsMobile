@@ -13,26 +13,17 @@ using JabbrMobile.Common.Messages;
 
 namespace JabbrMobile.Common.ViewModels
 {
-	public class HomeViewModel : MvxViewModel
+	public class HomeViewModel : BaseViewModel
 	{
-		ISettingsService _settings;
-		IJabbrService _service;
-		IMvxMessenger _messenger;
+		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
 
-		public HomeViewModel(ISettingsService settings, IJabbrService service, IMvxMessenger messenger)
+		public HomeViewModel(ISettingsService settings, IJabbrService service, IMvxMessenger messenger) : base(settings, service, messenger)
 		{
-			_settings = settings;
-			_service = service;
-			_messenger = messenger;
-
-			_messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged ("Rooms"));
-
-
-
+			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
 
 			try
 			{
-				_service.AddClient(new JabbrMobile.Common.Models.Account()
+				Service.AddClient(new JabbrMobile.Common.Models.Account()
 				{
 					AutoConnect = true,
 					Url = "https://jabbr.net/",
@@ -46,13 +37,21 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
+		public void SwitchVisibleRoomCommand(RoomInfo room)
+		{
+			this.VisibleRoom = room;
+			RaisePropertyChanged (() => VisibleRoom);
+		}
+
+		public RoomInfo VisibleRoom { get; private set; }
+
 		public List<RoomInfo> Rooms
 		{
 			get
 			{
 				var rooms = new List<RoomInfo> ();
 
-				foreach (var c in _service.Clients)
+				foreach (var c in Service.Clients)
 				{
 					foreach (var r in c.RoomsIn)
 						rooms.Add(new RoomInfo () { Room = r, Jabbr = c });
@@ -60,20 +59,7 @@ namespace JabbrMobile.Common.ViewModels
 
 				return rooms;
 			}
-		}
-
-		public ISettingsService Settings 
-		{ 
-			get { return _settings; }
-			set { _settings = value; }
-		}
-
-		public IJabbrService Service
-		{
-			get { return _service; }
-			set { _service = value; }
-		}
-		 
+		}		 
 	}
 
 }

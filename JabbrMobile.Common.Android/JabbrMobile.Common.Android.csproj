@@ -202,6 +202,9 @@
     <Compile Include="..\JabbrMobile.Common\Services\JabbrService.cs">
       <Link>Services\JabbrService.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\BaseViewModel.cs">
+      <Link>ViewModels\BaseViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

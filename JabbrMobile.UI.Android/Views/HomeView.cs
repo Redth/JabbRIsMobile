@@ -28,8 +28,7 @@ namespace JabbrMobile.Android.Views
 
 			slidingMenu = new SlidingMenu (this) {
 				TouchModeAbove = TouchMode.Fullscreen,
-				BehindWidth = 300
-
+				BehindOffset = 80
 			};
 		
 			slidingMenu.AttachToActivity (this, SlideStyle.Content);

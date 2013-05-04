@@ -12,7 +12,7 @@ namespace JabbRIsMobile
 			CreatableTypes()
 				.EndingWith("Service")
 					.AsInterfaces()
-					.RegisterAsSingleton();
+					.RegisterAsLazySingleton();
 
 			RegisterAppStart<HomeViewModel>();
 		}

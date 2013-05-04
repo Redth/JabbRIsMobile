@@ -18,7 +18,7 @@ namespace JabbrMobile.Android.Views
 	{
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
-			var ignored = base.OnCreateView (inflater, container, savedInstanceState);
+			base.OnCreateView (inflater, container, savedInstanceState);
 
 			return this.BindingInflate (Resource.Layout.Fragment_Menu, null);
 		}
