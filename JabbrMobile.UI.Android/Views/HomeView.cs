@@ -13,6 +13,7 @@ using Cirrious.MvvmCross.Droid.Views;
 using SlidingMenuSharp;
 using Cirrious.MvvmCross.Droid.Fragging;
 using JabbrMobile.Android;
+using JabbrMobile.Common.ViewModels;
 
 namespace JabbrMobile.Android.Views
 {
@@ -21,9 +22,13 @@ namespace JabbrMobile.Android.Views
 	{
 		SlidingMenu slidingMenu;
 		MenuFragment menuFragment;
+		ChatFragment chatFragment;
+		HomeViewModel homeViewModel;
 
 		protected override void OnViewModelSet ()
 		{
+			homeViewModel = (HomeViewModel)ViewModel;
+
 			SetContentView (Resource.Layout.Content_Frame);
 
 			slidingMenu = new SlidingMenu (this) {
@@ -40,8 +45,28 @@ namespace JabbrMobile.Android.Views
 
 			SupportFragmentManager.BeginTransaction ()
 				.Replace (Resource.Id.menu_frame, menuFragment).Commit ();
-		}
 
+			//TODO: Put some kind of default view in the chat fragment space
+
+			homeViewModel.PropertyChanged += (sender, e) => {
+
+				Console.WriteLine("PropertyChanged: "+  e.PropertyName);
+
+				if (e.PropertyName == "CurrentRoom")
+				{
+					Console.WriteLine("Switching Rooms: " + homeViewModel.CurrentRoom.Room.Name);
+
+					//switch chat fragment
+					chatFragment = new ChatFragment();
+					chatFragment.ViewModel = homeViewModel.CurrentRoom;
+
+					SupportFragmentManager.BeginTransaction()
+						.Replace(Resource.Id.content_frame, chatFragment).Commit();
+
+					//TODO: switch users list fragment
+				}
+			};
+		}
 	
 		public override void OnBackPressed ()
 		{

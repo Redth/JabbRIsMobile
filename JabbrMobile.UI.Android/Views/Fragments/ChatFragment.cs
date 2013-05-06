@@ -11,20 +11,16 @@ using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Droid.Fragging.Fragments;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
-using Cirrious.MvvmCross.Binding.Droid.Views;
-using JabbrMobile.Common.ViewModels;
 
 namespace JabbrMobile.Android.Views
 {
-	public class MenuFragment : MvxFragment
+	public class ChatFragment : MvxFragment
 	{
 		public override View OnCreateView (LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState)
 		{
 			base.OnCreateView (inflater, container, savedInstanceState);
 
-			var view = this.BindingInflate (Resource.Layout.Fragment_Menu, null);
-
-			return view;
+			return this.BindingInflate (Resource.Layout.Fragment_Chat, null);
 		}
 	}
 }

@@ -15,6 +15,8 @@ namespace JabbrMobile.Common.ViewModels
 {
 	public class HomeViewModel : BaseViewModel
 	{
+		public event Action<RoomViewModel> OnSwitchRoom;
+
 		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
 
 		public HomeViewModel() : base()
@@ -37,13 +39,21 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		public void SwitchVisibleRoomCommand(RoomViewModel room)
+		public void SwitchRoomCommand()
 		{
-			this.VisibleRoom = room;
-			RaisePropertyChanged (() => VisibleRoom);
+			Console.WriteLine ("Switch Room: NO PARAM");
+
 		}
 
-		public RoomViewModel VisibleRoom { get; private set; }
+		public void SwitchRoomCommand(RoomViewModel room)
+		{
+			Console.WriteLine ("Switch Room: " + room.Room.Name);
+
+			this.CurrentRoom = room;
+			RaisePropertyChanged (() => CurrentRoom);
+		}
+
+		public RoomViewModel CurrentRoom { get; private set; }
 
 		public List<RoomViewModel> Rooms
 		{

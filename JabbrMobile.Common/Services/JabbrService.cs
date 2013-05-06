@@ -59,6 +59,7 @@ namespace JabbrMobile.Common.Services
 
 		public string UserId { get; private set; }
 		public ObservableCollection<JabbR.Client.Models.Room> RoomsIn { get; private set; }
+		public JabbRClient Client { get { return _client; } }
 
 		async void Connect()
 		{
@@ -102,7 +103,10 @@ namespace JabbrMobile.Common.Services
 
 				//Add us into the result's Rooms
 				foreach (var r in logonInfo.Rooms)
+				{
+					Console.WriteLine ("Rooms In: " + r.Name);
 					RoomsIn.Add (r);
+				}
 
 				Log ("Connected> " + this.UserId ?? "" + " -> Rooms: " + RoomsIn.Count);
 				_messenger.Publish (new JabbrConnectedMessage (this, this, this.UserId, RoomsIn));

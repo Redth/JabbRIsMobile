@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/jabbrmobile.android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <TextView
+            android:text="nickname"
+            local:MvxBind="Text MessageUsernameDisplay"
+            android:id="@+id/textViewMessageUser"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:textColor="#ffffffff"
+            android:layout_marginRight="6dp" />
+        <TextView
+            android:text="This is a really long chat line of string to show how it wraps and handles multi lines"
+            local:MvxBind="Text MessageBodyDisplay"
+            android:id="@+id/textViewMessageBody"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:textSize="14sp" />
+    </LinearLayout>
+</LinearLayout>
