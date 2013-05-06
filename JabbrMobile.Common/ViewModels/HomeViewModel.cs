@@ -39,12 +39,6 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		public void SwitchRoomCommand()
-		{
-			Console.WriteLine ("Switch Room: NO PARAM");
-
-		}
-
 		public void SwitchRoomCommand(RoomViewModel room)
 		{
 			Console.WriteLine ("Switch Room: " + room.Room.Name);
