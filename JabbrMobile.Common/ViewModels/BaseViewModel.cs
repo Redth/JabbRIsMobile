@@ -2,7 +2,6 @@ using System;
 using System.Linq;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross;
-using Cirrious.MvvmCross.Droid;
 using Cirrious.MvvmCross.Platform;
 using JabbrMobile.Common.Services;
 using JabbR.Client.Models;

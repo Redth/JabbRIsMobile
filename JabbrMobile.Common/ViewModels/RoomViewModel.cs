@@ -1,14 +1,13 @@
 using System;
-using System.Collections.ObjectModel;
 using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Input;
-using Cirrious.CrossCore;
-using Cirrious.MvvmCross.Plugins.Messenger;
 using Cirrious.MvvmCross.ViewModels;
-using JabbR.Client.Models;
-using JabbrMobile.Common.Messages;
 using JabbrMobile.Common.Services;
+using Cirrious.MvvmCross.Plugins.Messenger;
+using JabbR.Client.Models;
+using System.Collections.ObjectModel;
+using JabbrMobile.Common.Messages;
+using System.Threading.Tasks;
+using Cirrious.CrossCore;
 
 namespace JabbrMobile.Common.ViewModels
 {
@@ -23,18 +22,15 @@ namespace JabbrMobile.Common.ViewModels
 			Jabbr = jabbr;
 			Room = room;
 
-			TypedMessage = string.Empty;
+			TypingMessage = string.Empty;
 			Messages = new ObservableCollection<MessageViewModel> ();
 
-			subTokMessageReceived = Messenger.Subscribe<JabbrMessageReceivedMessage> (msg => {
+			subTokMessageReceived = Messenger.SubscribeOnMainThread<JabbrMessageReceivedMessage> (msg => {
 
-				this.InvokeOnMainThread(() => {
-					lock (Messages)
-					{
-						Mvx.Trace(msg.Sender + "> " + msg.Message.HtmlEncoded);
-						Messages.Add(new MessageViewModel(msg.Message));
-					}
-				});
+				lock (Messages)
+					Messages.Add(new MessageViewModel(msg.Message));
+
+				RaisePropertyChanged(() => Messages);
 			});
 
 			subTokUserJoin = Messenger.Subscribe<JabbrUserJoinedMessage> (msg => {
@@ -49,8 +45,9 @@ namespace JabbrMobile.Common.ViewModels
 			{
 				lock (Messages)
 				{
-					foreach (var msg in Room.RecentMessages)
-						Messages.Add (new MessageViewModel(msg));
+                    if (Room.RecentMessages != null)
+					    foreach (var msg in Room.RecentMessages)
+						    Messages.Add (new MessageViewModel(msg));
 				}
 			}
 			catch (Exception ex)
@@ -65,7 +62,7 @@ namespace JabbrMobile.Common.ViewModels
 		public Room Room { get;set; }
 		public bool IsTyping { get;set; }
 
-		public string TypedMessage { get; set; }
+		public string TypingMessage { get; set; }
 
 		public ObservableCollection<MessageViewModel> Messages { get; set; }
 
@@ -77,49 +74,30 @@ namespace JabbrMobile.Common.ViewModels
 
 
 
-		public ICommand TypingActivityCommand
+		public async Task TypingActivityCommand()
 		{
-			get
-			{
-				return new MvxCommand (async() => {
+			if (IsTyping)
+				return;
 
-					Mvx.Trace("Typing...");
+			IsTyping = true;
 
-					if (IsTyping)
-						return;
+			//Tell JabbR we are typing
+			await Jabbr.Client.SetTyping (Room.Name);
 
-					Mvx.Trace("Typing... YES");
+			RaisePropertyChanged (() => IsTyping);
 
-					IsTyping = true;
-
-					//Tell JabbR we are typing
-					await Jabbr.Client.SetTyping (Room.Name);
-
-					RaisePropertyChanged (() => IsTyping);
-				});
-			}
 		}
 
-		public ICommand SendMessageCommand
+		public async Task SendMessageCommand()
 		{
-			get
-			{
-				return new MvxCommand(async() => {
+			Mvx.Trace ("Send Message: " + TypingMessage);
 
-					var msgToSend = TypedMessage;
+			//Send message to jabbr
+			await Jabbr.Client.Send (this.TypingMessage, Room.Name);
 
-					//Clear out hte msg
-					TypedMessage = string.Empty;
-					RaisePropertyChanged(() => TypedMessage);
+			IsTyping = false;
 
-					//Send message to jabbr
-					await Jabbr.Client.Send (msgToSend, Room.Name);
-
-					//Change typing status
-					IsTyping = false;
-					RaisePropertyChanged(() => IsTyping);
-				});
-			}
+			RaisePropertyChanged(() => IsTyping);
 		}
 
 		public async Task LoadMoreHistoryCommand()
@@ -152,6 +130,8 @@ namespace JabbrMobile.Common.ViewModels
 
 					foreach (var msg in msgs.Reverse())
 						Messages.Insert (0, new MessageViewModel(msg));
+
+					RaisePropertyChanged(() => Messages);
 				}
 			}
 			catch (Exception ex)
