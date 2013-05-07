@@ -25,7 +25,7 @@ namespace JabbrMobile.Common.ViewModels
 			TypingMessage = string.Empty;
 			Messages = new ObservableCollection<MessageViewModel> ();
 
-			subTokMessageReceived = Messenger.Subscribe<JabbrMessageReceivedMessage> (msg => {
+			subTokMessageReceived = Messenger.SubscribeOnMainThread<JabbrMessageReceivedMessage> (msg => {
 
 				lock (Messages)
 					Messages.Add(new MessageViewModel(msg.Message));
