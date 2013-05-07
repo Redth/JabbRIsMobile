@@ -104,7 +104,7 @@ namespace JabbrMobile.Common.Services
 				//Add us into the result's Rooms
 				foreach (var r in logonInfo.Rooms)
 				{
-					Console.WriteLine ("Rooms In: " + r.Name);
+                    Mvx.Trace("Rooms In: " + r.Name);
 					RoomsIn.Add (r);
 				}
 
@@ -266,7 +266,7 @@ namespace JabbrMobile.Common.Services
 
 		void Log(string msg)
 		{
-			Console.WriteLine (msg);
+            Mvx.Trace(msg);
 		}
 	}
 }

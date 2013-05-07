@@ -45,8 +45,9 @@ namespace JabbrMobile.Common.ViewModels
 			{
 				lock (Messages)
 				{
-					foreach (var msg in Room.RecentMessages)
-						Messages.Add (new MessageViewModel(msg));
+                    if (Room.RecentMessages != null)
+					    foreach (var msg in Room.RecentMessages)
+						    Messages.Add (new MessageViewModel(msg));
 				}
 			}
 			catch (Exception ex)
@@ -89,7 +90,7 @@ namespace JabbrMobile.Common.ViewModels
 
 		public async Task SendMessageCommand()
 		{
-			Console.WriteLine ("Send Message: " + TypingMessage);
+			Mvx.Trace ("Send Message: " + TypingMessage);
 
 			//Send message to jabbr
 			await Jabbr.Client.Send (this.TypingMessage, Room.Name);

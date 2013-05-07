@@ -1,8 +1,8 @@
 using System;
 using System.Linq;
+using Cirrious.CrossCore.Exceptions;
 using Cirrious.MvvmCross.ViewModels;
 using Cirrious.MvvmCross;
-using Cirrious.MvvmCross.Droid;
 using Cirrious.MvvmCross.Platform;
 using JabbrMobile.Common.Services;
 using JabbR.Client.Models;
@@ -36,7 +36,7 @@ namespace JabbrMobile.Common.ViewModels
 			}
 			catch (Exception ex)
 			{
-				Console.WriteLine (ex);
+				Mvx.Error(ex.ToLongString());
 			}
 		}
 
@@ -46,7 +46,7 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			get { 
 				return new MvxCommand<RoomViewModel> (room => {
-					Console.WriteLine ("Switch Room: " + room.Room.Name);
+					Mvx.Trace("Switch Room: " + room.Room.Name);
 
 					this.CurrentRoom = room;
 					RaisePropertyChanged (() => CurrentRoom);
