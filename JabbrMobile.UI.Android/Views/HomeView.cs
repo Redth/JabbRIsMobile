@@ -63,6 +63,8 @@ namespace JabbrMobile.Android.Views
 					SupportFragmentManager.BeginTransaction()
 						.Replace(Resource.Id.content_frame, chatFragment).Commit();
 
+					slidingMenu.Toggle();
+
 					//TODO: switch users list fragment
 				}
 			};

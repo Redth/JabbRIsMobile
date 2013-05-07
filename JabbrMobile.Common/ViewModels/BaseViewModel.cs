@@ -25,7 +25,7 @@ namespace JabbrMobile.Common.ViewModels
 			Commands = new MvxCommandCollectionBuilder().BuildCollectionFor(this);
 		}
 	
-		public IMvxCommandCollection Commands { get; private set; }
+		public IMvxCommandCollection Commands { get; set; }
 
 		public ISettingsService Settings { get; private set; }
 		public IJabbrService Service { get; private set; }

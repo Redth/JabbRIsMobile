@@ -1,11 +1,32 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/jabbrmobile.android"
     android:orientation="vertical"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
-    <Mvx.MvxListView xmlns:local="http://schemas.android.com/apk/res/jabbrmobile.android"
+    <Mvx.MvxListView
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         local:MvxItemTemplate="@layout/listitem_chat"
-        local:MvxBind="ItemsSource Messages;" />
+        local:MvxBind="ItemsSource Messages;"
+        android:layout_weight="1" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <EditText
+            android:inputType="textMultiLine"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            local:MvxBind="Text TypedMessage, Mode=TwoWay;"
+            android:layout_weight="1" />
+        <Button
+            android:text="Send"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            local:MvxBind="Click SendMessageCommand;" />
+    </LinearLayout>
 </LinearLayout>

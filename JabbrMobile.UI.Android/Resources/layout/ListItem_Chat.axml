@@ -17,7 +17,7 @@
         android:id="@+id/linearLayout1">
         <TextView
             android:text="nickname"
-            local:MvxBind="Text MessageUsernameDisplay"
+            local:MvxBind="Text UsernameDisplay"
             android:id="@+id/textViewMessageUser"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"

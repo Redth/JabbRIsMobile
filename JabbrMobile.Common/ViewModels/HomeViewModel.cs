@@ -10,13 +10,14 @@ using System.Collections.Generic;
 using JabbrMobile.Common.Models;
 using Cirrious.MvvmCross.Plugins.Messenger;
 using JabbrMobile.Common.Messages;
+using System.Windows.Input;
+using System.Reflection;
+using Cirrious.CrossCore;
 
 namespace JabbrMobile.Common.ViewModels
 {
 	public class HomeViewModel : BaseViewModel
 	{
-		public event Action<RoomViewModel> OnSwitchRoom;
-
 		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
 
 		public HomeViewModel() : base()
@@ -39,13 +40,27 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		public void SwitchRoomCommand(RoomViewModel room)
+
+
+		public ICommand SwitchRoomCommand
+		{
+			get { 
+				return new MvxCommand<RoomViewModel> (room => {
+					Console.WriteLine ("Switch Room: " + room.Room.Name);
+
+					this.CurrentRoom = room;
+					RaisePropertyChanged (() => CurrentRoom);
+				});
+			}
+		}
+
+		/*public void SwitchRoom2Command(RoomViewModel room)
 		{
 			Console.WriteLine ("Switch Room: " + room.Room.Name);
 
 			this.CurrentRoom = room;
 			RaisePropertyChanged (() => CurrentRoom);
-		}
+		}*/
 
 		public RoomViewModel CurrentRoom { get; private set; }
 
@@ -58,7 +73,7 @@ namespace JabbrMobile.Common.ViewModels
 				foreach (var c in Service.Connections)
 				{
 					foreach (var r in c.RoomsIn)
-						rooms.Add(new RoomViewModel () { Room = r, Jabbr = c });
+						rooms.Add(new RoomViewModel (c, r));
 				}
 
 				return rooms;
