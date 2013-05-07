@@ -36,15 +36,31 @@
             <Button x:Name="backButton" Click="GoBack" IsEnabled="{Binding Frame.CanGoBack, ElementName=pageRoot}" Style="{StaticResource BackButtonStyle}"/>
             <TextBlock x:Name="pageTitle" Grid.Column="1" Text="{StaticResource AppName}" Style="{StaticResource PageHeaderTextStyle}"/>
         </Grid>
-        <ListBox ItemsSource="{Binding Rooms}" Grid.Row="1" Background="Black">
-            <ListBox.ItemTemplate>
-                <DataTemplate>
-                    <Grid Background="Black">
-                        <TextBlock Foreground="Aqua" Text="{Binding Room.Name}"></TextBlock>
-                    </Grid>
-                </DataTemplate>
-            </ListBox.ItemTemplate>
-        </ListBox>
+        <StackPanel Orientation="Horizontal" Grid.Row="1" >
+            <ListBox ItemsSource="{Binding Rooms}" Background="Black" SelectionChanged="Selector_OnSelectionChanged">
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <Grid Background="Black">
+                            <TextBlock Foreground="Aqua" Text="{Binding Room.Name}"></TextBlock>
+                        </Grid>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+
+            <Grid>
+                <ListBox ItemsSource="{Binding CurrentRoom.Messages}" Background="Black" SelectionChanged="Selector_OnSelectionChanged">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Background="Black">
+                                <TextBlock Foreground="Pink" Text="{Binding UsernameDisplay}"></TextBlock>
+                                <TextBlock Foreground="LemonChiffon" Text="{Binding MessageBodyDisplay}"></TextBlock>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+                
+            </Grid>
+        </StackPanel>
         <VisualStateManager.VisualStateGroups>
 
             <!-- Visual states reflect the application's view state -->
