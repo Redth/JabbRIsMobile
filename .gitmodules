@@ -12,3 +12,6 @@
 [submodule "SlidingMenuSharp"]
 	path = SlidingMenuSharp
 	url = https://github.com/Cheesebaron/SlidingMenuSharp.git
+[submodule "LegacyBar"]
+	path = LegacyBar
+	url = https://github.com/Cheesebaron/LegacyBar.git
