@@ -16,7 +16,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>JabbRIsMobile.UI.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.0.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -200,6 +200,62 @@
     <AndroidResource Include="Resources\layout\ListItem_Menu_Room.axml" />
     <AndroidResource Include="Resources\layout\ListItem_Chat.axml" />
     <AndroidResource Include="Resources\layout\Fragment_Chat.axml" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_down.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_down_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_left.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_left_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_refresh_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_right.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_right_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_search.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_search_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_share.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_share_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_sort.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_sort_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_up.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\ic_action_up_dark.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_down.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_down_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_left.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_left_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_right.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_right_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_search.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_search_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_share.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_share_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_sort.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_sort_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_up.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\ic_action_up_dark.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_down_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_down.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_left_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_left.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_refresh_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_refresh.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_right_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_right.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_search_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_search.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_share_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_share.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_sort_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_sort.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_up_dark.png" />
+    <AndroidResource Include="Resources\drawable\ic_action_up.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_down.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_left.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_refresh.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_right.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_search.png" />
+    <AndroidResource Include="Resources\drawable\ic_menu_up.png" />
+    <AndroidResource Include="Resources\Values-v11\themes.xml" />
+    <AndroidResource Include="Resources\Values-v14\themes.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -215,10 +271,18 @@
       <Project>{ECDB1073-5AA0-45B7-A2E6-4F2B9792FBF5}</Project>
       <Name>JabbR.Client.Android</Name>
     </ProjectReference>
+    <ProjectReference Include="..\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj">
+      <Project>{371657B5-2C38-4D23-B7C1-6C053EB55FB8}</Project>
+      <Name>LegacyBar.Library</Name>
+    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\" />
     <Folder Include="Views\Fragments\" />
     <Folder Include="Bootstrap\" />
+    <Folder Include="Resources\drawable-hdpi\" />
+    <Folder Include="Resources\drawable-xhdpi\" />
+    <Folder Include="Resources\Values-v11\" />
+    <Folder Include="Resources\Values-v14\" />
   </ItemGroup>
 </Project>

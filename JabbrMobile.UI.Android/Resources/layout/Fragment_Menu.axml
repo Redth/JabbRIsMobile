@@ -5,8 +5,27 @@
     android:layout_height="fill_parent">
     <Mvx.MvxListView xmlns:local="http://schemas.android.com/apk/res/jabbrmobile.android"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
+        android:layout_height="wrap_content"
         android:id="@+id/mvxListViewRooms"
+        android:layout_weight="1"
         local:MvxItemTemplate="@layout/listitem_menu_room"
         local:MvxBind="ItemsSource Rooms; ItemClick SwitchRoomCommand;" />
+    <LinearLayout
+        android:orientation="horizontal"
+        android:minWidth="25px"
+        android:minHeight="25px"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1">
+        <Button
+            android:text="Accounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonAccounts" />
+        <Button
+            android:text="Settings"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/buttonSettings" />
+    </LinearLayout>
 </LinearLayout>

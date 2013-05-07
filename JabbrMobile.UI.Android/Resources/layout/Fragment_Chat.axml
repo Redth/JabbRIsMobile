@@ -21,8 +21,10 @@
             android:inputType="textMultiLine"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"
-            local:MvxBind="Text TypedMessage, Mode=TwoWay;"
-            android:layout_weight="1" />
+            local:MvxBind="Text TypedMessage; TextChanged TypingActivityCommand;"
+            android:layout_weight="1"
+            android:autoLink="all"
+            android:layout_marginBottom="10dp" />
         <Button
             android:text="Send"
             android:layout_width="wrap_content"
