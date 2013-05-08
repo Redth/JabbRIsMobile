@@ -11,6 +11,7 @@ using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Droid.Fragging.Fragments;
 using Cirrious.MvvmCross.Binding.Droid.BindingContext;
+using Cirrious.MvvmCross.Binding.Droid.Views;
 
 namespace JabbrMobile.Android.Views
 {

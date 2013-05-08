@@ -8,6 +8,7 @@ using System.Collections.ObjectModel;
 using JabbrMobile.Common.Messages;
 using System.Threading.Tasks;
 using Cirrious.CrossCore;
+using System.Windows.Input;
 
 namespace JabbrMobile.Common.ViewModels
 {
@@ -22,7 +23,7 @@ namespace JabbrMobile.Common.ViewModels
 			Jabbr = jabbr;
 			Room = room;
 
-			TypingMessage = string.Empty;
+			TypedMessage = string.Empty;
 			Messages = new ObservableCollection<MessageViewModel> ();
 
 			subTokMessageReceived = Messenger.SubscribeOnMainThread<JabbrMessageReceivedMessage> (msg => {
@@ -30,7 +31,6 @@ namespace JabbrMobile.Common.ViewModels
 				lock (Messages)
 					Messages.Add(new MessageViewModel(msg.Message));
 
-				RaisePropertyChanged(() => Messages);
 			});
 
 			subTokUserJoin = Messenger.Subscribe<JabbrUserJoinedMessage> (msg => {
@@ -41,28 +41,14 @@ namespace JabbrMobile.Common.ViewModels
 
 			});
 
-			try
-			{
-				lock (Messages)
-				{
-                    if (Room.RecentMessages != null)
-					    foreach (var msg in Room.RecentMessages)
-						    Messages.Add (new MessageViewModel(msg));
-				}
-			}
-			catch (Exception ex)
-			{
-				Mvx.Error ("RecentMessages Exception: " + ex);
-			}
-
-			RaisePropertyChanged (() => Messages);
+			LoadRoom ();
 		}
 
 		public JabbrConnection Jabbr { get; private set; }
 		public Room Room { get;set; }
 		public bool IsTyping { get;set; }
 
-		public string TypingMessage { get; set; }
+		public string TypedMessage { get; set; }
 
 		public ObservableCollection<MessageViewModel> Messages { get; set; }
 
@@ -72,71 +58,110 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-
-
-		public async Task TypingActivityCommand()
+		public ICommand TypingActivityCommand
 		{
-			if (IsTyping)
+			get
+			{
+				return new MvxCommand ( async() => {
+					if (IsTyping)
+						return;
+
+					IsTyping = true;
+
+					//Tell JabbR we are typing
+					await Jabbr.Client.SetTyping (Room.Name);
+
+					RaisePropertyChanged (() => IsTyping);
+
+				});
+			}
+		}
+
+		public ICommand SendMessageCommand
+		{
+			get
+			{
+				return new MvxCommand( async () => {
+
+					var msgToSend = TypedMessage;
+
+					TypedMessage = string.Empty;
+					RaisePropertyChanged(() => TypedMessage);
+
+					Mvx.Trace ("Send Message: " + msgToSend);
+
+					//Send message to jabbr
+					await Jabbr.Client.Send (msgToSend, Room.Name);
+
+					IsTyping = false;
+
+					RaisePropertyChanged(() => IsTyping);
+			
+				});
+			}
+		}
+
+		public async void LoadRoom()
+		{
+			var room = await Jabbr.Client.GetRoomInfo (this.Room.Name);
+
+			if (room == null)
 				return;
 
-			IsTyping = true;
+			this.Room = room;
 
-			//Tell JabbR we are typing
-			await Jabbr.Client.SetTyping (Room.Name);
-
-			RaisePropertyChanged (() => IsTyping);
-
-		}
-
-		public async Task SendMessageCommand()
-		{
-			Mvx.Trace ("Send Message: " + TypingMessage);
-
-			//Send message to jabbr
-			await Jabbr.Client.Send (this.TypingMessage, Room.Name);
-
-			IsTyping = false;
-
-			RaisePropertyChanged(() => IsTyping);
-		}
-
-		public async Task LoadMoreHistoryCommand()
-		{
-			Mvx.Trace ("Loading more History...");
-
-			try
+			if (room.RecentMessages != null && room.RecentMessages.Count() > 0)
 			{
-				string fromId = string.Empty;
-
-				MessageViewModel lastMsg = null;
-
-				lock (Messages)
-					lastMsg = Messages.LastOrDefault ();
-
-				if (lastMsg != null && lastMsg.Message != null && lastMsg.Message.Id != null)
-					fromId = lastMsg.Message.Id;
-
-				var msgs = await Jabbr.Client.GetPreviousMessages(fromId);
-
-				if (msgs == null)
+				lock(Messages)
 				{
-					Mvx.Trace ("No History Found");
-					return;
-				}
-
-				lock (Messages)
-				{
-					Mvx.Trace ("Got {0} Messages", Messages.Count);
-
-					foreach (var msg in msgs.Reverse())
+					foreach (var msg in room.RecentMessages.Reverse())
 						Messages.Insert (0, new MessageViewModel(msg));
-
-					RaisePropertyChanged(() => Messages);
 				}
 			}
-			catch (Exception ex)
+		}
+
+		public ICommand LoadMoreHistoryCommand
+		{
+			get
 			{
-				Mvx.Error("LoadMoreHistory Exception: " + ex);
+				return new MvxCommand ( async() => {
+					Mvx.Trace ("Loading more History...");
+
+					try
+					{
+						string fromId = string.Empty;
+
+						MessageViewModel lastMsg = null;
+
+						lock (Messages)
+							lastMsg = Messages.LastOrDefault ();
+
+						if (lastMsg != null && lastMsg.Message != null && lastMsg.Message.Id != null)
+							fromId = lastMsg.Message.Id;
+
+						var msgs = await Jabbr.Client.GetPreviousMessages(fromId);
+
+						if (msgs == null)
+						{
+							Mvx.Trace ("No History Found");
+							return;
+						}
+
+						lock (Messages)
+						{
+							Mvx.Trace ("Got {0} Messages", Messages.Count);
+
+							foreach (var msg in msgs.Reverse())
+								Messages.Insert (0, new MessageViewModel(msg));
+
+							RaisePropertyChanged(() => Messages);
+						}
+					}
+					catch (Exception ex)
+					{
+						Mvx.Error("LoadMoreHistory Exception: " + ex);
+					}
+				});
 			}
 		}
 	}
