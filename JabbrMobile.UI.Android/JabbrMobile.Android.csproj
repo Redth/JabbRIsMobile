@@ -257,6 +257,8 @@
     <AndroidResource Include="Resources\drawable\ic_menu_up.png" />
     <AndroidResource Include="Resources\Values-v11\themes.xml" />
     <AndroidResource Include="Resources\Values-v14\themes.xml" />
+    <AndroidResource Include="Resources\layout\View_Accounts.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Account.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

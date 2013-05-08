@@ -17,7 +17,9 @@ namespace JabbrMobile.Android.Views
 	{
 		protected override void OnViewModelSet ()
 		{
-			//SetContentView
+			SetContentView (Resource.Layout.View_Accounts);
+
+
 		}
 	}
 }

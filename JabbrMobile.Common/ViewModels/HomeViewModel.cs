@@ -40,7 +40,15 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
+		public ICommand ShowAccountsCommand
+		{
+			get { return new MvxCommand (() => ShowViewModel<AccountsViewModel>()); }
+		}
 
+		public ICommand ShowSettingsCommand
+		{
+			get { return new MvxCommand (() => ShowViewModel<SettingsViewModel>()); }
+		}
 
 		public ICommand SwitchRoomCommand
 		{

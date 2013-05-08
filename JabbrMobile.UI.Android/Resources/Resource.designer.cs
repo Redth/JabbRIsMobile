@@ -821,6 +821,9 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040021
 			public const int menu_frame = 2130968609;
 			
+			// aapt resource value: 0x7f040024
+			public const int mvxListViewAccounts = 2130968612;
+			
 			// aapt resource value: 0x7f04001a
 			public const int mvxListViewRooms = 2130968602;
 			
@@ -839,17 +842,17 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040023
 			public const int slidingmenumain = 2130968611;
 			
-			// aapt resource value: 0x7f04001e
-			public const int textViewMessageBody = 2130968606;
-			
-			// aapt resource value: 0x7f04001d
-			public const int textViewMessageUser = 2130968605;
+			// aapt resource value: 0x7f040020
+			public const int textViewMessageBody = 2130968608;
 			
 			// aapt resource value: 0x7f04001f
-			public const int textViewRoomName = 2130968607;
+			public const int textViewMessageUser = 2130968607;
 			
-			// aapt resource value: 0x7f040020
-			public const int textViewServer = 2130968608;
+			// aapt resource value: 0x7f04001d
+			public const int textViewRoomName = 2130968605;
+			
+			// aapt resource value: 0x7f04001e
+			public const int textViewServer = 2130968606;
 			
 			static Id()
 			{
@@ -883,22 +886,28 @@ namespace JabbrMobile.Android
 			public const int Fragment_Menu = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ListItem_Chat = 2130903046;
+			public const int ListItem_Account = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ListItem_Menu_Room = 2130903047;
+			public const int ListItem_Chat = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int Menu_Frame = 2130903048;
+			public const int ListItem_Menu_Room = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int overflowactionbar_item = 2130903049;
+			public const int Menu_Frame = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int slidingmenumain = 2130903050;
+			public const int overflowactionbar_item = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int spinneritem = 2130903051;
+			public const int slidingmenumain = 2130903051;
+			
+			// aapt resource value: 0x7f03000c
+			public const int spinneritem = 2130903052;
+			
+			// aapt resource value: 0x7f03000d
+			public const int View_Accounts = 2130903053;
 			
 			static Layout()
 			{

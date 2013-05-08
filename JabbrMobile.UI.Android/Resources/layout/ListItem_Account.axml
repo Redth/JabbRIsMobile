@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:local="http://schemas.android.com/apk/res/jabbrmobile.android"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:paddingTop="5dp"
+    android:paddingRight="10dp"
+    android:paddingBottom="5dp"
+    android:paddingLeft="10dp">
+    <TextView
+        android:text="http://jabbr.net"
+        local:MvxBind="Text Url"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewRoomName" />
+    <TextView
+        android:text="username"
+        local:MvxBind="Text Username"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/textViewServer" />
+</LinearLayout>
