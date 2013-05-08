@@ -794,6 +794,15 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040000
 			public const int custom = 2130968576;
 			
+			// aapt resource value: 0x7f040027
+			public const int editText1 = 2130968615;
+			
+			// aapt resource value: 0x7f040029
+			public const int editText2 = 2130968617;
+			
+			// aapt resource value: 0x7f04002b
+			public const int editText3 = 2130968619;
+			
 			// aapt resource value: 0x7f040008
 			public const int fullscreen = 2130968584;
 			
@@ -818,8 +827,20 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040007
 			public const int margin = 2130968583;
 			
+			// aapt resource value: 0x7f04002c
+			public const int menu_add = 2130968620;
+			
+			// aapt resource value: 0x7f04002e
+			public const int menu_delete = 2130968622;
+			
 			// aapt resource value: 0x7f040022
 			public const int menu_frame = 2130968610;
+			
+			// aapt resource value: 0x7f04002f
+			public const int menu_leave_room = 2130968623;
+			
+			// aapt resource value: 0x7f04002d
+			public const int menu_save = 2130968621;
 			
 			// aapt resource value: 0x7f040025
 			public const int mvxListViewAccounts = 2130968613;
@@ -844,6 +865,15 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f040024
 			public const int slidingmenumain = 2130968612;
+			
+			// aapt resource value: 0x7f040026
+			public const int textView1 = 2130968614;
+			
+			// aapt resource value: 0x7f040028
+			public const int textView2 = 2130968616;
+			
+			// aapt resource value: 0x7f04002a
+			public const int textView3 = 2130968618;
 			
 			// aapt resource value: 0x7f040021
 			public const int textViewMessageBody = 2130968609;
@@ -912,12 +942,37 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f03000d
 			public const int View_Accounts = 2130903053;
 			
+			// aapt resource value: 0x7f03000e
+			public const int View_EditAccount = 2130903054;
+			
 			static Layout()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
 			}
 			
 			private Layout()
+			{
+			}
+		}
+		
+		public partial class Menu
+		{
+			
+			// aapt resource value: 0x7f090000
+			public const int AccountsMenu = 2131296256;
+			
+			// aapt resource value: 0x7f090001
+			public const int EditAccountMenu = 2131296257;
+			
+			// aapt resource value: 0x7f090002
+			public const int HomeMenu = 2131296258;
+			
+			static Menu()
+			{
+				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
+			}
+			
+			private Menu()
 			{
 			}
 		}

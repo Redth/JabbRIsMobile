@@ -185,6 +185,8 @@
     <Compile Include="Views\Fragments\MenuFragment.cs" />
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Views\Fragments\ChatFragment.cs" />
+    <Compile Include="Views\EditAccountView.cs" />
+    <Compile Include="Views\BaseView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -259,6 +261,10 @@
     <AndroidResource Include="Resources\Values-v14\themes.xml" />
     <AndroidResource Include="Resources\layout\View_Accounts.axml" />
     <AndroidResource Include="Resources\layout\ListItem_Account.axml" />
+    <AndroidResource Include="Resources\layout\View_EditAccount.axml" />
+    <AndroidResource Include="Resources\Menu\EditAccountMenu.xml" />
+    <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
+    <AndroidResource Include="Resources\Menu\AccountsMenu.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -287,5 +293,6 @@
     <Folder Include="Resources\drawable-xhdpi\" />
     <Folder Include="Resources\Values-v11\" />
     <Folder Include="Resources\Values-v14\" />
+    <Folder Include="Resources\Menu\" />
   </ItemGroup>
 </Project>

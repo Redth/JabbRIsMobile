@@ -1,4 +1,5 @@
 using System;
+using System.Linq;
 using Cirrious.MvvmCross.ViewModels;
 using JabbrMobile.Common.Services;
 using Cirrious.MvvmCross.Plugins.Messenger;
@@ -7,6 +8,7 @@ using System.Collections.Generic;
 using JabbrMobile.Common.Models;
 using System.Collections.ObjectModel;
 using System.Windows.Input;
+using Cirrious.CrossCore;
 
 namespace JabbrMobile.Common.ViewModels
 {
@@ -14,7 +16,7 @@ namespace JabbrMobile.Common.ViewModels
 	{
 		public AccountsViewModel() : base()
 		{
-
+			Mvx.Trace ("Found Accounts: " + Settings.Accounts.Count());
 		}
 
 		public ObservableCollection<Account> Accounts 
@@ -26,8 +28,10 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			get
 			{
-				return new MvxCommand(() => {
-
+				return new MvxCommand<Account>(account => {
+					var bundle = new MvxBundle();
+					bundle.Data.Add("AccountId", account.Id);
+					ShowViewModel<EditAccountViewModel>(bundle);
 				});
 			}
 		}

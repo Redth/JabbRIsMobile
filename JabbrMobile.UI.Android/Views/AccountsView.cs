@@ -13,13 +13,13 @@ using Cirrious.MvvmCross.Droid.Views;
 namespace JabbrMobile.Android.Views
 {
 	[Activity (Label = "Accounts")]			
-	public class AccountsView : MvxActivity
+	public class AccountsView : BaseView
 	{
 		protected override void OnViewModelSet ()
 		{
 			SetContentView (Resource.Layout.View_Accounts);
 
-
+			MenuId = Resource.Menu.AccountsMenu;
 		}
 	}
 }

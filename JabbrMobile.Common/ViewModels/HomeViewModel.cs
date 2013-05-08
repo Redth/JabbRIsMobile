@@ -24,20 +24,12 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
 
-			try
-			{
-				Service.AddClient(new JabbrMobile.Common.Models.Account()
-				{
-					AutoConnect = true,
-					Url = "https://jabbr.net/",
-					Username = "MoJabbr",
-					Password = "mojabber"
-				});
-			}
-			catch (Exception ex)
-			{
-				Mvx.Error(ex.ToLongString());
-			}
+			Settings.Accounts.Add (new JabbrMobile.Common.Models.Account() {
+				AutoConnect = true,
+				Url = "https://jabbr.net/",
+				Username = "MoJabbr",
+				Password = "mojabber"
+			});
 		}
 
 		public ICommand ShowAccountsCommand

@@ -208,6 +208,9 @@
     <Compile Include="..\JabbrMobile.Common\ViewModels\MessageViewModel.cs">
       <Link>ViewModels\MessageViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\EditAccountViewModel.cs">
+      <Link>ViewModels\EditAccountViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

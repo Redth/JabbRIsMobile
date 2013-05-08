@@ -16,18 +16,36 @@ namespace JabbrMobile.Common.Services
 	{
 		MvxSubscriptionToken mvxSubAccountMessages;
 
+		ISettingsService Settings { get;set; }
+
 		public JabbrService()
 		{
 			Connections = new ObservableCollection<JabbrConnection> ();
 
-			var messenger = Mvx.Resolve<IMvxMessenger> ();
-			mvxSubAccountMessages = messenger.Subscribe<AccountMessage> (msg => {
+			Settings = Mvx.Resolve<ISettingsService> ();
 
-				if (msg.Type == AccountMessage.ActionType.Add)
-					AddClient(msg.Account);
+			Settings.Accounts.CollectionChanged += (sender, e) => {
 
-				//TODO: Remove accounts
-			});
+				if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Remove)
+				{
+					foreach (Account a in e.OldItems)
+					{
+						var cons = Connections.Where(c => c.Account.Id == a.Id);
+
+						if (cons != null)
+							foreach (var con in cons)
+								con.Client.Disconnect();
+					}
+				}
+				else if (e.Action == System.Collections.Specialized.NotifyCollectionChangedAction.Add)
+				{
+					foreach (Account a in e.NewItems)
+					{
+						if (Connections.Where(con => con.Account.Id == a.Id).Count() <= 0)
+							AddClient(a);
+					}
+				}
+			};
 		}
 
 		public ObservableCollection<JabbrConnection> Connections { get; set; }
