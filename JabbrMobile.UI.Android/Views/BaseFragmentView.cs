@@ -20,7 +20,7 @@ using LegacyBar.Library.BarActions;
 
 namespace JabbrMobile.Android.Views
 {
-	public class BaseView : MvxActivity
+	public class BaseFragmentView : MvxFragmentActivity
 	{
 		public LegacyBar.Library.Bar.LegacyBar LegacyBar { get; set; }
 		public int MenuId { get; set; }

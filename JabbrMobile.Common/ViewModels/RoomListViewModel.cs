@@ -24,8 +24,13 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			base.InitFromBundle (parameters);
 
+			IsLoading = true;
+
+			RaisePropertyChanged (() => IsLoading);
 			LoadRooms ();
 		}
+
+		public bool IsLoading { get; set; }
 
 		public ObservableCollection<RoomListItemViewModel> Rooms { get; set; }
 
@@ -34,7 +39,17 @@ namespace JabbrMobile.Common.ViewModels
 			get
 			{
 				return new MvxCommand<RoomListItemViewModel> ( async room => {
-					await room.Jabbr.Client.JoinRoom(room.Room.Name);
+
+					try 
+					{ 
+						await room.Jabbr.Client.JoinRoom(room.Room.Name); 
+
+						room.Jabbr.RoomsIn.Add(room.Room);
+					}
+					catch { }
+
+
+					Close(this);
 				});
 			}
 		}
@@ -49,8 +64,24 @@ namespace JabbrMobile.Common.ViewModels
 
 					lock(Rooms)
 					{
-						foreach (var r in rooms)
-							Rooms.Add(new RoomListItemViewModel(c, r));
+
+						var roomList = from r in rooms
+										where !r.Closed
+										orderby r.Count descending
+										select new RoomListItemViewModel(c, r);
+	
+						Rooms.Clear();
+
+						if (roomList != null)
+						{
+							foreach (var r in roomList)
+								Rooms.Add(r);
+						}
+
+						IsLoading = false;
+						RaisePropertyChanged (() => IsLoading);
+
+						//RaisePropertyChanged(() => Rooms);
 					}
 				}
 				catch (Exception ex)

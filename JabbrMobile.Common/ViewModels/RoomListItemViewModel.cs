@@ -25,7 +25,7 @@ namespace JabbrMobile.Common.ViewModels
 
 		public string ServerDisplayName { 
 			get {
-				return Jabbr.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/');
+				return Jabbr.Account.Username + " @ " + Jabbr.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/');
 			}
 		} 
 	}

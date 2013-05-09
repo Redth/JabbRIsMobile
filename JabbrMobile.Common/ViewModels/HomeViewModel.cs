@@ -19,11 +19,13 @@ namespace JabbrMobile.Common.ViewModels
 	public class HomeViewModel : BaseViewModel
 	{
 		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
-	
+		MvxSubscriptionToken _mvxMsgTokenJoinedRoom;
+
 		public HomeViewModel() : base()
 		{
-			_mvxMsgTokenJabbrConnected = Messenger.SubscribeOnMainThread<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
-					
+			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
+			_mvxMsgTokenJoinedRoom = Messenger.Subscribe<JabbrJoinedRoomMessage> (msg => RaisePropertyChanged(() => Rooms));
+
 
 			Settings.Accounts.Add (new JabbrMobile.Common.Models.Account() {
 				AutoConnect = true,
@@ -49,6 +51,20 @@ namespace JabbrMobile.Common.ViewModels
 			get { return new MvxCommand (() => ShowViewModel<RoomListViewModel>()); }
 		}
 
+		public ICommand LeaveCurrentRoomCommand
+		{
+			get
+			{
+				return new MvxCommand ( async () => {
+
+					var room = this.CurrentRoom;
+
+					await room.Connection.LeaveRoom(room.Room.Name);
+
+					RaisePropertyChanged(() => Rooms);
+				});
+			}
+		}
 
 		public ICommand SwitchRoomCommand
 		{
@@ -86,7 +102,7 @@ namespace JabbrMobile.Common.ViewModels
 
 				return rooms;
 			}
-		}		 
+		}
 	}
 
 }

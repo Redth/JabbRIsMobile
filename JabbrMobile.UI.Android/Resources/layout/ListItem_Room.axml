@@ -8,18 +8,46 @@
     android:paddingRight="10dp"
     android:paddingBottom="5dp"
     android:paddingLeft="10dp">
-    <TextView
-        android:text="RoomNameHere"
-        local:MvxBind="Text Room.Name"
-        android:textAppearance="?android:attr/textAppearanceLarge"
+    <LinearLayout
+        android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textViewRoomName" />
-    <TextView
-        android:text="jabbr.net"
-        local:MvxBind="Text ServerDisplayName"
-        android:textAppearance="?android:attr/textAppearanceSmall"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/textViewServer" />
+        android:layout_weight="1">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_weight="1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:text="RoomNameHere"
+                local:MvxBind="Text Room.Name"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewRoomName" />
+            <TextView
+                android:text="jabbr.net"
+                local:MvxBind="Text ServerDisplayName"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/textViewServer" />
+        </LinearLayout>
+        <ImageView
+            android:src="@drawable/icon_users_grey"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_gravity="center_vertical"
+            android:layout_marginRight="4dp"
+            android:scaleType="fitCenter"
+            android:adjustViewBounds="true" />
+        <TextView
+            android:text="0"
+            local:MvxBind="Text Room.Count"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:textColor="#ff6c6c6c" />
+    </LinearLayout>
 </LinearLayout>

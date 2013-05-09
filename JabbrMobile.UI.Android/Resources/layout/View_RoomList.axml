@@ -15,5 +15,5 @@
         android:id="@+id/mvxListViewRooms"
         android:layout_weight="1"
         ab:MvxItemTemplate="@layout/listitem_room"
-        ab:MvxBind="ItemsSource Rooms;" />
+        ab:MvxBind="ItemsSource Rooms; ItemClick JoinRoomCommand;" />
 </LinearLayout>

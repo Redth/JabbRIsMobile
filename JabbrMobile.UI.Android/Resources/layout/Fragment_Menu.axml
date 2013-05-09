@@ -18,6 +18,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1"
+        android:padding="10dp"
         android:background="#ff6c6c6c">
         <ImageView
             local:MvxBind="Click ShowRoomListCommand;"
@@ -28,14 +29,16 @@
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:background="@drawable/ButtonGlowLight"
-            android:layout_margin="8dp" />
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp" />
         <ImageView
             local:MvxBind="Click ShowAccountsCommand;"
             android:src="@drawable/icon_accounts"
             android:clickable="true"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_margin="8dp"
+            android:layout_marginRight="8dp"
+            android:layout_marginLeft="8dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:background="@drawable/ButtonGlowLight" />
@@ -45,7 +48,7 @@
             android:clickable="true"
             android:layout_width="32dp"
             android:layout_height="32dp"
-            android:layout_margin="8dp"
+            android:layout_marginLeft="8dp"
             android:adjustViewBounds="true"
             android:scaleType="centerInside"
             android:background="@drawable/ButtonGlowLight" />

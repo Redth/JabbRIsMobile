@@ -21,6 +21,7 @@
             android:layout_height="wrap_content"
             android:id="@+id/textView1" />
         <EditText
+            ab:MvxBind="Text Account.Url;"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText1"
@@ -33,6 +34,7 @@
             android:id="@+id/textView2"
             android:layout_marginTop="20dp" />
         <EditText
+            ab:MvxBind="Text Account.Username;"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText2"
@@ -45,10 +47,19 @@
             android:id="@+id/textView3"
             android:layout_marginTop="20dp" />
         <EditText
+            ab:MvxBind="Text Account.Password;"
             android:inputType="textPassword"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:id="@+id/editText3"
             android:hint="&lt;your password&gt;" />
+        <CheckBox
+            ab:MvxBind="Checked AutoConnect;"
+            android:text="AUTO-CONNECT"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/checkBox1"
+            android:layout_marginTop="20dp"
+            android:textColor="#ff6a6a6a" />
     </LinearLayout>
 </LinearLayout>

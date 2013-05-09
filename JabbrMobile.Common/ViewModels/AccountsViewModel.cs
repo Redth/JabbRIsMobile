@@ -16,7 +16,7 @@ namespace JabbrMobile.Common.ViewModels
 	{
 		public AccountsViewModel() : base()
 		{
-			Mvx.Trace ("Found Accounts: " + Settings.Accounts.Count());
+
 		}
 
 		public ObservableCollection<Account> Accounts 

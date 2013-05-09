@@ -9,6 +9,7 @@ using JabbrMobile.Common.Models;
 using JabbR.Client.Models;
 using System.Collections.ObjectModel;
 using Cirrious.CrossCore;
+using System.Threading.Tasks;
 
 namespace JabbrMobile.Common.Services
 {
@@ -73,15 +74,32 @@ namespace JabbrMobile.Common.Services
 		{
 			_messenger = Mvx.Resolve<IMvxMessenger> ();
 
-			RoomsIn = new ObservableCollection<Room> ();
+			RoomsIn = new List<Room> ();
 
 			this.Account = account;
 			Connect ();
 		}
 
 		public string UserId { get; private set; }
-		public ObservableCollection<JabbR.Client.Models.Room> RoomsIn { get; private set; }
+		public List<JabbR.Client.Models.Room> RoomsIn { get; private set; }
 		public JabbRClient Client { get { return _client; } }
+
+		public async Task JoinRoom(Room room)
+		{
+			try { await Client.JoinRoom(room.Name); }
+			catch (Exception ex) { Mvx.Error (ex.ToString()); }
+
+			if (!RoomsIn.Exists(r => r.Name.Equals(room.Name, StringComparison.InvariantCultureIgnoreCase)))
+				RoomsIn.Add (room);
+		}
+
+		public async Task LeaveRoom(string name)
+		{
+			try { await Client.LeaveRoom (name); }
+			catch (Exception ex) { Mvx.Error (ex.ToString()); }
+
+			RoomsIn.RemoveAll (r => r.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
+		}
 
 		async void Connect()
 		{
@@ -154,8 +172,8 @@ namespace JabbrMobile.Common.Services
 
 		void HandleUsersInactive (IEnumerable<User> users)
 		{
-			Log ("UsersInactive> " + string.Join (", ", (from u in users select u.Name)));
-			_messenger.Publish (new JabbrUsersInactiveMessage (this, this, users.ToList()));
+			//Log ("UsersInactive> " + string.Join (", ", (from u in users select u.Name)));
+			//_messenger.Publish (new JabbrUsersInactiveMessage (this, this, users.ToList()));
 		}
 
 		void HandleUsernameChanged (string oldUsername, JabbR.Client.Models.User user, string roomName)
@@ -178,8 +196,8 @@ namespace JabbrMobile.Common.Services
 
 		void HandleUserActivityChanged (JabbR.Client.Models.User user)
 		{
-			Log ("UserActivityChanged> " + user.Name);
-			_messenger.Publish(new JabbrUserActivityChangedMessage(this, this, user));
+			//Log ("UserActivityChanged> " + user.Name);
+			//_messenger.Publish(new JabbrUserActivityChangedMessage(this, this, user));
 		}
 
 		void HandleTopicChanged (JabbR.Client.Models.Room room)

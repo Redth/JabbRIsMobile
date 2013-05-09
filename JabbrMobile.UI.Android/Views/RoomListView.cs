@@ -14,7 +14,7 @@ using LegacyBar.Library.BarActions;
 namespace JabbrMobile.Android.Views
 {
 	[Activity (Label = "Account Details", Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
-	public class RoomListView : BaseView
+	public class RoomListView : BaseFragmentView
 	{
 		protected override void OnViewModelSet ()
 		{

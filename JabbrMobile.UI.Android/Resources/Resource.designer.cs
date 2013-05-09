@@ -789,16 +789,25 @@ namespace JabbrMobile.Android
 			public const int icon_add = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int icon_save = 2130837576;
+			public const int icon_exit = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int icon_settings = 2130837577;
+			public const int icon_save = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int jabbr_home_icon = 2130837578;
+			public const int icon_settings = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int SlidingMenuShadow = 2130837579;
+			public const int icon_users_grey = 2130837579;
+			
+			// aapt resource value: 0x7f02004c
+			public const int jabbr_home_icon = 2130837580;
+			
+			// aapt resource value: 0x7f02004d
+			public const int SlidingMenuShadow = 2130837581;
+			
+			// aapt resource value: 0x7f02004e
+			public const int SlidingMenuShadowRight = 2130837582;
 			
 			static Drawable()
 			{
@@ -852,20 +861,23 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040013
 			public const int actionbar_title_layout = 2130968595;
 			
+			// aapt resource value: 0x7f04002d
+			public const int checkBox1 = 2130968621;
+			
 			// aapt resource value: 0x7f040019
 			public const int content_frame = 2130968601;
 			
 			// aapt resource value: 0x7f040000
 			public const int custom = 2130968576;
 			
-			// aapt resource value: 0x7f040026
-			public const int editText1 = 2130968614;
-			
 			// aapt resource value: 0x7f040028
-			public const int editText2 = 2130968616;
+			public const int editText1 = 2130968616;
 			
 			// aapt resource value: 0x7f04002a
-			public const int editText3 = 2130968618;
+			public const int editText2 = 2130968618;
+			
+			// aapt resource value: 0x7f04002c
+			public const int editText3 = 2130968620;
 			
 			// aapt resource value: 0x7f040009
 			public const int fullscreen = 2130968585;
@@ -894,23 +906,23 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040008
 			public const int margin = 2130968584;
 			
-			// aapt resource value: 0x7f04002b
-			public const int menu_add = 2130968619;
-			
-			// aapt resource value: 0x7f04002d
-			public const int menu_delete = 2130968621;
-			
-			// aapt resource value: 0x7f040021
-			public const int menu_frame = 2130968609;
-			
 			// aapt resource value: 0x7f04002e
-			public const int menu_leave_room = 2130968622;
+			public const int menu_add = 2130968622;
 			
-			// aapt resource value: 0x7f04002c
-			public const int menu_save = 2130968620;
+			// aapt resource value: 0x7f040030
+			public const int menu_delete = 2130968624;
 			
-			// aapt resource value: 0x7f040024
-			public const int mvxListViewAccounts = 2130968612;
+			// aapt resource value: 0x7f040022
+			public const int menu_frame = 2130968610;
+			
+			// aapt resource value: 0x7f040031
+			public const int menu_leave_room = 2130968625;
+			
+			// aapt resource value: 0x7f04002f
+			public const int menu_save = 2130968623;
+			
+			// aapt resource value: 0x7f040026
+			public const int mvxListViewAccounts = 2130968614;
 			
 			// aapt resource value: 0x7f04001a
 			public const int mvxListViewMessages = 2130968602;
@@ -918,8 +930,11 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f04001c
 			public const int mvxListViewRooms = 2130968604;
 			
-			// aapt resource value: 0x7f040022
-			public const int overflow_spinner = 2130968610;
+			// aapt resource value: 0x7f04001d
+			public const int mvxListViewUsers = 2130968605;
+			
+			// aapt resource value: 0x7f040023
+			public const int overflow_spinner = 2130968611;
 			
 			// aapt resource value: 0x7f040007
 			public const int right = 2130968583;
@@ -930,29 +945,32 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f04000a
 			public const int selected_view = 2130968586;
 			
-			// aapt resource value: 0x7f040023
-			public const int slidingmenumain = 2130968611;
-			
-			// aapt resource value: 0x7f040025
-			public const int textView1 = 2130968613;
+			// aapt resource value: 0x7f040024
+			public const int slidingmenumain = 2130968612;
 			
 			// aapt resource value: 0x7f040027
-			public const int textView2 = 2130968615;
+			public const int textView1 = 2130968615;
 			
 			// aapt resource value: 0x7f040029
-			public const int textView3 = 2130968617;
+			public const int textView2 = 2130968617;
+			
+			// aapt resource value: 0x7f04002b
+			public const int textView3 = 2130968619;
+			
+			// aapt resource value: 0x7f040021
+			public const int textViewMessageBody = 2130968609;
 			
 			// aapt resource value: 0x7f040020
-			public const int textViewMessageBody = 2130968608;
-			
-			// aapt resource value: 0x7f04001f
-			public const int textViewMessageUser = 2130968607;
-			
-			// aapt resource value: 0x7f04001d
-			public const int textViewRoomName = 2130968605;
+			public const int textViewMessageUser = 2130968608;
 			
 			// aapt resource value: 0x7f04001e
-			public const int textViewServer = 2130968606;
+			public const int textViewRoomName = 2130968606;
+			
+			// aapt resource value: 0x7f04001f
+			public const int textViewServer = 2130968607;
+			
+			// aapt resource value: 0x7f040025
+			public const int userlist_frame = 2130968613;
 			
 			static Id()
 			{
@@ -986,37 +1004,46 @@ namespace JabbrMobile.Android
 			public const int Fragment_Menu = 2130903045;
 			
 			// aapt resource value: 0x7f030006
-			public const int ListItem_Account = 2130903046;
+			public const int Fragment_UserList = 2130903046;
 			
 			// aapt resource value: 0x7f030007
-			public const int ListItem_Chat = 2130903047;
+			public const int ListItem_Account = 2130903047;
 			
 			// aapt resource value: 0x7f030008
-			public const int ListItem_Menu_Room = 2130903048;
+			public const int ListItem_Chat = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int ListItem_Room = 2130903049;
+			public const int ListItem_Menu_Room = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int Menu_Frame = 2130903050;
+			public const int ListItem_Menu_User = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int overflowactionbar_item = 2130903051;
+			public const int ListItem_Room = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int slidingmenumain = 2130903052;
+			public const int Menu_Frame = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int spinneritem = 2130903053;
+			public const int overflowactionbar_item = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int View_Accounts = 2130903054;
+			public const int slidingmenumain = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int View_EditAccount = 2130903055;
+			public const int spinneritem = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int View_RoomList = 2130903056;
+			public const int UserList_Frame = 2130903056;
+			
+			// aapt resource value: 0x7f030011
+			public const int View_Accounts = 2130903057;
+			
+			// aapt resource value: 0x7f030012
+			public const int View_EditAccount = 2130903058;
+			
+			// aapt resource value: 0x7f030013
+			public const int View_RoomList = 2130903059;
 			
 			static Layout()
 			{
@@ -1065,6 +1092,9 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f070006
 			public const int menu_string_down = 2131165190;
 			
+			// aapt resource value: 0x7f07000c
+			public const int menu_string_exit = 2131165196;
+			
 			// aapt resource value: 0x7f070007
 			public const int menu_string_left = 2131165191;
 			
@@ -1073,6 +1103,9 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f070008
 			public const int menu_string_right = 2131165192;
+			
+			// aapt resource value: 0x7f07000b
+			public const int menu_string_save = 2131165195;
 			
 			// aapt resource value: 0x7f070004
 			public const int menu_string_search = 2131165188;

@@ -22,16 +22,16 @@ namespace JabbrMobile.Android.Views
 
 			MenuId = Resource.Menu.AccountsMenu;
 
+
 			/*AddHomeAction (() => {
 				this.Finish();
-			}, Resource.Drawable.jabbr_home_icon); */
-
-			/*var itemActionBarAction = new MenuItemLegacyBarAction(
-				this, Resource.Id.menu_add, Resource.Drawable.icon_add, Resource.String.Hello)
-			{
+			}, Resource.Drawable.jabbr_home_icon, false); 
+			*/
+			/*var itemActionBarAction = new MenuItemLegacyBarAction (
+				this, Resource.Id.menu_add, Resource.Drawable.icon_add, Resource.String.Hello) {
 				ActionType = ActionType.Always
 			};
-			LegacyBar.AddAction(itemActionBarAction);*/
+			LegacyBar.AddAction(itemActionBarAction); */
 		}
 	}
 }

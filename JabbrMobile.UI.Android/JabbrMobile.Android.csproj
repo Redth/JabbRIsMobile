@@ -186,8 +186,10 @@
     <Compile Include="Bootstrap\MessengerPluginBootstrap.cs" />
     <Compile Include="Views\Fragments\ChatFragment.cs" />
     <Compile Include="Views\EditAccountView.cs" />
-    <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\RoomListView.cs" />
+    <Compile Include="Views\BaseFragmentView.cs" />
+    <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\Fragments\UserListFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -275,6 +277,12 @@
     <AndroidResource Include="Resources\drawable\ButtonGlowLight.xml" />
     <AndroidResource Include="Resources\drawable\SlidingMenuShadow.xml" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon_save.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_users_grey.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_exit.png" />
+    <AndroidResource Include="Resources\layout\Fragment_UserList.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Menu_User.axml" />
+    <AndroidResource Include="Resources\layout\UserList_Frame.axml" />
+    <AndroidResource Include="Resources\drawable\SlidingMenuShadowRight.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

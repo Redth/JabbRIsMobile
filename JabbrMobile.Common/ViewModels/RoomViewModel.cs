@@ -20,7 +20,7 @@ namespace JabbrMobile.Common.ViewModels
 
 		public RoomViewModel(JabbrConnection jabbr, Room room) : base()
 		{
-			Jabbr = jabbr;
+			Connection = jabbr;
 			Room = room;
 
 			TypedMessage = string.Empty;
@@ -44,7 +44,7 @@ namespace JabbrMobile.Common.ViewModels
 			LoadRoom ();
 		}
 
-		public JabbrConnection Jabbr { get; private set; }
+		public JabbrConnection Connection { get; private set; }
 		public Room Room { get;set; }
 		public bool IsTyping { get;set; }
 
@@ -52,10 +52,9 @@ namespace JabbrMobile.Common.ViewModels
 
 		public ObservableCollection<MessageViewModel> Messages { get; set; }
 
-		public string ServerDisplayName { 
-			get {
-				return Jabbr.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/');
-			}
+		public string ServerDisplayName 
+		{ 
+			get { return Connection.Account.Username + " @ " + Connection.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/'); }
 		}
 
 		public ICommand TypingActivityCommand
@@ -69,7 +68,7 @@ namespace JabbrMobile.Common.ViewModels
 					IsTyping = true;
 
 					//Tell JabbR we are typing
-					await Jabbr.Client.SetTyping (Room.Name);
+					await Connection.Client.SetTyping (Room.Name);
 
 					RaisePropertyChanged (() => IsTyping);
 
@@ -91,7 +90,7 @@ namespace JabbrMobile.Common.ViewModels
 					Mvx.Trace ("Send Message: " + msgToSend);
 
 					//Send message to jabbr
-					await Jabbr.Client.Send (msgToSend, Room.Name);
+					await Connection.Client.Send (msgToSend, Room.Name);
 
 					IsTyping = false;
 
@@ -103,21 +102,30 @@ namespace JabbrMobile.Common.ViewModels
 
 		public async void LoadRoom()
 		{
-			var room = await Jabbr.Client.GetRoomInfo (this.Room.Name);
-
-			if (room == null)
-				return;
-
-			this.Room = room;
-
-			if (room.RecentMessages != null && room.RecentMessages.Count() > 0)
+			try
 			{
-				lock(Messages)
+				var room = await Connection.Client.GetRoomInfo (this.Room.Name);
+
+				if (room == null)
+					return;
+
+				this.Room = room;
+
+				if (room.RecentMessages != null && room.RecentMessages.Count() > 0)
 				{
-					foreach (var msg in room.RecentMessages.Reverse())
-						Messages.Insert (0, new MessageViewModel(msg));
+					lock(Messages)
+					{
+						foreach (var msg in room.RecentMessages.Reverse())
+							Messages.Insert (0, new MessageViewModel(msg));
+					}
 				}
 			}
+			catch (Exception ex)
+			{
+				Mvx.Error(ex.ToString());
+			}
+
+			RaisePropertyChanged (() => Room);
 		}
 
 		public ICommand LoadMoreHistoryCommand
@@ -139,7 +147,7 @@ namespace JabbrMobile.Common.ViewModels
 						if (lastMsg != null && lastMsg.Message != null && lastMsg.Message.Id != null)
 							fromId = lastMsg.Message.Id;
 
-						var msgs = await Jabbr.Client.GetPreviousMessages(fromId);
+						var msgs = await Connection.Client.GetPreviousMessages(fromId);
 
 						if (msgs == null)
 						{

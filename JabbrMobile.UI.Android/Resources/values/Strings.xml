@@ -9,4 +9,6 @@
   <string name="menu_string_right">right</string>
   <string name="menu_string_refresh">refresh</string>
   <string name="menu_string_sort">Sort</string>
+  <string name="menu_string_save">Save</string>
+  <string name="menu_string_exit">Exit</string>
 </resources>
