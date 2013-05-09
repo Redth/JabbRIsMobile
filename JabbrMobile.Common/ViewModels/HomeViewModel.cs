@@ -19,10 +19,11 @@ namespace JabbrMobile.Common.ViewModels
 	public class HomeViewModel : BaseViewModel
 	{
 		MvxSubscriptionToken _mvxMsgTokenJabbrConnected;
-
+	
 		public HomeViewModel() : base()
 		{
-			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
+			_mvxMsgTokenJabbrConnected = Messenger.SubscribeOnMainThread<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
+					
 
 			Settings.Accounts.Add (new JabbrMobile.Common.Models.Account() {
 				AutoConnect = true,
@@ -30,6 +31,7 @@ namespace JabbrMobile.Common.ViewModels
 				Username = "MoJabbr",
 				Password = "mojabber"
 			});
+
 		}
 
 		public ICommand ShowAccountsCommand
@@ -41,6 +43,12 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			get { return new MvxCommand (() => ShowViewModel<SettingsViewModel>()); }
 		}
+
+		public ICommand ShowRoomListCommand
+		{
+			get { return new MvxCommand (() => ShowViewModel<RoomListViewModel>()); }
+		}
+
 
 		public ICommand SwitchRoomCommand
 		{

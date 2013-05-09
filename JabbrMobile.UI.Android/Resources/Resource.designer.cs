@@ -75,6 +75,7 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Color.Red = JabbrMobile.Android.Resource.Color.Red;
 			LegacyBar.Library.Resource.Color.actionbar_accentcolor_black = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_black;
 			LegacyBar.Library.Resource.Color.actionbar_accentcolor_blue = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_blue;
+			LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkblue;
 			LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkgray;
 			LegacyBar.Library.Resource.Color.actionbar_accentcolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_lightgray;
 			LegacyBar.Library.Resource.Color.actionbar_background_end = JabbrMobile.Android.Resource.Color.actionbar_background_end;
@@ -87,22 +88,26 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Color.actionbar_background_start_alt = JabbrMobile.Android.Resource.Color.actionbar_background_start_alt;
 			LegacyBar.Library.Resource.Color.actionbar_maincolor_black = JabbrMobile.Android.Resource.Color.actionbar_maincolor_black;
 			LegacyBar.Library.Resource.Color.actionbar_maincolor_blue = JabbrMobile.Android.Resource.Color.actionbar_maincolor_blue;
+			LegacyBar.Library.Resource.Color.actionbar_maincolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkblue;
 			LegacyBar.Library.Resource.Color.actionbar_maincolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkgray;
 			LegacyBar.Library.Resource.Color.actionbar_maincolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_maincolor_lightgray;
 			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_black = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_black;
 			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_blue = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_blue;
+			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkblue;
 			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkgray;
 			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_lightgray;
 			LegacyBar.Library.Resource.Color.actionbar_separator = JabbrMobile.Android.Resource.Color.actionbar_separator;
 			LegacyBar.Library.Resource.Color.actionbar_separator_alt = JabbrMobile.Android.Resource.Color.actionbar_separator_alt;
 			LegacyBar.Library.Resource.Color.actionbar_separator_black = JabbrMobile.Android.Resource.Color.actionbar_separator_black;
 			LegacyBar.Library.Resource.Color.actionbar_separator_blue = JabbrMobile.Android.Resource.Color.actionbar_separator_blue;
+			LegacyBar.Library.Resource.Color.actionbar_separator_darkblue = JabbrMobile.Android.Resource.Color.actionbar_separator_darkblue;
 			LegacyBar.Library.Resource.Color.actionbar_separator_darkgray = JabbrMobile.Android.Resource.Color.actionbar_separator_darkgray;
 			LegacyBar.Library.Resource.Color.actionbar_separator_lightgray = JabbrMobile.Android.Resource.Color.actionbar_separator_lightgray;
 			LegacyBar.Library.Resource.Color.actionbar_title = JabbrMobile.Android.Resource.Color.actionbar_title;
 			LegacyBar.Library.Resource.Color.actionbar_title_alt = JabbrMobile.Android.Resource.Color.actionbar_title_alt;
 			LegacyBar.Library.Resource.Color.actionbar_title_black = JabbrMobile.Android.Resource.Color.actionbar_title_black;
 			LegacyBar.Library.Resource.Color.actionbar_title_blue = JabbrMobile.Android.Resource.Color.actionbar_title_blue;
+			LegacyBar.Library.Resource.Color.actionbar_title_darkblue = JabbrMobile.Android.Resource.Color.actionbar_title_darkblue;
 			LegacyBar.Library.Resource.Color.actionbar_title_darkgray = JabbrMobile.Android.Resource.Color.actionbar_title_darkgray;
 			LegacyBar.Library.Resource.Color.actionbar_title_lightgray = JabbrMobile.Android.Resource.Color.actionbar_title_lightgray;
 			LegacyBar.Library.Resource.Color.black = JabbrMobile.Android.Resource.Color.black;
@@ -113,10 +118,12 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Color.bottomactionbar_background_start = JabbrMobile.Android.Resource.Color.bottomactionbar_background_start;
 			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_black = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_black;
 			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_blue = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_blue;
+			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkblue = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkblue;
 			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkgray = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkgray;
 			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_lightgray = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_lightgray;
 			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_black = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_black;
 			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_blue = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_blue;
+			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkblue = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkblue;
 			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkgray = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkgray;
 			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_lightgray = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_lightgray;
 			LegacyBar.Library.Resource.Color.bottomactionbar_separator = JabbrMobile.Android.Resource.Color.bottomactionbar_separator;
@@ -125,6 +132,7 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Color.grey = JabbrMobile.Android.Resource.Color.grey;
 			LegacyBar.Library.Resource.Color.pager_black = JabbrMobile.Android.Resource.Color.pager_black;
 			LegacyBar.Library.Resource.Color.pager_blue = JabbrMobile.Android.Resource.Color.pager_blue;
+			LegacyBar.Library.Resource.Color.pager_darkblue = JabbrMobile.Android.Resource.Color.pager_darkblue;
 			LegacyBar.Library.Resource.Color.pager_darkgray = JabbrMobile.Android.Resource.Color.pager_darkgray;
 			LegacyBar.Library.Resource.Color.pager_lightgray = JabbrMobile.Android.Resource.Color.pager_lightgray;
 			LegacyBar.Library.Resource.Color.red = JabbrMobile.Android.Resource.Color.red;
@@ -143,12 +151,14 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Drawable.actionbar_background_alt = JabbrMobile.Android.Resource.Drawable.actionbar_background_alt;
 			LegacyBar.Library.Resource.Drawable.actionbar_background_black = JabbrMobile.Android.Resource.Drawable.actionbar_background_black;
 			LegacyBar.Library.Resource.Drawable.actionbar_background_blue = JabbrMobile.Android.Resource.Drawable.actionbar_background_blue;
+			LegacyBar.Library.Resource.Drawable.actionbar_background_darkblue = JabbrMobile.Android.Resource.Drawable.actionbar_background_darkblue;
 			LegacyBar.Library.Resource.Drawable.actionbar_background_darkgray = JabbrMobile.Android.Resource.Drawable.actionbar_background_darkgray;
 			LegacyBar.Library.Resource.Drawable.actionbar_background_lightgray = JabbrMobile.Android.Resource.Drawable.actionbar_background_lightgray;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn = JabbrMobile.Android.Resource.Drawable.actionbar_btn;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_alt = JabbrMobile.Android.Resource.Drawable.actionbar_btn_alt;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_black = JabbrMobile.Android.Resource.Drawable.actionbar_btn_black;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_blue = JabbrMobile.Android.Resource.Drawable.actionbar_btn_blue;
+			LegacyBar.Library.Resource.Drawable.actionbar_btn_darkblue = JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkblue;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_darkgray = JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkgray;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_lightgray = JabbrMobile.Android.Resource.Drawable.actionbar_btn_lightgray;
 			LegacyBar.Library.Resource.Drawable.actionbar_btn_normal = JabbrMobile.Android.Resource.Drawable.actionbar_btn_normal;
@@ -158,11 +168,13 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_background = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_black = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_black;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_blue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_blue;
+			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkblue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkblue;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkgray;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_lightgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_lightgray;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_black = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_black;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_blue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_blue;
+			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkblue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkblue;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkgray;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_lightgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_lightgray;
 			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_normal = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_normal;
@@ -193,6 +205,7 @@ namespace JabbrMobile.Android
 			LegacyBar.Library.Resource.Id.custom = JabbrMobile.Android.Resource.Id.custom;
 			LegacyBar.Library.Resource.Id.holo_black = JabbrMobile.Android.Resource.Id.holo_black;
 			LegacyBar.Library.Resource.Id.holo_blue = JabbrMobile.Android.Resource.Id.holo_blue;
+			LegacyBar.Library.Resource.Id.holo_darkblue = JabbrMobile.Android.Resource.Id.holo_darkblue;
 			LegacyBar.Library.Resource.Id.holo_gray = JabbrMobile.Android.Resource.Id.holo_gray;
 			LegacyBar.Library.Resource.Id.holo_light = JabbrMobile.Android.Resource.Id.holo_light;
 			LegacyBar.Library.Resource.Id.overflow_spinner = JabbrMobile.Android.Resource.Id.overflow_spinner;
@@ -314,14 +327,17 @@ namespace JabbrMobile.Android
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f050039
-			public const int Red = 2131034169;
+			// aapt resource value: 0x7f050041
+			public const int Red = 2131034177;
 			
 			// aapt resource value: 0x7f050023
 			public const int actionbar_accentcolor_black = 2131034147;
 			
 			// aapt resource value: 0x7f05002b
 			public const int actionbar_accentcolor_blue = 2131034155;
+			
+			// aapt resource value: 0x7f050033
+			public const int actionbar_accentcolor_darkblue = 2131034163;
 			
 			// aapt resource value: 0x7f05001b
 			public const int actionbar_accentcolor_darkgray = 2131034139;
@@ -359,6 +375,9 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05002a
 			public const int actionbar_maincolor_blue = 2131034154;
 			
+			// aapt resource value: 0x7f050032
+			public const int actionbar_maincolor_darkblue = 2131034162;
+			
 			// aapt resource value: 0x7f05001a
 			public const int actionbar_maincolor_darkgray = 2131034138;
 			
@@ -370,6 +389,9 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f05002c
 			public const int actionbar_pressedcolor_blue = 2131034156;
+			
+			// aapt resource value: 0x7f050034
+			public const int actionbar_pressedcolor_darkblue = 2131034164;
 			
 			// aapt resource value: 0x7f05001c
 			public const int actionbar_pressedcolor_darkgray = 2131034140;
@@ -389,6 +411,9 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05002e
 			public const int actionbar_separator_blue = 2131034158;
 			
+			// aapt resource value: 0x7f050036
+			public const int actionbar_separator_darkblue = 2131034166;
+			
 			// aapt resource value: 0x7f05001e
 			public const int actionbar_separator_darkgray = 2131034142;
 			
@@ -407,17 +432,20 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05002d
 			public const int actionbar_title_blue = 2131034157;
 			
+			// aapt resource value: 0x7f050035
+			public const int actionbar_title_darkblue = 2131034165;
+			
 			// aapt resource value: 0x7f05001d
 			public const int actionbar_title_darkgray = 2131034141;
 			
 			// aapt resource value: 0x7f050015
 			public const int actionbar_title_lightgray = 2131034133;
 			
-			// aapt resource value: 0x7f050033
-			public const int black = 2131034163;
+			// aapt resource value: 0x7f05003b
+			public const int black = 2131034171;
 			
-			// aapt resource value: 0x7f050036
-			public const int blue = 2131034166;
+			// aapt resource value: 0x7f05003e
+			public const int blue = 2131034174;
 			
 			// aapt resource value: 0x7f05000f
 			public const int bottomactionbar_background_end = 2131034127;
@@ -437,6 +465,9 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05002f
 			public const int bottomactionbar_maincolor_blue = 2131034159;
 			
+			// aapt resource value: 0x7f050037
+			public const int bottomactionbar_maincolor_darkblue = 2131034167;
+			
 			// aapt resource value: 0x7f05001f
 			public const int bottomactionbar_maincolor_darkgray = 2131034143;
 			
@@ -448,6 +479,9 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f050030
 			public const int bottomactionbar_pressedcolor_blue = 2131034160;
+			
+			// aapt resource value: 0x7f050038
+			public const int bottomactionbar_pressedcolor_darkblue = 2131034168;
 			
 			// aapt resource value: 0x7f050020
 			public const int bottomactionbar_pressedcolor_darkgray = 2131034144;
@@ -461,11 +495,11 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05000d
 			public const int bottomactionbar_title = 2131034125;
 			
-			// aapt resource value: 0x7f050034
-			public const int green = 2131034164;
+			// aapt resource value: 0x7f05003c
+			public const int green = 2131034172;
 			
-			// aapt resource value: 0x7f050037
-			public const int grey = 2131034167;
+			// aapt resource value: 0x7f05003f
+			public const int grey = 2131034175;
 			
 			// aapt resource value: 0x7f050029
 			public const int pager_black = 2131034153;
@@ -473,20 +507,23 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050031
 			public const int pager_blue = 2131034161;
 			
+			// aapt resource value: 0x7f050039
+			public const int pager_darkblue = 2131034169;
+			
 			// aapt resource value: 0x7f050021
 			public const int pager_darkgray = 2131034145;
 			
 			// aapt resource value: 0x7f050019
 			public const int pager_lightgray = 2131034137;
 			
-			// aapt resource value: 0x7f050035
-			public const int red = 2131034165;
+			// aapt resource value: 0x7f05003d
+			public const int red = 2131034173;
 			
-			// aapt resource value: 0x7f050032
-			public const int white = 2131034162;
+			// aapt resource value: 0x7f05003a
+			public const int white = 2131034170;
 			
-			// aapt resource value: 0x7f050038
-			public const int yellow = 2131034168;
+			// aapt resource value: 0x7f050040
+			public const int yellow = 2131034176;
 			
 			static Color()
 			{
@@ -554,181 +591,214 @@ namespace JabbrMobile.Android
 			public const int actionbar_background_blue = 2130837509;
 			
 			// aapt resource value: 0x7f020006
-			public const int actionbar_background_darkgray = 2130837510;
+			public const int actionbar_background_darkblue = 2130837510;
 			
 			// aapt resource value: 0x7f020007
-			public const int actionbar_background_lightgray = 2130837511;
+			public const int actionbar_background_darkgray = 2130837511;
 			
 			// aapt resource value: 0x7f020008
-			public const int actionbar_btn = 2130837512;
+			public const int actionbar_background_lightgray = 2130837512;
 			
 			// aapt resource value: 0x7f020009
-			public const int actionbar_btn_alt = 2130837513;
+			public const int actionbar_btn = 2130837513;
 			
 			// aapt resource value: 0x7f02000a
-			public const int actionbar_btn_black = 2130837514;
+			public const int actionbar_btn_alt = 2130837514;
 			
 			// aapt resource value: 0x7f02000b
-			public const int actionbar_btn_blue = 2130837515;
+			public const int actionbar_btn_black = 2130837515;
 			
 			// aapt resource value: 0x7f02000c
-			public const int actionbar_btn_darkgray = 2130837516;
+			public const int actionbar_btn_blue = 2130837516;
 			
 			// aapt resource value: 0x7f02000d
-			public const int actionbar_btn_lightgray = 2130837517;
+			public const int actionbar_btn_darkblue = 2130837517;
 			
 			// aapt resource value: 0x7f02000e
-			public const int actionbar_btn_normal = 2130837518;
+			public const int actionbar_btn_darkgray = 2130837518;
 			
 			// aapt resource value: 0x7f02000f
-			public const int actionbar_btn_normal_alt = 2130837519;
+			public const int actionbar_btn_lightgray = 2130837519;
 			
 			// aapt resource value: 0x7f020010
-			public const int actionbar_btn_pressed = 2130837520;
+			public const int actionbar_btn_normal = 2130837520;
 			
 			// aapt resource value: 0x7f020011
-			public const int actionbar_btn_pressed_alt = 2130837521;
+			public const int actionbar_btn_normal_alt = 2130837521;
 			
 			// aapt resource value: 0x7f020012
-			public const int bottomactionbar_background = 2130837522;
+			public const int actionbar_btn_pressed = 2130837522;
 			
 			// aapt resource value: 0x7f020013
-			public const int bottomactionbar_background_black = 2130837523;
+			public const int actionbar_btn_pressed_alt = 2130837523;
 			
 			// aapt resource value: 0x7f020014
-			public const int bottomactionbar_background_blue = 2130837524;
+			public const int bottomactionbar_background = 2130837524;
 			
 			// aapt resource value: 0x7f020015
-			public const int bottomactionbar_background_darkgray = 2130837525;
+			public const int bottomactionbar_background_black = 2130837525;
 			
 			// aapt resource value: 0x7f020016
-			public const int bottomactionbar_background_lightgray = 2130837526;
+			public const int bottomactionbar_background_blue = 2130837526;
 			
 			// aapt resource value: 0x7f020017
-			public const int bottomactionbar_btn = 2130837527;
+			public const int bottomactionbar_background_darkblue = 2130837527;
 			
 			// aapt resource value: 0x7f020018
-			public const int bottomactionbar_btn_black = 2130837528;
+			public const int bottomactionbar_background_darkgray = 2130837528;
 			
 			// aapt resource value: 0x7f020019
-			public const int bottomactionbar_btn_blue = 2130837529;
+			public const int bottomactionbar_background_lightgray = 2130837529;
 			
 			// aapt resource value: 0x7f02001a
-			public const int bottomactionbar_btn_darkgray = 2130837530;
+			public const int bottomactionbar_btn = 2130837530;
 			
 			// aapt resource value: 0x7f02001b
-			public const int bottomactionbar_btn_lightgray = 2130837531;
+			public const int bottomactionbar_btn_black = 2130837531;
 			
 			// aapt resource value: 0x7f02001c
-			public const int bottomactionbar_btn_normal = 2130837532;
+			public const int bottomactionbar_btn_blue = 2130837532;
 			
 			// aapt resource value: 0x7f02001d
-			public const int bottomactionbar_btn_pressed = 2130837533;
+			public const int bottomactionbar_btn_darkblue = 2130837533;
 			
 			// aapt resource value: 0x7f02001e
-			public const int dropdown_btn_holo_dark = 2130837534;
+			public const int bottomactionbar_btn_darkgray = 2130837534;
 			
 			// aapt resource value: 0x7f02001f
-			public const int dropdown_btn_holo_light = 2130837535;
+			public const int bottomactionbar_btn_lightgray = 2130837535;
 			
 			// aapt resource value: 0x7f020020
-			public const int dropdown_disabled_holo_dark = 2130837536;
+			public const int bottomactionbar_btn_normal = 2130837536;
 			
 			// aapt resource value: 0x7f020021
-			public const int dropdown_disabled_holo_light = 2130837537;
+			public const int bottomactionbar_btn_pressed = 2130837537;
 			
 			// aapt resource value: 0x7f020022
-			public const int dropdown_focused_holo_dark = 2130837538;
+			public const int ButtonGlowLight = 2130837538;
 			
 			// aapt resource value: 0x7f020023
-			public const int dropdown_focused_holo_light = 2130837539;
+			public const int dropdown_btn_holo_dark = 2130837539;
 			
 			// aapt resource value: 0x7f020024
-			public const int dropdown_normal_holo_dark = 2130837540;
+			public const int dropdown_btn_holo_light = 2130837540;
 			
 			// aapt resource value: 0x7f020025
-			public const int dropdown_normal_holo_light = 2130837541;
+			public const int dropdown_disabled_holo_dark = 2130837541;
 			
 			// aapt resource value: 0x7f020026
-			public const int dropdown_pressed_holo_dark = 2130837542;
+			public const int dropdown_disabled_holo_light = 2130837542;
 			
 			// aapt resource value: 0x7f020027
-			public const int dropdown_pressed_holo_light = 2130837543;
+			public const int dropdown_focused_holo_dark = 2130837543;
 			
 			// aapt resource value: 0x7f020028
-			public const int ic_action_down = 2130837544;
+			public const int dropdown_focused_holo_light = 2130837544;
 			
 			// aapt resource value: 0x7f020029
-			public const int ic_action_down_dark = 2130837545;
+			public const int dropdown_normal_holo_dark = 2130837545;
 			
 			// aapt resource value: 0x7f02002a
-			public const int ic_action_left = 2130837546;
+			public const int dropdown_normal_holo_light = 2130837546;
 			
 			// aapt resource value: 0x7f02002b
-			public const int ic_action_left_dark = 2130837547;
+			public const int dropdown_pressed_holo_dark = 2130837547;
 			
 			// aapt resource value: 0x7f02002c
-			public const int ic_action_overflow = 2130837548;
+			public const int dropdown_pressed_holo_light = 2130837548;
 			
 			// aapt resource value: 0x7f02002d
-			public const int ic_action_overflow_dark = 2130837549;
+			public const int ic_action_down = 2130837549;
 			
 			// aapt resource value: 0x7f02002e
-			public const int ic_action_refresh = 2130837550;
+			public const int ic_action_down_dark = 2130837550;
 			
 			// aapt resource value: 0x7f02002f
-			public const int ic_action_refresh_dark = 2130837551;
+			public const int ic_action_left = 2130837551;
 			
 			// aapt resource value: 0x7f020030
-			public const int ic_action_right = 2130837552;
+			public const int ic_action_left_dark = 2130837552;
 			
 			// aapt resource value: 0x7f020031
-			public const int ic_action_right_dark = 2130837553;
+			public const int ic_action_overflow = 2130837553;
 			
 			// aapt resource value: 0x7f020032
-			public const int ic_action_search = 2130837554;
+			public const int ic_action_overflow_dark = 2130837554;
 			
 			// aapt resource value: 0x7f020033
-			public const int ic_action_search_dark = 2130837555;
+			public const int ic_action_refresh = 2130837555;
 			
 			// aapt resource value: 0x7f020034
-			public const int ic_action_share = 2130837556;
+			public const int ic_action_refresh_dark = 2130837556;
 			
 			// aapt resource value: 0x7f020035
-			public const int ic_action_share_dark = 2130837557;
+			public const int ic_action_right = 2130837557;
 			
 			// aapt resource value: 0x7f020036
-			public const int ic_action_sort = 2130837558;
+			public const int ic_action_right_dark = 2130837558;
 			
 			// aapt resource value: 0x7f020037
-			public const int ic_action_sort_dark = 2130837559;
+			public const int ic_action_search = 2130837559;
 			
 			// aapt resource value: 0x7f020038
-			public const int ic_action_up = 2130837560;
+			public const int ic_action_search_dark = 2130837560;
 			
 			// aapt resource value: 0x7f020039
-			public const int ic_action_up_dark = 2130837561;
+			public const int ic_action_share = 2130837561;
 			
 			// aapt resource value: 0x7f02003a
-			public const int ic_menu_down = 2130837562;
+			public const int ic_action_share_dark = 2130837562;
 			
 			// aapt resource value: 0x7f02003b
-			public const int ic_menu_left = 2130837563;
+			public const int ic_action_sort = 2130837563;
 			
 			// aapt resource value: 0x7f02003c
-			public const int ic_menu_refresh = 2130837564;
+			public const int ic_action_sort_dark = 2130837564;
 			
 			// aapt resource value: 0x7f02003d
-			public const int ic_menu_right = 2130837565;
+			public const int ic_action_up = 2130837565;
 			
 			// aapt resource value: 0x7f02003e
-			public const int ic_menu_search = 2130837566;
+			public const int ic_action_up_dark = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int ic_menu_up = 2130837567;
+			public const int ic_menu_down = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int Icon = 2130837568;
+			public const int ic_menu_left = 2130837568;
+			
+			// aapt resource value: 0x7f020041
+			public const int ic_menu_refresh = 2130837569;
+			
+			// aapt resource value: 0x7f020042
+			public const int ic_menu_right = 2130837570;
+			
+			// aapt resource value: 0x7f020043
+			public const int ic_menu_search = 2130837571;
+			
+			// aapt resource value: 0x7f020044
+			public const int ic_menu_up = 2130837572;
+			
+			// aapt resource value: 0x7f020045
+			public const int Icon = 2130837573;
+			
+			// aapt resource value: 0x7f020046
+			public const int icon_accounts = 2130837574;
+			
+			// aapt resource value: 0x7f020047
+			public const int icon_add = 2130837575;
+			
+			// aapt resource value: 0x7f020048
+			public const int icon_save = 2130837576;
+			
+			// aapt resource value: 0x7f020049
+			public const int icon_settings = 2130837577;
+			
+			// aapt resource value: 0x7f02004a
+			public const int jabbr_home_icon = 2130837578;
+			
+			// aapt resource value: 0x7f02004b
+			public const int SlidingMenuShadow = 2130837579;
 			
 			static Drawable()
 			{
@@ -743,68 +813,62 @@ namespace JabbrMobile.Android
 		public partial class Id
 		{
 			
-			// aapt resource value: 0x7f04000a
-			public const int MvxBindingTagUnique = 2130968586;
-			
-			// aapt resource value: 0x7f040017
-			public const int actionbar = 2130968599;
-			
-			// aapt resource value: 0x7f040011
-			public const int actionbar_actions = 2130968593;
-			
-			// aapt resource value: 0x7f04000c
-			public const int actionbar_home = 2130968588;
-			
-			// aapt resource value: 0x7f04000e
-			public const int actionbar_home_bg = 2130968590;
-			
-			// aapt resource value: 0x7f04000f
-			public const int actionbar_home_btn = 2130968591;
-			
-			// aapt resource value: 0x7f040010
-			public const int actionbar_home_is_back = 2130968592;
-			
-			// aapt resource value: 0x7f04000d
-			public const int actionbar_home_logo = 2130968589;
-			
-			// aapt resource value: 0x7f040016
-			public const int actionbar_item = 2130968598;
-			
-			// aapt resource value: 0x7f040013
-			public const int actionbar_progress = 2130968595;
-			
-			// aapt resource value: 0x7f040015
-			public const int actionbar_spinner = 2130968597;
-			
-			// aapt resource value: 0x7f040014
-			public const int actionbar_title = 2130968596;
-			
-			// aapt resource value: 0x7f040012
-			public const int actionbar_title_layout = 2130968594;
-			
-			// aapt resource value: 0x7f04001c
-			public const int buttonAccounts = 2130968604;
-			
-			// aapt resource value: 0x7f04001d
-			public const int buttonSettings = 2130968605;
+			// aapt resource value: 0x7f04000b
+			public const int MvxBindingTagUnique = 2130968587;
 			
 			// aapt resource value: 0x7f040018
-			public const int content_frame = 2130968600;
+			public const int actionbar = 2130968600;
+			
+			// aapt resource value: 0x7f040012
+			public const int actionbar_actions = 2130968594;
+			
+			// aapt resource value: 0x7f04000d
+			public const int actionbar_home = 2130968589;
+			
+			// aapt resource value: 0x7f04000f
+			public const int actionbar_home_bg = 2130968591;
+			
+			// aapt resource value: 0x7f040010
+			public const int actionbar_home_btn = 2130968592;
+			
+			// aapt resource value: 0x7f040011
+			public const int actionbar_home_is_back = 2130968593;
+			
+			// aapt resource value: 0x7f04000e
+			public const int actionbar_home_logo = 2130968590;
+			
+			// aapt resource value: 0x7f040017
+			public const int actionbar_item = 2130968599;
+			
+			// aapt resource value: 0x7f040014
+			public const int actionbar_progress = 2130968596;
+			
+			// aapt resource value: 0x7f040016
+			public const int actionbar_spinner = 2130968598;
+			
+			// aapt resource value: 0x7f040015
+			public const int actionbar_title = 2130968597;
+			
+			// aapt resource value: 0x7f040013
+			public const int actionbar_title_layout = 2130968595;
+			
+			// aapt resource value: 0x7f040019
+			public const int content_frame = 2130968601;
 			
 			// aapt resource value: 0x7f040000
 			public const int custom = 2130968576;
 			
-			// aapt resource value: 0x7f040027
-			public const int editText1 = 2130968615;
+			// aapt resource value: 0x7f040026
+			public const int editText1 = 2130968614;
 			
-			// aapt resource value: 0x7f040029
-			public const int editText2 = 2130968617;
+			// aapt resource value: 0x7f040028
+			public const int editText2 = 2130968616;
 			
-			// aapt resource value: 0x7f04002b
-			public const int editText3 = 2130968619;
+			// aapt resource value: 0x7f04002a
+			public const int editText3 = 2130968618;
 			
-			// aapt resource value: 0x7f040008
-			public const int fullscreen = 2130968584;
+			// aapt resource value: 0x7f040009
+			public const int fullscreen = 2130968585;
 			
 			// aapt resource value: 0x7f040003
 			public const int holo_black = 2130968579;
@@ -812,80 +876,83 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040004
 			public const int holo_blue = 2130968580;
 			
+			// aapt resource value: 0x7f040005
+			public const int holo_darkblue = 2130968581;
+			
 			// aapt resource value: 0x7f040002
 			public const int holo_gray = 2130968578;
 			
 			// aapt resource value: 0x7f040001
 			public const int holo_light = 2130968577;
 			
-			// aapt resource value: 0x7f040005
-			public const int left = 2130968581;
-			
-			// aapt resource value: 0x7f04001a
-			public const int linearLayout1 = 2130968602;
-			
-			// aapt resource value: 0x7f040007
-			public const int margin = 2130968583;
-			
-			// aapt resource value: 0x7f04002c
-			public const int menu_add = 2130968620;
-			
-			// aapt resource value: 0x7f04002e
-			public const int menu_delete = 2130968622;
-			
-			// aapt resource value: 0x7f040022
-			public const int menu_frame = 2130968610;
-			
-			// aapt resource value: 0x7f04002f
-			public const int menu_leave_room = 2130968623;
-			
-			// aapt resource value: 0x7f04002d
-			public const int menu_save = 2130968621;
-			
-			// aapt resource value: 0x7f040025
-			public const int mvxListViewAccounts = 2130968613;
-			
-			// aapt resource value: 0x7f040019
-			public const int mvxListViewMessages = 2130968601;
+			// aapt resource value: 0x7f040006
+			public const int left = 2130968582;
 			
 			// aapt resource value: 0x7f04001b
-			public const int mvxListViewRooms = 2130968603;
+			public const int linearLayout1 = 2130968603;
 			
-			// aapt resource value: 0x7f040023
-			public const int overflow_spinner = 2130968611;
+			// aapt resource value: 0x7f040008
+			public const int margin = 2130968584;
 			
-			// aapt resource value: 0x7f040006
-			public const int right = 2130968582;
+			// aapt resource value: 0x7f04002b
+			public const int menu_add = 2130968619;
 			
-			// aapt resource value: 0x7f04000b
-			public const int screen = 2130968587;
-			
-			// aapt resource value: 0x7f040009
-			public const int selected_view = 2130968585;
-			
-			// aapt resource value: 0x7f040024
-			public const int slidingmenumain = 2130968612;
-			
-			// aapt resource value: 0x7f040026
-			public const int textView1 = 2130968614;
-			
-			// aapt resource value: 0x7f040028
-			public const int textView2 = 2130968616;
-			
-			// aapt resource value: 0x7f04002a
-			public const int textView3 = 2130968618;
+			// aapt resource value: 0x7f04002d
+			public const int menu_delete = 2130968621;
 			
 			// aapt resource value: 0x7f040021
-			public const int textViewMessageBody = 2130968609;
+			public const int menu_frame = 2130968609;
+			
+			// aapt resource value: 0x7f04002e
+			public const int menu_leave_room = 2130968622;
+			
+			// aapt resource value: 0x7f04002c
+			public const int menu_save = 2130968620;
+			
+			// aapt resource value: 0x7f040024
+			public const int mvxListViewAccounts = 2130968612;
+			
+			// aapt resource value: 0x7f04001a
+			public const int mvxListViewMessages = 2130968602;
+			
+			// aapt resource value: 0x7f04001c
+			public const int mvxListViewRooms = 2130968604;
+			
+			// aapt resource value: 0x7f040022
+			public const int overflow_spinner = 2130968610;
+			
+			// aapt resource value: 0x7f040007
+			public const int right = 2130968583;
+			
+			// aapt resource value: 0x7f04000c
+			public const int screen = 2130968588;
+			
+			// aapt resource value: 0x7f04000a
+			public const int selected_view = 2130968586;
+			
+			// aapt resource value: 0x7f040023
+			public const int slidingmenumain = 2130968611;
+			
+			// aapt resource value: 0x7f040025
+			public const int textView1 = 2130968613;
+			
+			// aapt resource value: 0x7f040027
+			public const int textView2 = 2130968615;
+			
+			// aapt resource value: 0x7f040029
+			public const int textView3 = 2130968617;
 			
 			// aapt resource value: 0x7f040020
-			public const int textViewMessageUser = 2130968608;
-			
-			// aapt resource value: 0x7f04001e
-			public const int textViewRoomName = 2130968606;
+			public const int textViewMessageBody = 2130968608;
 			
 			// aapt resource value: 0x7f04001f
-			public const int textViewServer = 2130968607;
+			public const int textViewMessageUser = 2130968607;
+			
+			// aapt resource value: 0x7f04001d
+			public const int textViewRoomName = 2130968605;
+			
+			// aapt resource value: 0x7f04001e
+			public const int textViewServer = 2130968606;
 			
 			static Id()
 			{
@@ -928,22 +995,28 @@ namespace JabbrMobile.Android
 			public const int ListItem_Menu_Room = 2130903048;
 			
 			// aapt resource value: 0x7f030009
-			public const int Menu_Frame = 2130903049;
+			public const int ListItem_Room = 2130903049;
 			
 			// aapt resource value: 0x7f03000a
-			public const int overflowactionbar_item = 2130903050;
+			public const int Menu_Frame = 2130903050;
 			
 			// aapt resource value: 0x7f03000b
-			public const int slidingmenumain = 2130903051;
+			public const int overflowactionbar_item = 2130903051;
 			
 			// aapt resource value: 0x7f03000c
-			public const int spinneritem = 2130903052;
+			public const int slidingmenumain = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int View_Accounts = 2130903053;
+			public const int spinneritem = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int View_EditAccount = 2130903054;
+			public const int View_Accounts = 2130903054;
+			
+			// aapt resource value: 0x7f03000f
+			public const int View_EditAccount = 2130903055;
+			
+			// aapt resource value: 0x7f030010
+			public const int View_RoomList = 2130903056;
 			
 			static Layout()
 			{

@@ -8,9 +8,7 @@
         android:id="@+id/actionbar"
         style="@style/actionbar"
         ab:title="Account Details"
-        ab:separator="@color/actionbar_separator_lightgray"
-        ab:background="@drawable/actionbar_background_alt"
-        ab:background_item="@drawable/actionbar_btn_alt" />
+        ab:theme="holo_darkblue" />
     <LinearLayout
         android:orientation="vertical"
         android:layout_width="fill_parent"

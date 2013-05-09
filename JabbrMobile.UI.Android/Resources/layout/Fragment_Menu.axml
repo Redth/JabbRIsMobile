@@ -17,18 +17,37 @@
         android:minHeight="25px"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/linearLayout1">
-        <Button
-            android:text="Accounts"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+        android:id="@+id/linearLayout1"
+        android:background="#ff6c6c6c">
+        <ImageView
+            local:MvxBind="Click ShowRoomListCommand;"
+            android:src="@drawable/icon_add"
+            android:clickable="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/ButtonGlowLight"
+            android:layout_margin="8dp" />
+        <ImageView
             local:MvxBind="Click ShowAccountsCommand;"
-            android:id="@+id/buttonAccounts" />
-        <Button
-            android:text="Settings"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:src="@drawable/icon_accounts"
+            android:clickable="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/ButtonGlowLight" />
+        <ImageView
             local:MvxBind="Click ShowSettingsCommand;"
-            android:id="@+id/buttonSettings" />
+            android:src="@drawable/icon_settings"
+            android:clickable="true"
+            android:layout_width="32dp"
+            android:layout_height="32dp"
+            android:layout_margin="8dp"
+            android:adjustViewBounds="true"
+            android:scaleType="centerInside"
+            android:background="@drawable/ButtonGlowLight" />
     </LinearLayout>
 </LinearLayout>

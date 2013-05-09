@@ -7,13 +7,13 @@
     <legacybar.library.bar.LegacyBar
         android:id="@+id/actionbar"
         style="@style/actionbar"
-        ab:title="Accounts"
+        ab:title="Rooms"
         ab:theme="holo_darkblue" />
     <Mvx.MvxListView
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/mvxListViewAccounts"
+        android:id="@+id/mvxListViewRooms"
         android:layout_weight="1"
-        ab:MvxItemTemplate="@layout/listitem_account"
-        ab:MvxBind="ItemsSource Accounts; ItemClick EditAccountCommand;" />
+        ab:MvxItemTemplate="@layout/listitem_room"
+        ab:MvxBind="ItemsSource Rooms;" />
 </LinearLayout>

@@ -9,10 +9,11 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Droid.Views;
+using LegacyBar.Library.BarActions;
 
 namespace JabbrMobile.Android.Views
 {
-	[Activity (Label = "Accounts")]			
+	[Activity (Label = "Accounts", Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class AccountsView : BaseView
 	{
 		protected override void OnViewModelSet ()
@@ -20,6 +21,17 @@ namespace JabbrMobile.Android.Views
 			SetContentView (Resource.Layout.View_Accounts);
 
 			MenuId = Resource.Menu.AccountsMenu;
+
+			/*AddHomeAction (() => {
+				this.Finish();
+			}, Resource.Drawable.jabbr_home_icon); */
+
+			/*var itemActionBarAction = new MenuItemLegacyBarAction(
+				this, Resource.Id.menu_add, Resource.Drawable.icon_add, Resource.String.Hello)
+			{
+				ActionType = ActionType.Always
+			};
+			LegacyBar.AddAction(itemActionBarAction);*/
 		}
 	}
 }

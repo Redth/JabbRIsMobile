@@ -16,7 +16,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>JabbRIsMobile.UI.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -187,6 +187,7 @@
     <Compile Include="Views\Fragments\ChatFragment.cs" />
     <Compile Include="Views\EditAccountView.cs" />
     <Compile Include="Views\BaseView.cs" />
+    <Compile Include="Views\RoomListView.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -265,6 +266,15 @@
     <AndroidResource Include="Resources\Menu\EditAccountMenu.xml" />
     <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
     <AndroidResource Include="Resources\Menu\AccountsMenu.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\jabbr_home_icon" />
+    <AndroidResource Include="Resources\layout\View_RoomList.axml" />
+    <AndroidResource Include="Resources\layout\ListItem_Room.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_accounts.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_add.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_settings.png" />
+    <AndroidResource Include="Resources\drawable\ButtonGlowLight.xml" />
+    <AndroidResource Include="Resources\drawable\SlidingMenuShadow.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_save.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

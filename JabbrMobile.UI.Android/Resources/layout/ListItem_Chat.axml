@@ -23,7 +23,7 @@
             android:layout_height="fill_parent"
             android:textSize="14sp"
             android:textStyle="bold"
-            android:textColor="#ffffffff"
+            android:textColor="#ff000000"
             android:layout_marginRight="6dp" />
         <TextView
             android:text="This is a really long chat line of string to show how it wraps and handles multi lines"
@@ -31,6 +31,9 @@
             android:id="@+id/textViewMessageBody"
             android:layout_width="wrap_content"
             android:layout_height="fill_parent"
+            android:linksClickable="true"
+            android:autoLink="web"
+            android:clickable="true"
             android:textSize="14sp" />
     </LinearLayout>
 </LinearLayout>

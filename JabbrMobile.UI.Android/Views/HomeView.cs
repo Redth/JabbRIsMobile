@@ -19,7 +19,7 @@ using LegacyBar.Library.Bar;
 
 namespace JabbrMobile.Android.Views
 {
-	[Activity (Label = "JabbR", MainLauncher=true)] //, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
+	[Activity (Label = "JabbR", MainLauncher=true, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class HomeView : BaseView
 	{
 		SlidingMenu slidingMenu;
@@ -42,7 +42,11 @@ namespace JabbrMobile.Android.Views
 
 			LegacyBar = FindViewById<LegacyBar.Library.Bar.LegacyBar>(Resource.Id.actionbar);
 
-			//LegacyBar.SetHomeLogo(Resource.Drawable.ic_menu_left);
+			//LegacyBar.SetHomeLogo(Resource.Drawable.jabbr_home_icon);
+			AddHomeAction (() => {
+				slidingMenu.Toggle();
+			}, Resource.Drawable.jabbr_home_icon);
+
 			LegacyBar.Click += (sender, e) => {
 				slidingMenu.Toggle();
 			};
@@ -55,12 +59,13 @@ namespace JabbrMobile.Android.Views
 
 			slidingMenu = new SlidingMenu (this) {
 				TouchModeAbove = TouchMode.Fullscreen,
-				BehindOffset = 80
+				BehindOffset = 80,
+				ShadowWidth = 20,
+				ShadowDrawableRes = Resource.Drawable.SlidingMenuShadow
 			};
 		
 			slidingMenu.AttachToActivity (this, SlideStyle.Content);
 			slidingMenu.SetMenu (Resource.Layout.Menu_Frame);
-
 
 
 			menuFragment = new MenuFragment ();
@@ -87,6 +92,8 @@ namespace JabbrMobile.Android.Views
 						.Replace(Resource.Id.content_frame, chatFragment).Commit();
 
 					slidingMenu.Toggle();
+
+					this.RunOnUiThread(() => LegacyBar.Title = homeViewModel.CurrentRoom.Room.Name);
 
 					//TODO: switch users list fragment
 				}

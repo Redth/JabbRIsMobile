@@ -17,12 +17,14 @@ namespace JabbrMobile.Common.Services
 		MvxSubscriptionToken mvxSubAccountMessages;
 
 		ISettingsService Settings { get;set; }
+		IMvxMessenger Messenger { get;set; }
 
 		public JabbrService()
 		{
 			Connections = new ObservableCollection<JabbrConnection> ();
 
 			Settings = Mvx.Resolve<ISettingsService> ();
+			Messenger = Mvx.Resolve<IMvxMessenger> ();
 
 			Settings.Accounts.CollectionChanged += (sender, e) => {
 
@@ -45,6 +47,8 @@ namespace JabbrMobile.Common.Services
 							AddClient(a);
 					}
 				}
+
+				Messenger.Publish<AccountsChangedMessage>(new AccountsChangedMessage(this));
 			};
 		}
 

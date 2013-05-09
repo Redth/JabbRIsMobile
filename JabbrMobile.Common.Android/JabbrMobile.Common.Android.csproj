@@ -211,6 +211,12 @@
     <Compile Include="..\JabbrMobile.Common\ViewModels\EditAccountViewModel.cs">
       <Link>ViewModels\EditAccountViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\RoomListViewModel.cs">
+      <Link>ViewModels\RoomListViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\RoomListItemViewModel.cs">
+      <Link>ViewModels\RoomListItemViewModel.cs</Link>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

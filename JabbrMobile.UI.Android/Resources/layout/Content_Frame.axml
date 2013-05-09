@@ -7,10 +7,8 @@
     <legacybar.library.bar.LegacyBar
         android:id="@+id/actionbar"
         style="@style/actionbar"
-        ab:title="Awesome!"
-        ab:separator="@color/actionbar_separator_alt"
-        ab:background="@drawable/actionbar_background_alt"
-        ab:background_item="@drawable/actionbar_btn_alt" />
+        ab:title="JabbR"
+        ab:theme="holo_darkblue" />
     <FrameLayout
         android:id="@+id/content_frame"
         android:layout_width="match_parent"
