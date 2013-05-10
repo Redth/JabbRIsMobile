@@ -61,6 +61,9 @@ namespace JabbrMobile.Common.ViewModels
 
 					await room.Connection.LeaveRoom(room.Room.Name);
 
+					CurrentRoom = null;
+					RaisePropertyChanged (() => CurrentRoom);
+
 					RaisePropertyChanged(() => Rooms);
 				});
 			}

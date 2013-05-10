@@ -34,6 +34,23 @@ namespace JabbrMobile.Common.ViewModels
 		public bool NewAccount { get;set; }
 		public Account Account { get; set; }
 
+		public ICommand SaveCommand
+		{
+			get
+			{
+				return new MvxCommand(() => {
+
+					if (!NewAccount)
+						Settings.Accounts.Remove(Account);
+
+					Settings.Accounts.Add(Account);
+					Settings.Save();
+
+					this.Close(this);
+				});
+			}
+		}
+
 	}
 
 }

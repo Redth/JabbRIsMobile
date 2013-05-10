@@ -9,6 +9,7 @@ using JabbrMobile.Common.Messages;
 using System.Threading.Tasks;
 using Cirrious.CrossCore;
 using System.Windows.Input;
+using System.Collections.Generic;
 
 namespace JabbrMobile.Common.ViewModels
 {
@@ -28,6 +29,9 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokMessageReceived = Messenger.SubscribeOnMainThread<JabbrMessageReceivedMessage> (msg => {
 
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+					return;
+
 				lock (Messages)
 					Messages.Add(new MessageViewModel(msg.Message));
 
@@ -35,10 +39,35 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokUserJoin = Messenger.Subscribe<JabbrUserJoinedMessage> (msg => {
 
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+					return;
+
+				var uvm = new UserViewModel(msg.User);
+
+				lock(Users)
+				{
+					if (!Users.Contains(uvm))
+						_users.Add(uvm);
+				}
+
+				RaisePropertyChanged(() => Users);
+
 			});
 
 			subTokUserLeft = Messenger.Subscribe<JabbrUserLeftMessage> (msg => {
 
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+					return;
+
+				var uvm = new UserViewModel(msg.User);
+
+				lock(Users)
+				{
+					if (Users.Contains(uvm))
+						_users.Remove(uvm);
+				}
+
+				RaisePropertyChanged(() => Users);
 			});
 
 			LoadRoom ();
@@ -46,15 +75,43 @@ namespace JabbrMobile.Common.ViewModels
 
 		public JabbrConnection Connection { get; private set; }
 		public Room Room { get;set; }
+
 		public bool IsTyping { get;set; }
 
 		public string TypedMessage { get; set; }
 
 		public ObservableCollection<MessageViewModel> Messages { get; set; }
 
+		List<UserViewModel> _users = new List<UserViewModel>();
+		public IEnumerable<UserViewModel> Users 
+		{ 
+			get
+			{
+				var o = from u in _users
+						where u.User.Status != UserStatus.Offline
+						orderby u.User.IsAdmin, u.User.Status, u.User.Name
+						select u;
+
+				return o;
+			}
+		}
+
 		public string ServerDisplayName 
 		{ 
 			get { return Connection.Account.Username + " @ " + Connection.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/'); }
+		}
+
+		public ICommand SelectUserCommand
+		{
+			get
+			{
+				return new MvxCommand<UserViewModel> (user => {
+
+					TypedMessage += "@" + user.User.Name;
+					RaisePropertyChanged(() => TypedMessage);
+
+				});
+			}
 		}
 
 		public ICommand TypingActivityCommand
@@ -111,6 +168,9 @@ namespace JabbrMobile.Common.ViewModels
 
 				this.Room = room;
 
+				Mvx.Trace("Users In Room: " + room.Users.Count());
+
+
 				if (room.RecentMessages != null && room.RecentMessages.Count() > 0)
 				{
 					lock(Messages)
@@ -118,6 +178,21 @@ namespace JabbrMobile.Common.ViewModels
 						foreach (var msg in room.RecentMessages.Reverse())
 							Messages.Insert (0, new MessageViewModel(msg));
 					}
+				}
+
+				if (room.Users != null && room.Users.Count() > 0)
+				{
+					lock(Users)
+					{
+						foreach (var u in room.Users)
+						{
+							var uvm = new UserViewModel(u);
+
+							_users.Add(uvm);
+						}
+					}
+
+					RaisePropertyChanged(() => Users);
 				}
 			}
 			catch (Exception ex)

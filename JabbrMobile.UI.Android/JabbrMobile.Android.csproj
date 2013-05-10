@@ -16,7 +16,7 @@
     <MonoAndroidAssetsPrefix>Assets</MonoAndroidAssetsPrefix>
     <AssemblyName>JabbRIsMobile.UI.Android</AssemblyName>
     <AndroidManifest>Properties\AndroidManifest.xml</AndroidManifest>
-    <TargetFrameworkVersion>v2.3</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <AndroidLinkMode>None</AndroidLinkMode>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
@@ -190,6 +190,8 @@
     <Compile Include="Views\BaseFragmentView.cs" />
     <Compile Include="Views\BaseView.cs" />
     <Compile Include="Views\Fragments\UserListFragment.cs" />
+    <Compile Include="Converters\UserStatusDrawableValueConverter.cs" />
+    <Compile Include="Views\Fragments\EmptyFragment.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -268,7 +270,6 @@
     <AndroidResource Include="Resources\Menu\EditAccountMenu.xml" />
     <AndroidResource Include="Resources\Menu\HomeMenu.xml" />
     <AndroidResource Include="Resources\Menu\AccountsMenu.xml" />
-    <AndroidResource Include="Resources\drawable-xhdpi\jabbr_home_icon" />
     <AndroidResource Include="Resources\layout\View_RoomList.axml" />
     <AndroidResource Include="Resources\layout\ListItem_Room.axml" />
     <AndroidResource Include="Resources\drawable-xhdpi\icon_accounts.png" />
@@ -283,6 +284,14 @@
     <AndroidResource Include="Resources\layout\ListItem_Menu_User.axml" />
     <AndroidResource Include="Resources\layout\UserList_Frame.axml" />
     <AndroidResource Include="Resources\drawable\SlidingMenuShadowRight.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_green_circle_small" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_yellow_circle_small.png" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_green_circle_small" />
+    <AndroidResource Include="Resources\drawable-hdpi\icon_yellow_circle_small" />
+    <AndroidResource Include="Resources\drawable-xhdpi\icon_delete.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\jabbr_home_icon.png" />
+    <AndroidResource Include="Resources\layout\Fragment_Empty.axml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\jabbr_bg.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -312,5 +321,6 @@
     <Folder Include="Resources\Values-v11\" />
     <Folder Include="Resources\Values-v14\" />
     <Folder Include="Resources\Menu\" />
+    <Folder Include="Converters\" />
   </ItemGroup>
 </Project>

@@ -21,14 +21,17 @@ using LegacyBar.Library.BarActions;
 
 namespace JabbrMobile.Android.Views
 {
-	[Activity (Label = "JabbR", MainLauncher=true, ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
+	[Activity (Label = "JabbR", MainLauncher=true, ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden|ConfigChanges.ScreenSize, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class HomeView : BaseFragmentView
 	{
 		SlidingMenu slidingMenu;
 		MenuFragment menuFragment;
 		UserListFragment userListFragment;
 		ChatFragment chatFragment;
+		EmptyFragment emptyFragment;
 		HomeViewModel homeViewModel;
+
+		bool showActions = false;
 
 		protected override void OnViewModelSet ()
 		{
@@ -55,13 +58,10 @@ namespace JabbrMobile.Android.Views
 			};
 			LegacyBar.Title = "JabbR";
 
-			var itemActionBarAction = new MenuItemLegacyBarAction(
-				this, Resource.Id.menu_leave_room, Resource.Drawable.icon_exit, Resource.String.menu_string_exit)
-			{
-				ActionType = ActionType.Always,
-			};
 
-			LegacyBar.AddAction(itemActionBarAction);
+
+
+
 
 
 			slidingMenu = new SlidingMenu (this) {
@@ -69,8 +69,8 @@ namespace JabbrMobile.Android.Views
 				TouchModeAbove = TouchMode.Fullscreen,
 				BehindOffset = 80,
 				ShadowWidth = 20,
-				//ShadowDrawableRes = Resource.Drawable.SlidingMenuShadow,
-				//SecondaryShadowDrawableRes = Resource.Drawable.SlidingMenuShadowRight
+				ShadowDrawableRes = Resource.Drawable.SlidingMenuShadow,
+				SecondaryShadowDrawableRes = Resource.Drawable.SlidingMenuShadowRight
 			};
 		
 			slidingMenu.AttachToActivity (this, SlideStyle.Content);
@@ -85,12 +85,12 @@ namespace JabbrMobile.Android.Views
 
 			slidingMenu.SetSecondaryMenu (Resource.Layout.UserList_Frame);
 			//slidingMenu.SecondaryShadowDrawableRes = Resource.Drawable.SlidingMenuShadowRight;
-			userListFragment = new UserListFragment ();
-			userListFragment.ViewModel = homeViewModel.CurrentRoom;
+
+			emptyFragment = new EmptyFragment ();
+			emptyFragment.ViewModel = this.ViewModel;
 
 			SupportFragmentManager.BeginTransaction ()
-				.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
-
+				.Replace (Resource.Id.content_frame, emptyFragment).Commit ();
 
 
 			//TODO: Put some kind of default view in the chat fragment space
@@ -101,7 +101,22 @@ namespace JabbrMobile.Android.Views
 
 				if (e.PropertyName == "CurrentRoom")
 				{
-					Console.WriteLine("Switching Rooms: " + homeViewModel.CurrentRoom.Room.Name);
+					if (homeViewModel.CurrentRoom == null)
+					{
+						SupportFragmentManager.BeginTransaction ()
+							.Replace (Resource.Id.content_frame, emptyFragment).Commit ();
+
+						LegacyBar.Title = "JabbR";
+
+						showActions = false;
+						ToggleActions();
+
+						userListFragment.ViewModel = homeViewModel.CurrentRoom;
+
+						return;
+					}
+
+					showActions = true;
 
 					//switch chat fragment
 					chatFragment = new ChatFragment();
@@ -110,13 +125,46 @@ namespace JabbrMobile.Android.Views
 					SupportFragmentManager.BeginTransaction()
 						.Replace(Resource.Id.content_frame, chatFragment).Commit();
 
+					userListFragment = new UserListFragment();
+					userListFragment.ViewModel = homeViewModel.CurrentRoom;
+
+					SupportFragmentManager.BeginTransaction ()
+						.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
+
+					ToggleActions();
+
 					slidingMenu.Toggle();
 
 					this.RunOnUiThread(() => LegacyBar.Title = homeViewModel.CurrentRoom.Room.Name);
-
-					//TODO: switch users list fragment
 				}
 			};
+		}
+
+		void ToggleActions()
+		{
+			if (!showActions)
+			{
+				LegacyBar.RemoveActionAtMenuId (Resource.Id.menu_leave_room);
+				LegacyBar.RemoveActionAtMenuId (Resource.Id.menu_connection);
+				return;
+			}
+
+			if (LegacyBar.ActionCount <= 1)
+			{
+				var connectionActionBarAction = new MenuItemLegacyBarAction (
+					this, Resource.Id.menu_leave_room, Resource.Drawable.icon_green_circle_small, Resource.String.menu_string_exit) {
+					ActionType = ActionType.Always,
+				};
+
+				LegacyBar.AddAction (connectionActionBarAction);
+
+				var itemActionBarAction = new MenuItemLegacyBarAction (
+					this, Resource.Id.menu_leave_room, Resource.Drawable.icon_exit, Resource.String.menu_string_exit) {
+					ActionType = ActionType.CollapseActionView,
+				};
+
+				LegacyBar.AddAction (itemActionBarAction);
+			}
 		}
 	
 		public override void OnBackPressed ()
@@ -137,16 +185,9 @@ namespace JabbrMobile.Android.Views
 					AlertDialog.Builder d;
 					d = new AlertDialog.Builder (this);
 					d.SetMessage ("Are you sure you want to leave: " + this.homeViewModel.CurrentRoom.Room.Name + "?");
-					d.SetPositiveButton ("Yes", (o, e) => {
-
-						this.homeViewModel.LeaveCurrentRoomCommand.Execute (null);
-					
-					});
-					d.SetNegativeButton ("No", (o, e) => {
-
-					});
-					d.Show ();
-				
+					d.SetPositiveButton ("No", (o, e) => { });
+					d.SetNegativeButton ("Yes", (o, e) => this.homeViewModel.LeaveCurrentRoomCommand.Execute (null));
+					d.Show ();				
 					return true;
 			}
 

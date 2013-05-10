@@ -10,10 +10,11 @@ using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Droid.Views;
 using LegacyBar.Library.BarActions;
+using Android.Content.PM;
 
 namespace JabbrMobile.Android.Views
 {
-	[Activity (Label = "Account Details", Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
+	[Activity (Label = "Account Details", ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden|ConfigChanges.ScreenSize, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class RoomListView : BaseFragmentView
 	{
 		protected override void OnViewModelSet ()

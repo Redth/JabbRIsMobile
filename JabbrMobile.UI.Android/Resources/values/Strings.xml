@@ -11,4 +11,5 @@
   <string name="menu_string_sort">Sort</string>
   <string name="menu_string_save">Save</string>
   <string name="menu_string_exit">Exit</string>
+  <string name="menu_string_delete">Exit</string>
 </resources>

@@ -10,10 +10,11 @@ using Android.Views;
 using Android.Widget;
 using Cirrious.MvvmCross.Droid.Views;
 using LegacyBar.Library.BarActions;
+using Android.Content.PM;
 
 namespace JabbrMobile.Android.Views
 {
-	[Activity (Label = "Accounts", Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
+	[Activity (Label = "Accounts", ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden|ConfigChanges.ScreenSize, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class AccountsView : BaseView
 	{
 		protected override void OnViewModelSet ()
