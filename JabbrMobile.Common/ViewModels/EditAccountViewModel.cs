@@ -20,10 +20,13 @@ namespace JabbrMobile.Common.ViewModels
 
 		protected override void InitFromBundle (IMvxBundle parameters)
 		{
-			var acctId = parameters.Data ["AccountId"];
+			if (parameters != null && parameters.Data != null && parameters.Data.ContainsKey("AccountId"))
+			{
+				var acctId = parameters.Data ["AccountId"];
 
-			Account = Settings.Accounts.Where (a => a.Id.Equals(acctId)).FirstOrDefault ();
-		
+				Account = Settings.Accounts.Where (a => a.Id.Equals(acctId)).FirstOrDefault ();
+			}
+
 			if (Account == null)
 			{
 				NewAccount = true;
@@ -44,6 +47,22 @@ namespace JabbrMobile.Common.ViewModels
 						Settings.Accounts.Remove(Account);
 
 					Settings.Accounts.Add(Account);
+					Settings.Save();
+
+					this.Close(this);
+				});
+			}
+		}
+
+		public ICommand DeleteCommand
+		{
+			get
+			{
+				return new MvxCommand(() => {
+
+					if (Settings.Accounts.Contains(Account))
+						Settings.Accounts.Remove(Account);
+
 					Settings.Save();
 
 					this.Close(this);

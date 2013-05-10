@@ -35,6 +35,17 @@ namespace JabbrMobile.Common.ViewModels
 				});
 			}
 		}
+
+		public ICommand AddCommand
+		{
+			get
+			{
+				return new MvxCommand<Account>(account => {
+					var bundle = new MvxBundle();
+					ShowViewModel<EditAccountViewModel>(bundle);
+				});
+			}
+		}
 	}
 
 }

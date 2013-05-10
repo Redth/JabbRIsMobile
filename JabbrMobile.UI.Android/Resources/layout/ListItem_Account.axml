@@ -10,7 +10,7 @@
     android:paddingLeft="10dp">
     <TextView
         android:text="http://jabbr.net"
-        local:MvxBind="Text Url"
+        local:MvxBind="Text ServerDisplayName"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"

@@ -16,7 +16,7 @@ using JabbrMobile.Common.ViewModels;
 namespace JabbrMobile.Android.Views
 {
 	[Activity (Label = "Account Details", ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden|ConfigChanges.ScreenSize, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
-	public class EditAccountView : BaseFragmentView
+	public class EditAccountView : BaseView
 	{
 		EditAccountViewModel viewModel;
 
@@ -47,6 +47,7 @@ namespace JabbrMobile.Android.Views
 			};
 			LegacyBar.AddAction(itemActionBarAction);
 
+			//LegacyBar.Title = viewModel.NewAccount ? "Add Account" : "Edit Account";
 
 		}
 
@@ -58,7 +59,11 @@ namespace JabbrMobile.Android.Views
 					this.viewModel.SaveCommand.Execute (null);
 					return true;
 				case Resource.Id.menu_delete:
-
+					AlertDialog.Builder d;
+					d = new AlertDialog.Builder (this);
+					d.SetMessage ("Are you sure you want to delete this account?");
+					d.SetPositiveButton ("No", (o, e) => { });
+					d.SetNegativeButton ("Yes", (o, e) => this.viewModel.DeleteCommand.Execute (null));
 					return true;
 				
 			}

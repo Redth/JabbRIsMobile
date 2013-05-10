@@ -16,6 +16,11 @@ namespace JabbrMobile.Common.Models
 
 		public bool AutoConnect { get;set; }
 
+		public string ServerDisplayName 
+		{
+			get { return Url.Replace ("http://", "").Replace ("https://", "").Trim('/'); }
+		}
+
 
 		public override bool Equals (object obj)
 		{
