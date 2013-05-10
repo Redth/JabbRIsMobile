@@ -14,9 +14,9 @@
         android:layout_height="wrap_content">
         <ImageView
             local:MvxBind="DrawableId User.Status, Converter=UserStatusDrawableId"
-            android:src="@drawable/circle_green"
-            android:layout_width="24dp"
-            android:layout_height="24dp"
+            android:src="@drawable/icon_green_circle_small"
+            android:layout_width="18dp"
+            android:layout_height="18dp"
             android:layout_gravity="center_vertical" />
         <TextView
             android:text="Username"
