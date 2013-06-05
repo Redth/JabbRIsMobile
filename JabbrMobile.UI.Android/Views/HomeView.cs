@@ -113,23 +113,42 @@ namespace JabbrMobile.Android.Views
 
 						userListFragment.ViewModel = homeViewModel.CurrentRoom;
 
+						SupportFragmentManager.BeginTransaction ()
+							.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
 						return;
 					}
 
 					showActions = true;
 
-					//switch chat fragment
-					chatFragment = new ChatFragment();
-					chatFragment.ViewModel = homeViewModel.CurrentRoom;
 
-					SupportFragmentManager.BeginTransaction()
-						.Replace(Resource.Id.content_frame, chatFragment).Commit();
+					if (chatFragment == null)
+					{
+						chatFragment = new ChatFragment();
+						chatFragment.ViewModel = homeViewModel.CurrentRoom;
 
-					userListFragment = new UserListFragment();
-					userListFragment.ViewModel = homeViewModel.CurrentRoom;
+						SupportFragmentManager.BeginTransaction()
+							.Replace(Resource.Id.content_frame, chatFragment).Commit();
 
-					SupportFragmentManager.BeginTransaction ()
-						.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
+					}
+					else
+					{
+						chatFragment.ViewModel = homeViewModel.CurrentRoom;
+					}
+
+					if (userListFragment == null)
+					{
+						userListFragment = new UserListFragment();
+						userListFragment.ViewModel = homeViewModel.CurrentRoom;
+
+						SupportFragmentManager.BeginTransaction ()
+							.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
+
+					}
+					else
+					{
+						userListFragment.ViewModel = homeViewModel.CurrentRoom;
+					}
+
 
 					ToggleActions();
 

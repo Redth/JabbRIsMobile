@@ -88,6 +88,9 @@ csx
 # Windows Store app package directory
 AppPackages/
 
+#Xamarin
+Components/
+
 # Others
 [Bb]in
 [Oo]bj

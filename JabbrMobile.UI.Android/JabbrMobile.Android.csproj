@@ -303,13 +303,17 @@
       <Project>{67E5F7BC-771D-4113-B3F4-D6DE30D0A983}</Project>
       <Name>JabbrMobile.Common.Android</Name>
     </ProjectReference>
-    <ProjectReference Include="..\JabbR\JabbR.Client.Android\JabbR.Client.Android.csproj">
-      <Project>{ECDB1073-5AA0-45B7-A2E6-4F2B9792FBF5}</Project>
-      <Name>JabbR.Client.Android</Name>
-    </ProjectReference>
     <ProjectReference Include="..\LegacyBar\LegacyBar.Library\LegacyBar.Library.csproj">
       <Project>{371657B5-2C38-4D23-B7C1-6C053EB55FB8}</Project>
       <Name>LegacyBar.Library</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SignalR\src\Microsoft.AspNet.SignalR.Client.Android\Microsoft.AspNet.SignalR.Client.Android.csproj">
+      <Project>{677A3843-1774-48D8-B00C-01F1151AF2BC}</Project>
+      <Name>Microsoft.AspNet.SignalR.Client.Android</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\JabbR\JabbR.Client.Android\JabbR.Client.Android.csproj">
+      <Project>{ECDB1073-5AA0-45B7-A2E6-4F2B9792FBF5}</Project>
+      <Name>JabbR.Client.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

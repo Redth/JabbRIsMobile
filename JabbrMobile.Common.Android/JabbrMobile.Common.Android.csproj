@@ -16,6 +16,7 @@
     <AssemblyName>JabbrMobile.Common.Android</AssemblyName>
     <newfilesearch>OnLoad</newfilesearch>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <BaseDirectory>..\JabbrMobile.Common</BaseDirectory>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,7 +34,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
-    <AndroidLinkMode>SdkOnly</AndroidLinkMode>
     <AndroidUseSharedRuntime>false</AndroidUseSharedRuntime>
   </PropertyGroup>
   <ItemGroup>
@@ -221,9 +221,13 @@
     <Compile Include="..\JabbrMobile.Common\ViewModels\UserViewModel.cs">
       <Link>ViewModels\UserViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\ChatViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
+    <None Include="..\JabbrMobile.Common\Models\RoomInfo.cs">
+      <Visible>False</Visible>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <AndroidResource Include="Resources\values\Strings.xml" />
