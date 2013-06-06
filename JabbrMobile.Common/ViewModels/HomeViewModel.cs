@@ -75,7 +75,12 @@ namespace JabbrMobile.Common.ViewModels
 				return new MvxCommand<RoomViewModel> (room => {
 					Mvx.Trace("Switch Room: " + room.Room.Name);
 
+					var oldRoom = this.CurrentRoom;
+
 					this.CurrentRoom = room;
+				
+					Messenger.Publish(new CurrentRoomChangedMessage(this) { OldRoom = oldRoom, NewRoom = this.CurrentRoom });
+
 					RaisePropertyChanged (() => CurrentRoom);
 				});
 			}

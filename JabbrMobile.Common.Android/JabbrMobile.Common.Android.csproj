@@ -222,6 +222,7 @@
       <Link>ViewModels\UserViewModel.cs</Link>
     </Compile>
     <Compile Include="..\JabbrMobile.Common\ViewModels\ChatViewModel.cs" />
+    <Compile Include="..\JabbrMobile.Common\Messages\CurrentRoomChangedMessage.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -103,6 +103,11 @@ namespace JabbrMobile.Android.Views
 				{
 					if (homeViewModel.CurrentRoom == null)
 					{
+						if (emptyFragment == null)
+							emptyFragment = new EmptyFragment();
+
+						chatFragment = null;
+
 						SupportFragmentManager.BeginTransaction ()
 							.Replace (Resource.Id.content_frame, emptyFragment).Commit ();
 
@@ -111,7 +116,7 @@ namespace JabbrMobile.Android.Views
 						showActions = false;
 						ToggleActions();
 
-						userListFragment.ViewModel = homeViewModel.CurrentRoom;
+						userListFragment.ViewModel = null;
 
 						SupportFragmentManager.BeginTransaction ()
 							.Replace (Resource.Id.userlist_frame, userListFragment).Commit ();
@@ -128,7 +133,6 @@ namespace JabbrMobile.Android.Views
 
 						SupportFragmentManager.BeginTransaction()
 							.Replace(Resource.Id.content_frame, chatFragment).Commit();
-
 					}
 					else
 					{

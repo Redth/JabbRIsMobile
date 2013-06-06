@@ -10,11 +10,14 @@ using System.Collections.ObjectModel;
 using System.Windows.Input;
 using Cirrious.CrossCore;
 using System.Threading.Tasks;
+using JabbrMobile.Common.Messages;
 
 namespace JabbrMobile.Common.ViewModels
 {
 	public class RoomListViewModel : BaseViewModel
 	{
+
+
 		public RoomListViewModel() : base()
 		{
 			Rooms = new ObservableCollection<RoomListItemViewModel> ();

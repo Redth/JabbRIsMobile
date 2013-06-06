@@ -205,7 +205,6 @@
     <AndroidResource Include="Resources\values\MvxBindingAttributes.xml" />
     <AndroidResource Include="Resources\layout\Content_Frame.axml" />
     <AndroidResource Include="Resources\layout\Menu_Frame.axml" />
-    <AndroidResource Include="Resources\layout\ListItem_Menu_Room.axml" />
     <AndroidResource Include="Resources\layout\ListItem_Chat.axml" />
     <AndroidResource Include="Resources\layout\Fragment_Chat.axml" />
     <AndroidResource Include="Resources\drawable-hdpi\ic_action_down.png" />
@@ -292,6 +291,9 @@
     <AndroidResource Include="Resources\drawable-xhdpi\jabbr_home_icon.png" />
     <AndroidResource Include="Resources\layout\Fragment_Empty.axml" />
     <AndroidResource Include="Resources\drawable-xhdpi\jabbr_bg.png" />
+    <AndroidResource Include="Resources\drawable\ListItem_Menu_Room_Selector.xml" />
+    <AndroidResource Include="Resources\values\colors.xml" />
+    <AndroidResource Include="Resources\layout\ListItem_Menu_Room.axml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

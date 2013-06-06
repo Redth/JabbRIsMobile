@@ -24,6 +24,11 @@ namespace JabbrMobile.Android.Views
 
 			var view = this.BindingInflate (Resource.Layout.Fragment_Menu, null);
 
+			var rooms = view.FindViewById<MvxListView> (Resource.Id.mvxListViewRooms);
+
+			rooms.SetSelector (Resource.Drawable.ListItem_Menu_Room_Selector);
+			//rooms.ChoiceMode = ChoiceMode.Single;
+
 			return view;
 		}
 	}

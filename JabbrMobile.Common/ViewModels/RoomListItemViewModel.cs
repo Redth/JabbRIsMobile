@@ -12,7 +12,7 @@ using System.Windows.Input;
 
 namespace JabbrMobile.Common.ViewModels
 {
-	public class RoomListItemViewModel
+	public class RoomListItemViewModel : BaseViewModel
 	{
 		public RoomListItemViewModel(JabbrConnection jabbr, Room room)
 		{
@@ -22,12 +22,26 @@ namespace JabbrMobile.Common.ViewModels
 
 		public JabbrConnection Jabbr { get; private set; }
 		public Room Room { get;set; }
+		public HomeViewModel Home { get;set; }
+
+		public bool IsCurrent 
+		{ 
+			get
+			{ 
+				if (Home == null || Home.CurrentRoom == null)
+					return false;
+
+				return Home.CurrentRoom.Room.Name.Equals (Room.Name, StringComparison.InvariantCultureIgnoreCase);
+			}
+		}
 
 		public string ServerDisplayName { 
 			get {
 				return Jabbr.Account.Username + " @ " + Jabbr.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/');
 			}
 		} 
+
+
 	}
 
 }

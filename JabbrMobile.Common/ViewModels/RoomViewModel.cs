@@ -18,6 +18,7 @@ namespace JabbrMobile.Common.ViewModels
 		MvxSubscriptionToken subTokMessageReceived;
 		MvxSubscriptionToken subTokUserLeft;
 		MvxSubscriptionToken subTokUserJoin;
+		MvxSubscriptionToken subTokCurrentRoomChgd;
 
 		public RoomViewModel(JabbrConnection jabbr, Room room) : base()
 		{
@@ -70,8 +71,16 @@ namespace JabbrMobile.Common.ViewModels
 				RaisePropertyChanged(() => Users);
 			});
 
+			subTokCurrentRoomChgd = Messenger.Subscribe<CurrentRoomChangedMessage>(msg => {
+
+				IsCurrent = msg.NewRoom.Room.Name.Equals(this.Room.Name, StringComparison.InvariantCultureIgnoreCase);
+				RaisePropertyChanged(() => IsCurrent);
+
+			});
+
 			LoadRoom ();
 		}
+
 
 		public JabbrConnection Connection { get; private set; }
 		public Room Room { get;set; }
@@ -79,6 +88,7 @@ namespace JabbrMobile.Common.ViewModels
 		public bool IsTyping { get;set; }
 
 		public string TypedMessage { get; set; }
+		public bool IsCurrent { get; private set; }
 
 		public ObservableCollection<MessageViewModel> Messages { get; set; }
 
