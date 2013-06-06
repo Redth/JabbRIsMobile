@@ -26,13 +26,14 @@ namespace JabbrMobile.Common.ViewModels
 			_mvxMsgTokenJabbrConnected = Messenger.Subscribe<JabbrConnectedMessage> (msg => RaisePropertyChanged (() => Rooms));
 			_mvxMsgTokenJoinedRoom = Messenger.Subscribe<JabbrJoinedRoomMessage> (msg => RaisePropertyChanged(() => Rooms));
 
+			Settings.Load ();
 
-			Settings.Accounts.Add (new JabbrMobile.Common.Models.Account() {
+			/*Settings.Accounts.Add (new JabbrMobile.Common.Models.Account() {
 				AutoConnect = true,
 				Url = "https://jabbr.net/",
 				Username = "MoJabbr",
 				Password = "mojabber"
-			});
+			});*/
 
 		}
 

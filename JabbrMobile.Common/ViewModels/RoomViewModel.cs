@@ -115,12 +115,7 @@ namespace JabbrMobile.Common.ViewModels
 		{
 			get
 			{
-				return new MvxCommand<UserViewModel> (user => {
-
-					TypedMessage += "@" + user.User.Name;
-					RaisePropertyChanged(() => TypedMessage);
-
-				});
+				return new MvxCommand<UserViewModel> (user => Messenger.Publish(new UserSelectedMessage(this, user.User)));
 			}
 		}
 

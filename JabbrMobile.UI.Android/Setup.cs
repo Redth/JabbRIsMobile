@@ -26,6 +26,7 @@ namespace JabbrMobile.Android
 		{
 			pluginManager.EnsurePluginLoaded<PluginLoader>();
 			pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.Visibility.PluginLoader>();
+			pluginManager.EnsurePluginLoaded<Cirrious.MvvmCross.Plugins.File.PluginLoader> ();
 			base.LoadPlugins(pluginManager);
 		}
 	}

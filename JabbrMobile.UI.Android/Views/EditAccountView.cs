@@ -22,6 +22,8 @@ namespace JabbrMobile.Android.Views
 
 		protected override void OnViewModelSet ()
 		{
+			viewModel = ViewModel as EditAccountViewModel;
+
 			SetContentView (Resource.Layout.View_EditAccount);
 
 			MenuId = Resource.Menu.EditAccountMenu;
@@ -32,13 +34,15 @@ namespace JabbrMobile.Android.Views
 				this.Finish();
 			}, Resource.Drawable.jabbr_home_icon);
 
-			var deleteActionBarAction = new MenuItemLegacyBarAction(
-				this, Resource.Id.menu_delete, Resource.Drawable.icon_delete, Resource.String.menu_string_delete)
+			if (!viewModel.NewAccount)
 			{
-				ActionType = ActionType.Always
-			};
-			LegacyBar.AddAction(deleteActionBarAction);
-
+				var deleteActionBarAction = new MenuItemLegacyBarAction(
+					this, Resource.Id.menu_delete, Resource.Drawable.icon_delete, Resource.String.menu_string_delete)
+				{
+					ActionType = ActionType.Always
+				};
+				LegacyBar.AddAction(deleteActionBarAction);
+			}
 
 			var itemActionBarAction = new MenuItemLegacyBarAction(
 				this, Resource.Id.menu_save, Resource.Drawable.icon_save, Resource.String.menu_string_save)
@@ -64,6 +68,7 @@ namespace JabbrMobile.Android.Views
 					d.SetMessage ("Are you sure you want to delete this account?");
 					d.SetPositiveButton ("No", (o, e) => { });
 					d.SetNegativeButton ("Yes", (o, e) => this.viewModel.DeleteCommand.Execute (null));
+					d.Show ();
 					return true;
 				
 			}

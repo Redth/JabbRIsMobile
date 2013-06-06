@@ -882,8 +882,11 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050013
 			public const int actionbar_title_layout = 2131034131;
 			
-			// aapt resource value: 0x7f050032
-			public const int checkBox1 = 2131034162;
+			// aapt resource value: 0x7f05001c
+			public const int chatText = 2131034140;
+			
+			// aapt resource value: 0x7f050033
+			public const int checkBox1 = 2131034163;
 			
 			// aapt resource value: 0x7f050019
 			public const int content_frame = 2131034137;
@@ -891,14 +894,14 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050000
 			public const int custom = 2131034112;
 			
-			// aapt resource value: 0x7f05002d
-			public const int editText1 = 2131034157;
+			// aapt resource value: 0x7f05002e
+			public const int editText1 = 2131034158;
 			
-			// aapt resource value: 0x7f05002f
-			public const int editText2 = 2131034159;
+			// aapt resource value: 0x7f050030
+			public const int editText2 = 2131034160;
 			
-			// aapt resource value: 0x7f050031
-			public const int editText3 = 2131034161;
+			// aapt resource value: 0x7f050032
+			public const int editText3 = 2131034162;
 			
 			// aapt resource value: 0x7f050009
 			public const int fullscreen = 2131034121;
@@ -918,11 +921,11 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050001
 			public const int holo_light = 2131034113;
 			
-			// aapt resource value: 0x7f05001c
-			public const int imageView1 = 2131034140;
+			// aapt resource value: 0x7f05001d
+			public const int imageView1 = 2131034141;
 			
-			// aapt resource value: 0x7f050024
-			public const int imageView2 = 2131034148;
+			// aapt resource value: 0x7f050025
+			public const int imageView2 = 2131034149;
 			
 			// aapt resource value: 0x7f050006
 			public const int left = 2131034118;
@@ -930,47 +933,47 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05001b
 			public const int linearLayout1 = 2131034139;
 			
-			// aapt resource value: 0x7f050025
-			public const int loadingBar = 2131034149;
-			
 			// aapt resource value: 0x7f050026
-			public const int loadingBarMessage = 2131034150;
+			public const int loadingBar = 2131034150;
+			
+			// aapt resource value: 0x7f050027
+			public const int loadingBarMessage = 2131034151;
 			
 			// aapt resource value: 0x7f050008
 			public const int margin = 2131034120;
 			
-			// aapt resource value: 0x7f050033
-			public const int menu_add = 2131034163;
-			
-			// aapt resource value: 0x7f050036
-			public const int menu_connection = 2131034166;
-			
 			// aapt resource value: 0x7f050034
-			public const int menu_delete = 2131034164;
-			
-			// aapt resource value: 0x7f050027
-			public const int menu_frame = 2131034151;
+			public const int menu_add = 2131034164;
 			
 			// aapt resource value: 0x7f050037
-			public const int menu_leave_room = 2131034167;
+			public const int menu_connection = 2131034167;
 			
 			// aapt resource value: 0x7f050035
-			public const int menu_save = 2131034165;
+			public const int menu_delete = 2131034165;
 			
-			// aapt resource value: 0x7f05002b
-			public const int mvxListViewAccounts = 2131034155;
+			// aapt resource value: 0x7f050028
+			public const int menu_frame = 2131034152;
+			
+			// aapt resource value: 0x7f050038
+			public const int menu_leave_room = 2131034168;
+			
+			// aapt resource value: 0x7f050036
+			public const int menu_save = 2131034166;
+			
+			// aapt resource value: 0x7f05002c
+			public const int mvxListViewAccounts = 2131034156;
 			
 			// aapt resource value: 0x7f05001a
 			public const int mvxListViewMessages = 2131034138;
 			
-			// aapt resource value: 0x7f05001d
-			public const int mvxListViewRooms = 2131034141;
-			
 			// aapt resource value: 0x7f05001e
-			public const int mvxListViewUsers = 2131034142;
+			public const int mvxListViewRooms = 2131034142;
 			
-			// aapt resource value: 0x7f050028
-			public const int overflow_spinner = 2131034152;
+			// aapt resource value: 0x7f05001f
+			public const int mvxListViewUsers = 2131034143;
+			
+			// aapt resource value: 0x7f050029
+			public const int overflow_spinner = 2131034153;
 			
 			// aapt resource value: 0x7f050007
 			public const int right = 2131034119;
@@ -981,35 +984,35 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05000a
 			public const int selected_view = 2131034122;
 			
-			// aapt resource value: 0x7f050029
-			public const int slidingmenumain = 2131034153;
-			
-			// aapt resource value: 0x7f05002c
-			public const int textView1 = 2131034156;
-			
-			// aapt resource value: 0x7f05002e
-			public const int textView2 = 2131034158;
-			
-			// aapt resource value: 0x7f050030
-			public const int textView3 = 2131034160;
-			
-			// aapt resource value: 0x7f050022
-			public const int textViewMessageBody = 2131034146;
-			
-			// aapt resource value: 0x7f050021
-			public const int textViewMessageUser = 2131034145;
-			
-			// aapt resource value: 0x7f05001f
-			public const int textViewRoomName = 2131034143;
-			
-			// aapt resource value: 0x7f050020
-			public const int textViewServer = 2131034144;
-			
 			// aapt resource value: 0x7f05002a
-			public const int userlist_frame = 2131034154;
+			public const int slidingmenumain = 2131034154;
+			
+			// aapt resource value: 0x7f05002d
+			public const int textView1 = 2131034157;
+			
+			// aapt resource value: 0x7f05002f
+			public const int textView2 = 2131034159;
+			
+			// aapt resource value: 0x7f050031
+			public const int textView3 = 2131034161;
 			
 			// aapt resource value: 0x7f050023
-			public const int view1 = 2131034147;
+			public const int textViewMessageBody = 2131034147;
+			
+			// aapt resource value: 0x7f050022
+			public const int textViewMessageUser = 2131034146;
+			
+			// aapt resource value: 0x7f050020
+			public const int textViewRoomName = 2131034144;
+			
+			// aapt resource value: 0x7f050021
+			public const int textViewServer = 2131034145;
+			
+			// aapt resource value: 0x7f05002b
+			public const int userlist_frame = 2131034155;
+			
+			// aapt resource value: 0x7f050024
+			public const int view1 = 2131034148;
 			
 			static Id()
 			{

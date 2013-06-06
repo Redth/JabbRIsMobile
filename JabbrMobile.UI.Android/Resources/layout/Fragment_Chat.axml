@@ -21,6 +21,7 @@
         android:layout_height="wrap_content"
         android:id="@+id/linearLayout1">
         <EditText
+            android:id="@+id/chatText"
             android:inputType="textMultiLine"
             android:layout_height="wrap_content"
             android:layout_width="wrap_content"

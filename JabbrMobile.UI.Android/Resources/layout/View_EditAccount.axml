@@ -54,6 +54,7 @@
             android:id="@+id/editText3"
             android:hint="&lt;your password&gt;" />
         <CheckBox
+            android:visibility="gone"
             ab:MvxBind="Checked AutoConnect;"
             android:text="AUTO-CONNECT"
             android:layout_width="fill_parent"

@@ -7,6 +7,7 @@ namespace JabbrMobile.Common.Models
 		public Account()
 		{
 			Id = Guid.NewGuid ().ToString ();
+			AutoConnect = true;
 		}
 
 		public string Id { get;set; }

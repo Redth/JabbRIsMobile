@@ -18,12 +18,18 @@ using LegacyBar.Library;
 using LegacyBar.Library.Bar;
 using Android.Content.PM;
 using LegacyBar.Library.BarActions;
+using Cirrious.MvvmCross.Plugins.Messenger;
+using Cirrious.CrossCore;
+using JabbrMobile.Common.Messages;
 
 namespace JabbrMobile.Android.Views
 {
 	[Activity (Label = "JabbR", MainLauncher=true, ConfigurationChanges=ConfigChanges.Orientation|ConfigChanges.KeyboardHidden|ConfigChanges.ScreenSize, Theme="@android:style/Theme.Holo.Light.NoActionBar")]			
 	public class HomeView : BaseFragmentView
 	{
+		MvxSubscriptionToken _mvxMsgTokUserSelected;
+		IMvxMessenger messenger;
+
 		SlidingMenu slidingMenu;
 		MenuFragment menuFragment;
 		UserListFragment userListFragment;
@@ -161,6 +167,14 @@ namespace JabbrMobile.Android.Views
 					this.RunOnUiThread(() => LegacyBar.Title = homeViewModel.CurrentRoom.Room.Name);
 				}
 			};
+
+			messenger = Mvx.Resolve<IMvxMessenger> ();
+			_mvxMsgTokUserSelected = messenger.SubscribeOnMainThread<UserSelectedMessage> (msg => {
+				chatFragment.AppendText("@" + msg.User.Name);
+
+				slidingMenu.ShowContent(true);
+			});
+
 		}
 
 		void ToggleActions()
