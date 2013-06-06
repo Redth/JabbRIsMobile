@@ -192,6 +192,7 @@
     <Compile Include="Views\Fragments\UserListFragment.cs" />
     <Compile Include="Converters\UserStatusDrawableValueConverter.cs" />
     <Compile Include="Views\Fragments\EmptyFragment.cs" />
+    <Compile Include="LoadingBar.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />
@@ -294,6 +295,9 @@
     <AndroidResource Include="Resources\drawable\ListItem_Menu_Room_Selector.xml" />
     <AndroidResource Include="Resources\values\colors.xml" />
     <AndroidResource Include="Resources\layout\ListItem_Menu_Room.axml" />
+    <AndroidResource Include="Resources\layout\LoadingBar.axml" />
+    <AndroidResource Include="Resources\values\styles.xml" />
+    <AndroidResource Include="Resources\drawable-xhdpi\loadingBar.9.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

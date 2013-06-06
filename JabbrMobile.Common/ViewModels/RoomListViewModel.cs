@@ -26,11 +26,6 @@ namespace JabbrMobile.Common.ViewModels
 		protected override void InitFromBundle (IMvxBundle parameters)
 		{
 			base.InitFromBundle (parameters);
-
-			IsLoading = true;
-
-			RaisePropertyChanged (() => IsLoading);
-			LoadRooms ();
 		}
 
 		public bool IsLoading { get; set; }
@@ -57,8 +52,11 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		async void LoadRooms()
+		public async Task LoadRooms()
 		{
+			IsLoading = true;
+			RaisePropertyChanged (() => IsLoading);
+
 			foreach (var c in Service.Connections)
 			{
 				try
