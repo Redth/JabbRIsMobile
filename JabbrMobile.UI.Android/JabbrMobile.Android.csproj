@@ -298,6 +298,7 @@
     <AndroidResource Include="Resources\layout\LoadingBar.axml" />
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable-xhdpi\loadingBar.9.png" />
+    <AndroidResource Include="Resources\drawable-xhdpi\launchericon.png" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>

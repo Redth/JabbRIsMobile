@@ -819,16 +819,19 @@ namespace JabbrMobile.Android
 			public const int jabbr_home_icon = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int ListItem_Menu_Room_Selector = 2130837585;
+			public const int launchericon = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int loadingbar = 2130837586;
+			public const int ListItem_Menu_Room_Selector = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int SlidingMenuShadow = 2130837587;
+			public const int loadingbar = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int SlidingMenuShadowRight = 2130837588;
+			public const int SlidingMenuShadow = 2130837588;
+			
+			// aapt resource value: 0x7f020055
+			public const int SlidingMenuShadowRight = 2130837589;
 			
 			static Drawable()
 			{
