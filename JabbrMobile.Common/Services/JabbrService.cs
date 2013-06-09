@@ -89,7 +89,7 @@ namespace JabbrMobile.Common.Services
 			try { await Client.JoinRoom(room.Name); }
 			catch (Exception ex) { Mvx.Error (ex.ToString()); }
 
-			if (!RoomsIn.Exists(r => r.Name.Equals(room.Name, StringComparison.InvariantCultureIgnoreCase)))
+			if (!RoomsIn.Exists(r => r.Name.Equals(room.Name, StringComparison.OrdinalIgnoreCase)))
 				RoomsIn.Add (room);
 		}
 
@@ -98,7 +98,7 @@ namespace JabbrMobile.Common.Services
 			try { await Client.LeaveRoom (name); }
 			catch (Exception ex) { Mvx.Error (ex.ToString()); }
 
-			RoomsIn.RemoveAll (r => r.Name.Equals(name, StringComparison.InvariantCultureIgnoreCase));
+			RoomsIn.RemoveAll (r => r.Name.Equals(name, StringComparison.OrdinalIgnoreCase));
 		}
 
 		async void Connect()

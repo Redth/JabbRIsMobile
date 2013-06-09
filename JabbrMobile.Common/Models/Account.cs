@@ -33,7 +33,7 @@ namespace JabbrMobile.Common.Models
 			if (a == null)
 				return false;
 
-			return a.Id.Equals (this.Id, StringComparison.InvariantCultureIgnoreCase);
+			return a.Id.Equals (this.Id, StringComparison.OrdinalIgnoreCase);
 		}
 	}
 }

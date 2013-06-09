@@ -31,7 +31,7 @@ namespace JabbrMobile.Common.ViewModels
 				if (Home == null || Home.CurrentRoom == null)
 					return false;
 
-				return Home.CurrentRoom.Room.Name.Equals (Room.Name, StringComparison.InvariantCultureIgnoreCase);
+				return Home.CurrentRoom.Room.Name.Equals (Room.Name, StringComparison.OrdinalIgnoreCase);
 			}
 		}
 

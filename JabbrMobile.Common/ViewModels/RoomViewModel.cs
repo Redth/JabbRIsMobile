@@ -30,7 +30,7 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokMessageReceived = Messenger.SubscribeOnMainThread<JabbrMessageReceivedMessage> (msg => {
 
-				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.OrdinalIgnoreCase))
 					return;
 
 				lock (Messages)
@@ -40,7 +40,7 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokUserJoin = Messenger.Subscribe<JabbrUserJoinedMessage> (msg => {
 
-				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.OrdinalIgnoreCase))
 					return;
 
 				var uvm = new UserViewModel(msg.User);
@@ -57,7 +57,7 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokUserLeft = Messenger.Subscribe<JabbrUserLeftMessage> (msg => {
 
-				if (!msg.RoomName.Equals(Room.Name, StringComparison.InvariantCultureIgnoreCase))
+				if (!msg.RoomName.Equals(Room.Name, StringComparison.OrdinalIgnoreCase))
 					return;
 
 				var uvm = new UserViewModel(msg.User);
@@ -73,7 +73,7 @@ namespace JabbrMobile.Common.ViewModels
 
 			subTokCurrentRoomChgd = Messenger.Subscribe<CurrentRoomChangedMessage>(msg => {
 
-				IsCurrent = msg.NewRoom.Room.Name.Equals(this.Room.Name, StringComparison.InvariantCultureIgnoreCase);
+				IsCurrent = msg.NewRoom.Room.Name.Equals(this.Room.Name, StringComparison.OrdinalIgnoreCase);
 				RaisePropertyChanged(() => IsCurrent);
 
 			});

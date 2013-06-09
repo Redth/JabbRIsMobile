@@ -112,8 +112,14 @@
     <Compile Include="..\jabbrmobile.common\messages\AccountMessage.cs">
       <Link>Messages\AccountMessage.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\Messages\CurrentRoomChangedMessage.cs">
+      <Link>CurrentRoomChangedMessage.cs</Link>
+    </Compile>
     <Compile Include="..\jabbrmobile.common\messages\JabbrMessage.cs">
       <Link>Messages\JabbrMessage.cs</Link>
+    </Compile>
+    <Compile Include="..\JabbrMobile.Common\Messages\UserSelectedMessage.cs">
+      <Link>UserSelectedMessage.cs</Link>
     </Compile>
     <Compile Include="..\jabbrmobile.common\models\Account.cs">
       <Link>Models\Account.cs</Link>
@@ -136,17 +142,32 @@
     <Compile Include="..\jabbrmobile.common\viewmodels\BaseViewModel.cs">
       <Link>ViewModels\BaseViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\JabbrMobile.Common\ViewModels\ChatViewModel.cs">
+      <Link>ChatViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\jabbrmobile.common\viewmodels\EditAccountViewModel.cs">
+      <Link>ViewModels\EditAccountViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\jabbrmobile.common\viewmodels\HomeViewModel.cs">
       <Link>ViewModels\HomeViewModel.cs</Link>
     </Compile>
     <Compile Include="..\jabbrmobile.common\viewmodels\MessageViewModel.cs">
       <Link>ViewModels\MessageViewModel.cs</Link>
     </Compile>
+    <Compile Include="..\jabbrmobile.common\viewmodels\RoomListItemViewModel.cs">
+      <Link>ViewModels\RoomListItemViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\jabbrmobile.common\viewmodels\RoomListViewModel.cs">
+      <Link>ViewModels\RoomListViewModel.cs</Link>
+    </Compile>
     <Compile Include="..\jabbrmobile.common\viewmodels\RoomViewModel.cs">
       <Link>ViewModels\RoomViewModel.cs</Link>
     </Compile>
     <Compile Include="..\jabbrmobile.common\viewmodels\SettingsViewModel.cs">
       <Link>ViewModels\SettingsViewModel.cs</Link>
+    </Compile>
+    <Compile Include="..\jabbrmobile.common\viewmodels\UserViewModel.cs">
+      <Link>ViewModels\UserViewModel.cs</Link>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -160,11 +181,18 @@
     <Reference Include="Cirrious.MvvmCross">
       <HintPath>..\MvvmCross-Binaries\VS2012\bin\Release\Mvx\WindowsStore\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
+    <Reference Include="Cirrious.MvvmCross.Plugins.File">
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Release\Mvx\WindowsStore\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+    </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
       <HintPath>..\MvvmCross-Binaries\VS2012\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.WindowsStore">
       <HintPath>..\MvvmCross-Binaries\VS2012\bin\Release\Mvx\WindowsStore\Cirrious.MvvmCross.WindowsStore.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.4.5.11\lib\winrt45\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '11.0' ">

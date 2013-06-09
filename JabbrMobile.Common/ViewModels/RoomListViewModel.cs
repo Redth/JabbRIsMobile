@@ -87,7 +87,7 @@ namespace JabbrMobile.Common.ViewModels
 				}
 				catch (Exception ex)
 				{
-					Console.WriteLine(c.Account.Url + " -> GetRooms Failed: " + ex);
+					Mvx.Trace(c.Account.Url + " -> GetRooms Failed: " + ex);
 				}
 
 			}
