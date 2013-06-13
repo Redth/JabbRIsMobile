@@ -116,8 +116,17 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Setup.cs" />
+    <Compile Include="Views\AccountsView.xaml.cs">
+      <DependentUpon>AccountsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\EditAccountView.xaml.cs">
+      <DependentUpon>EditAccountView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\HomeView.xaml.cs">
       <DependentUpon>HomeView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RoomListView.xaml.cs">
+      <DependentUpon>RoomListView.xaml</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>
@@ -146,7 +155,19 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="Views\AccountsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\EditAccountView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\HomeView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RoomListView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

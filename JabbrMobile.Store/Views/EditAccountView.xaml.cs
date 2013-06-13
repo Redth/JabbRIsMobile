@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
-using JabbrMobile.Common.ViewModels;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -20,9 +19,9 @@ namespace JabbrMobile.Store.Views
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class HomeView : JabbrMobile.Store.Common.LayoutAwarePage
+    public sealed partial class EditAccountView : JabbrMobile.Store.Common.LayoutAwarePage
     {
-        public HomeView()
+        public EditAccountView()
         {
             this.InitializeComponent();
         }
@@ -48,28 +47,6 @@ namespace JabbrMobile.Store.Views
         /// <param name="pageState">An empty dictionary to be populated with serializable state.</param>
         protected override void SaveState(Dictionary<String, Object> pageState)
         {
-        }
-
-        private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            if (e.AddedItems.Count == 1)
-            {
-                HomeViewModel.SwitchRoomCommand.Execute(e.AddedItems[0]);
-            }
-        }
-
-        private HomeViewModel HomeViewModel
-        {
-            get { return ((HomeViewModel)ViewModel); }
-        }
-
-        private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            var room = HomeViewModel.CurrentRoom;
-            if (room == null)
-                return;
-
-            room.TypingActivityCommand.Execute(null);
         }
     }
 }

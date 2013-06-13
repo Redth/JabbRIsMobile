@@ -20,9 +20,9 @@ namespace JabbrMobile.Store.Views
     /// <summary>
     /// A basic page that provides characteristics common to most applications.
     /// </summary>
-    public sealed partial class HomeView : JabbrMobile.Store.Common.LayoutAwarePage
+    public sealed partial class AccountsView : JabbrMobile.Store.Common.LayoutAwarePage
     {
-        public HomeView()
+        public AccountsView()
         {
             this.InitializeComponent();
         }
@@ -52,24 +52,11 @@ namespace JabbrMobile.Store.Views
 
         private void Selector_OnSelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.AddedItems.Count == 1)
+            if (e.AddedItems != null
+                && e.AddedItems.Count == 1)
             {
-                HomeViewModel.SwitchRoomCommand.Execute(e.AddedItems[0]);
+                ((AccountsViewModel)ViewModel).EditAccountCommand.Execute(e.AddedItems[0]);
             }
-        }
-
-        private HomeViewModel HomeViewModel
-        {
-            get { return ((HomeViewModel)ViewModel); }
-        }
-
-        private void TextBox_OnTextChanged(object sender, TextChangedEventArgs e)
-        {
-            var room = HomeViewModel.CurrentRoom;
-            if (room == null)
-                return;
-
-            room.TypingActivityCommand.Execute(null);
         }
     }
 }
