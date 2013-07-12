@@ -1,6 +1,3 @@
-[submodule "SignalR"]
-	path = SignalR
-	url = https://github.com/SignalR/SignalR/
 [submodule "MvvmCross-Binaries"]
 	path = MvvmCross-Binaries
 	url = https://github.com/slodge/MvvmCross-Binaries
@@ -15,3 +12,6 @@
 [submodule "LegacyBar"]
 	path = LegacyBar
 	url = https://github.com/Redth/LegacyBar.git
+[submodule "SignalR"]
+	path = SignalR
+	url = https://github.com/Redth/SignalR.git
