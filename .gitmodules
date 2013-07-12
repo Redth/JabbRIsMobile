@@ -12,6 +12,3 @@
 [submodule "LegacyBar"]
 	path = LegacyBar
 	url = https://github.com/Redth/LegacyBar.git
-[submodule "SignalR"]
-	path = SignalR
-	url = https://github.com/Redth/SignalR.git
