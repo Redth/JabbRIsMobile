@@ -12,6 +12,10 @@
         android:orientation="horizontal"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
+        <View
+            local:MvxBind="Color User.Status, Converter=UserStatusColor"
+            android:layout_width="10dp"
+            android:layout_height="fill_parent" />
         <ImageView
             local:MvxBind="DrawableId User.Status, Converter=UserStatusDrawableId"
             android:src="@drawable/icon_green_circle_small"
