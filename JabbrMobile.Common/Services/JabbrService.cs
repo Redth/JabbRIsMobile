@@ -116,7 +116,7 @@ namespace JabbrMobile.Common.Services
 			_client.OwnerAdded += HandleOwnerAdded;
 			_client.OwnerRemoved += HandleOwnerRemoved;
 			_client.PrivateMessage += HandlePrivateMessage;
-			_client.RoomCountChanged += HandleRoomCountChanged;
+			//_client.RoomCountChanged += HandleRoomCountChanged;
 			//client.StateChanged += HandleStateChanged;
 			_client.TopicChanged += HandleTopicChanged;
 			_client.UserActivityChanged += HandleUserActivityChanged;
@@ -200,10 +200,10 @@ namespace JabbrMobile.Common.Services
 			//_messenger.Publish(new JabbrUserActivityChangedMessage(this, this, user));
 		}
 
-		void HandleTopicChanged (JabbR.Client.Models.Room room)
+		void HandleTopicChanged (string roomName, string topic, string who)
 		{
-			Log ("TopicChanged> " + room.Name);
-			_messenger.Publish(new JabbrTopicChangedMessage(this, this, room));
+			Log ("TopicChanged> " + roomName);
+			_messenger.Publish(new JabbrTopicChangedMessage(this, this, roomName, topic, who));
 		}
 
 		/*void HandleStateChanged (Microsoft.StateChange obj)
@@ -211,11 +211,11 @@ namespace JabbrMobile.Common.Services
 
 		}*/
 
-		void HandleRoomCountChanged (JabbR.Client.Models.Room room, int count)
-		{
-			Log ("RoomCountChanged> " + room.Name + " -> " + count);
-			_messenger.Publish(new JabbrRoomCountChangedMessage(this, this, room, count));
-		}
+//		void HandleRoomCountChanged (JabbR.Client.Models.Room room, int count)
+//		{
+//			Log ("RoomCountChanged> " + room.Name + " -> " + count);
+//			_messenger.Publish(new JabbrRoomCountChangedMessage(this, this, room, count));
+//		}
 
 		void HandlePrivateMessage (string fromUser, string toUser, string message)
 		{
@@ -291,7 +291,7 @@ namespace JabbrMobile.Common.Services
 			_client.OwnerAdded -= HandleOwnerAdded;
 			_client.OwnerRemoved -= HandleOwnerRemoved;
 			_client.PrivateMessage -= HandlePrivateMessage;
-			_client.RoomCountChanged -= HandleRoomCountChanged;
+			//_client.RoomCountChanged -= HandleRoomCountChanged;
 			//client.StateChanged -= HandleStateChanged;
 			_client.TopicChanged -= HandleTopicChanged;
 			_client.UserActivityChanged -= HandleUserActivityChanged;

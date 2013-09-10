@@ -13,7 +13,7 @@
         android:layout_width="fill_parent"
         android:layout_height="wrap_content">
         <View
-            local:MvxBind="Color User.Status, Converter=UserStatusColor"
+            local:MvxBind="Background User.Status, Converter=UserStatusColor"
             android:layout_width="10dp"
             android:layout_height="fill_parent" />
         <ImageView

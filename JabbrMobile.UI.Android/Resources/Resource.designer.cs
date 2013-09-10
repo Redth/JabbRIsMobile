@@ -26,211 +26,213 @@ namespace JabbrMobile.Android
 		
 		public static void UpdateIdValues()
 		{
-			SlidingMenuSharp.Resource.Attribute.behindOffset = JabbrMobile.Android.Resource.Attribute.behindOffset;
-			SlidingMenuSharp.Resource.Attribute.behindScrollScale = JabbrMobile.Android.Resource.Attribute.behindScrollScale;
-			SlidingMenuSharp.Resource.Attribute.behindWidth = JabbrMobile.Android.Resource.Attribute.behindWidth;
-			SlidingMenuSharp.Resource.Attribute.fadeDegree = JabbrMobile.Android.Resource.Attribute.fadeDegree;
-			SlidingMenuSharp.Resource.Attribute.fadeEnabled = JabbrMobile.Android.Resource.Attribute.fadeEnabled;
-			SlidingMenuSharp.Resource.Attribute.mode = JabbrMobile.Android.Resource.Attribute.mode;
-			SlidingMenuSharp.Resource.Attribute.selectorDrawable = JabbrMobile.Android.Resource.Attribute.selectorDrawable;
-			SlidingMenuSharp.Resource.Attribute.selectorEnabled = JabbrMobile.Android.Resource.Attribute.selectorEnabled;
-			SlidingMenuSharp.Resource.Attribute.shadowDrawable = JabbrMobile.Android.Resource.Attribute.shadowDrawable;
-			SlidingMenuSharp.Resource.Attribute.shadowWidth = JabbrMobile.Android.Resource.Attribute.shadowWidth;
-			SlidingMenuSharp.Resource.Attribute.touchModeAbove = JabbrMobile.Android.Resource.Attribute.touchModeAbove;
-			SlidingMenuSharp.Resource.Attribute.touchModeBehind = JabbrMobile.Android.Resource.Attribute.touchModeBehind;
-			SlidingMenuSharp.Resource.Attribute.viewAbove = JabbrMobile.Android.Resource.Attribute.viewAbove;
-			SlidingMenuSharp.Resource.Attribute.viewBehind = JabbrMobile.Android.Resource.Attribute.viewBehind;
-			SlidingMenuSharp.Resource.Id.fullscreen = JabbrMobile.Android.Resource.Id.fullscreen;
-			SlidingMenuSharp.Resource.Id.left = JabbrMobile.Android.Resource.Id.left;
-			SlidingMenuSharp.Resource.Id.margin = JabbrMobile.Android.Resource.Id.margin;
-			SlidingMenuSharp.Resource.Id.right = JabbrMobile.Android.Resource.Id.right;
-			SlidingMenuSharp.Resource.Id.selected_view = JabbrMobile.Android.Resource.Id.selected_view;
-			SlidingMenuSharp.Resource.Id.slidingmenumain = JabbrMobile.Android.Resource.Id.slidingmenumain;
-			SlidingMenuSharp.Resource.Layout.slidingmenumain = JabbrMobile.Android.Resource.Layout.slidingmenumain;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu = JabbrMobile.Android.Resource.Styleable.SlidingMenu;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindOffset = JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindOffset;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindScrollScale = JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindScrollScale;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindWidth = JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindWidth;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeDegree = JabbrMobile.Android.Resource.Styleable.SlidingMenu_fadeDegree;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeEnabled = JabbrMobile.Android.Resource.Styleable.SlidingMenu_fadeEnabled;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_mode = JabbrMobile.Android.Resource.Styleable.SlidingMenu_mode;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorDrawable = JabbrMobile.Android.Resource.Styleable.SlidingMenu_selectorDrawable;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorEnabled = JabbrMobile.Android.Resource.Styleable.SlidingMenu_selectorEnabled;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowDrawable = JabbrMobile.Android.Resource.Styleable.SlidingMenu_shadowDrawable;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowWidth = JabbrMobile.Android.Resource.Styleable.SlidingMenu_shadowWidth;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeAbove = JabbrMobile.Android.Resource.Styleable.SlidingMenu_touchModeAbove;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeBehind = JabbrMobile.Android.Resource.Styleable.SlidingMenu_touchModeBehind;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewAbove = JabbrMobile.Android.Resource.Styleable.SlidingMenu_viewAbove;
-			SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewBehind = JabbrMobile.Android.Resource.Styleable.SlidingMenu_viewBehind;
-			JabbrMobile.Common.Resource.String.library_name = JabbrMobile.Android.Resource.String.library_name;
-			LegacyBar.Library.Resource.Attribute.background = JabbrMobile.Android.Resource.Attribute.background;
-			LegacyBar.Library.Resource.Attribute.background_item = JabbrMobile.Android.Resource.Attribute.background_item;
-			LegacyBar.Library.Resource.Attribute.is_bottom = JabbrMobile.Android.Resource.Attribute.is_bottom;
-			LegacyBar.Library.Resource.Attribute.light_icons = JabbrMobile.Android.Resource.Attribute.light_icons;
-			LegacyBar.Library.Resource.Attribute.separator = JabbrMobile.Android.Resource.Attribute.separator;
-			LegacyBar.Library.Resource.Attribute.theme = JabbrMobile.Android.Resource.Attribute.theme;
-			LegacyBar.Library.Resource.Attribute.title = JabbrMobile.Android.Resource.Attribute.title;
-			LegacyBar.Library.Resource.Attribute.title_color = JabbrMobile.Android.Resource.Attribute.title_color;
-			LegacyBar.Library.Resource.Color.Red = JabbrMobile.Android.Resource.Color.Red;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_black = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_blue = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkblue;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_accentcolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_accentcolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_background_end = JabbrMobile.Android.Resource.Color.actionbar_background_end;
-			LegacyBar.Library.Resource.Color.actionbar_background_end_alt = JabbrMobile.Android.Resource.Color.actionbar_background_end_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end = JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_end;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end_alt = JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_end_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start = JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_start;
-			LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start_alt = JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_start_alt;
-			LegacyBar.Library.Resource.Color.actionbar_background_start = JabbrMobile.Android.Resource.Color.actionbar_background_start;
-			LegacyBar.Library.Resource.Color.actionbar_background_start_alt = JabbrMobile.Android.Resource.Color.actionbar_background_start_alt;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_black = JabbrMobile.Android.Resource.Color.actionbar_maincolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_blue = JabbrMobile.Android.Resource.Color.actionbar_maincolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkblue;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_maincolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_maincolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_black = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_black;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_blue = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_blue;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkblue = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkblue;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkgray = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_pressedcolor_lightgray = JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_separator = JabbrMobile.Android.Resource.Color.actionbar_separator;
-			LegacyBar.Library.Resource.Color.actionbar_separator_alt = JabbrMobile.Android.Resource.Color.actionbar_separator_alt;
-			LegacyBar.Library.Resource.Color.actionbar_separator_black = JabbrMobile.Android.Resource.Color.actionbar_separator_black;
-			LegacyBar.Library.Resource.Color.actionbar_separator_blue = JabbrMobile.Android.Resource.Color.actionbar_separator_blue;
-			LegacyBar.Library.Resource.Color.actionbar_separator_darkblue = JabbrMobile.Android.Resource.Color.actionbar_separator_darkblue;
-			LegacyBar.Library.Resource.Color.actionbar_separator_darkgray = JabbrMobile.Android.Resource.Color.actionbar_separator_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_separator_lightgray = JabbrMobile.Android.Resource.Color.actionbar_separator_lightgray;
-			LegacyBar.Library.Resource.Color.actionbar_title = JabbrMobile.Android.Resource.Color.actionbar_title;
-			LegacyBar.Library.Resource.Color.actionbar_title_alt = JabbrMobile.Android.Resource.Color.actionbar_title_alt;
-			LegacyBar.Library.Resource.Color.actionbar_title_black = JabbrMobile.Android.Resource.Color.actionbar_title_black;
-			LegacyBar.Library.Resource.Color.actionbar_title_blue = JabbrMobile.Android.Resource.Color.actionbar_title_blue;
-			LegacyBar.Library.Resource.Color.actionbar_title_darkblue = JabbrMobile.Android.Resource.Color.actionbar_title_darkblue;
-			LegacyBar.Library.Resource.Color.actionbar_title_darkgray = JabbrMobile.Android.Resource.Color.actionbar_title_darkgray;
-			LegacyBar.Library.Resource.Color.actionbar_title_lightgray = JabbrMobile.Android.Resource.Color.actionbar_title_lightgray;
-			LegacyBar.Library.Resource.Color.black = JabbrMobile.Android.Resource.Color.black;
-			LegacyBar.Library.Resource.Color.blue = JabbrMobile.Android.Resource.Color.blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_end = JabbrMobile.Android.Resource.Color.bottomactionbar_background_end;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_end = JabbrMobile.Android.Resource.Color.bottomactionbar_background_item_pressed_end;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_start = JabbrMobile.Android.Resource.Color.bottomactionbar_background_item_pressed_start;
-			LegacyBar.Library.Resource.Color.bottomactionbar_background_start = JabbrMobile.Android.Resource.Color.bottomactionbar_background_start;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_black = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_black;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_blue = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkblue = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkblue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkgray = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_lightgray = JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_lightgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_black = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_black;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_blue = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_blue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkblue = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkblue;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkgray = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_lightgray = JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_lightgray;
-			LegacyBar.Library.Resource.Color.bottomactionbar_separator = JabbrMobile.Android.Resource.Color.bottomactionbar_separator;
-			LegacyBar.Library.Resource.Color.bottomactionbar_title = JabbrMobile.Android.Resource.Color.bottomactionbar_title;
-			LegacyBar.Library.Resource.Color.green = JabbrMobile.Android.Resource.Color.green;
-			LegacyBar.Library.Resource.Color.grey = JabbrMobile.Android.Resource.Color.grey;
-			LegacyBar.Library.Resource.Color.pager_black = JabbrMobile.Android.Resource.Color.pager_black;
-			LegacyBar.Library.Resource.Color.pager_blue = JabbrMobile.Android.Resource.Color.pager_blue;
-			LegacyBar.Library.Resource.Color.pager_darkblue = JabbrMobile.Android.Resource.Color.pager_darkblue;
-			LegacyBar.Library.Resource.Color.pager_darkgray = JabbrMobile.Android.Resource.Color.pager_darkgray;
-			LegacyBar.Library.Resource.Color.pager_lightgray = JabbrMobile.Android.Resource.Color.pager_lightgray;
-			LegacyBar.Library.Resource.Color.red = JabbrMobile.Android.Resource.Color.red;
-			LegacyBar.Library.Resource.Color.white = JabbrMobile.Android.Resource.Color.white;
-			LegacyBar.Library.Resource.Color.yellow = JabbrMobile.Android.Resource.Color.yellow;
-			LegacyBar.Library.Resource.Dimension.actionbar_accentheight = JabbrMobile.Android.Resource.Dimension.actionbar_accentheight;
-			LegacyBar.Library.Resource.Dimension.actionbar_height = JabbrMobile.Android.Resource.Dimension.actionbar_height;
-			LegacyBar.Library.Resource.Dimension.actionbar_home_item_width = JabbrMobile.Android.Resource.Dimension.actionbar_home_item_width;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height = JabbrMobile.Android.Resource.Dimension.actionbar_item_height;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height_over = JabbrMobile.Android.Resource.Dimension.actionbar_item_height_over;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_height_overflow = JabbrMobile.Android.Resource.Dimension.actionbar_item_height_overflow;
-			LegacyBar.Library.Resource.Dimension.actionbar_item_width = JabbrMobile.Android.Resource.Dimension.actionbar_item_width;
-			LegacyBar.Library.Resource.Drawable.actionbar_back_indicator = JabbrMobile.Android.Resource.Drawable.actionbar_back_indicator;
-			LegacyBar.Library.Resource.Drawable.actionbar_back_indicator_dark = JabbrMobile.Android.Resource.Drawable.actionbar_back_indicator_dark;
-			LegacyBar.Library.Resource.Drawable.actionbar_background = JabbrMobile.Android.Resource.Drawable.actionbar_background;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_alt = JabbrMobile.Android.Resource.Drawable.actionbar_background_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_black = JabbrMobile.Android.Resource.Drawable.actionbar_background_black;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_blue = JabbrMobile.Android.Resource.Drawable.actionbar_background_blue;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_darkblue = JabbrMobile.Android.Resource.Drawable.actionbar_background_darkblue;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_darkgray = JabbrMobile.Android.Resource.Drawable.actionbar_background_darkgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_background_lightgray = JabbrMobile.Android.Resource.Drawable.actionbar_background_lightgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn = JabbrMobile.Android.Resource.Drawable.actionbar_btn;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_alt = JabbrMobile.Android.Resource.Drawable.actionbar_btn_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_black = JabbrMobile.Android.Resource.Drawable.actionbar_btn_black;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_blue = JabbrMobile.Android.Resource.Drawable.actionbar_btn_blue;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_darkblue = JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkblue;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_darkgray = JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_lightgray = JabbrMobile.Android.Resource.Drawable.actionbar_btn_lightgray;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_normal = JabbrMobile.Android.Resource.Drawable.actionbar_btn_normal;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_normal_alt = JabbrMobile.Android.Resource.Drawable.actionbar_btn_normal_alt;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed = JabbrMobile.Android.Resource.Drawable.actionbar_btn_pressed;
-			LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed_alt = JabbrMobile.Android.Resource.Drawable.actionbar_btn_pressed_alt;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_black = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_black;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_blue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_blue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkblue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkblue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_background_lightgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_lightgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_black = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_black;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_blue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_blue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkblue = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkblue;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_lightgray = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_lightgray;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_normal = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_normal;
-			LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_pressed = JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_pressed;
-			LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_dark = JabbrMobile.Android.Resource.Drawable.dropdown_btn_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_light = JabbrMobile.Android.Resource.Drawable.dropdown_btn_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_dark = JabbrMobile.Android.Resource.Drawable.dropdown_disabled_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_light = JabbrMobile.Android.Resource.Drawable.dropdown_disabled_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_dark = JabbrMobile.Android.Resource.Drawable.dropdown_focused_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_light = JabbrMobile.Android.Resource.Drawable.dropdown_focused_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_dark = JabbrMobile.Android.Resource.Drawable.dropdown_normal_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_light = JabbrMobile.Android.Resource.Drawable.dropdown_normal_holo_light;
-			LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_dark = JabbrMobile.Android.Resource.Drawable.dropdown_pressed_holo_dark;
-			LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_light = JabbrMobile.Android.Resource.Drawable.dropdown_pressed_holo_light;
-			LegacyBar.Library.Resource.Drawable.ic_action_overflow = JabbrMobile.Android.Resource.Drawable.ic_action_overflow;
-			LegacyBar.Library.Resource.Drawable.ic_action_overflow_dark = JabbrMobile.Android.Resource.Drawable.ic_action_overflow_dark;
-			LegacyBar.Library.Resource.Id.actionbar_actions = JabbrMobile.Android.Resource.Id.actionbar_actions;
-			LegacyBar.Library.Resource.Id.actionbar_home = JabbrMobile.Android.Resource.Id.actionbar_home;
-			LegacyBar.Library.Resource.Id.actionbar_home_bg = JabbrMobile.Android.Resource.Id.actionbar_home_bg;
-			LegacyBar.Library.Resource.Id.actionbar_home_btn = JabbrMobile.Android.Resource.Id.actionbar_home_btn;
-			LegacyBar.Library.Resource.Id.actionbar_home_is_back = JabbrMobile.Android.Resource.Id.actionbar_home_is_back;
-			LegacyBar.Library.Resource.Id.actionbar_home_logo = JabbrMobile.Android.Resource.Id.actionbar_home_logo;
-			LegacyBar.Library.Resource.Id.actionbar_item = JabbrMobile.Android.Resource.Id.actionbar_item;
-			LegacyBar.Library.Resource.Id.actionbar_progress = JabbrMobile.Android.Resource.Id.actionbar_progress;
-			LegacyBar.Library.Resource.Id.actionbar_spinner = JabbrMobile.Android.Resource.Id.actionbar_spinner;
-			LegacyBar.Library.Resource.Id.actionbar_title = JabbrMobile.Android.Resource.Id.actionbar_title;
-			LegacyBar.Library.Resource.Id.actionbar_title_layout = JabbrMobile.Android.Resource.Id.actionbar_title_layout;
-			LegacyBar.Library.Resource.Id.custom = JabbrMobile.Android.Resource.Id.custom;
-			LegacyBar.Library.Resource.Id.holo_black = JabbrMobile.Android.Resource.Id.holo_black;
-			LegacyBar.Library.Resource.Id.holo_blue = JabbrMobile.Android.Resource.Id.holo_blue;
-			LegacyBar.Library.Resource.Id.holo_darkblue = JabbrMobile.Android.Resource.Id.holo_darkblue;
-			LegacyBar.Library.Resource.Id.holo_gray = JabbrMobile.Android.Resource.Id.holo_gray;
-			LegacyBar.Library.Resource.Id.holo_light = JabbrMobile.Android.Resource.Id.holo_light;
-			LegacyBar.Library.Resource.Id.overflow_spinner = JabbrMobile.Android.Resource.Id.overflow_spinner;
-			LegacyBar.Library.Resource.Id.screen = JabbrMobile.Android.Resource.Id.screen;
-			LegacyBar.Library.Resource.Layout.actionbar = JabbrMobile.Android.Resource.Layout.actionbar;
-			LegacyBar.Library.Resource.Layout.actionbar_item = JabbrMobile.Android.Resource.Layout.actionbar_item;
-			LegacyBar.Library.Resource.Layout.blankspinner = JabbrMobile.Android.Resource.Layout.blankspinner;
-			LegacyBar.Library.Resource.Layout.overflowactionbar_item = JabbrMobile.Android.Resource.Layout.overflowactionbar_item;
-			LegacyBar.Library.Resource.Layout.spinneritem = JabbrMobile.Android.Resource.Layout.spinneritem;
-			LegacyBar.Library.Resource.String.actionbar_activity_not_found = JabbrMobile.Android.Resource.String.actionbar_activity_not_found;
-			LegacyBar.Library.Resource.Style.actionbar = JabbrMobile.Android.Resource.Style.actionbar;
-			LegacyBar.Library.Resource.Style.actionbarhomeitem = JabbrMobile.Android.Resource.Style.actionbarhomeitem;
-			LegacyBar.Library.Resource.Style.actionbarhomelogo = JabbrMobile.Android.Resource.Style.actionbarhomelogo;
-			LegacyBar.Library.Resource.Style.actionbaritem = JabbrMobile.Android.Resource.Style.actionbaritem;
-			LegacyBar.Library.Resource.Style.actionbarprogressbar = JabbrMobile.Android.Resource.Style.actionbarprogressbar;
-			LegacyBar.Library.Resource.Style.clearbutton = JabbrMobile.Android.Resource.Style.clearbutton;
-			LegacyBar.Library.Resource.Styleable.actionbar = JabbrMobile.Android.Resource.Styleable.actionbar;
-			LegacyBar.Library.Resource.Styleable.actionbar_background = JabbrMobile.Android.Resource.Styleable.actionbar_background;
-			LegacyBar.Library.Resource.Styleable.actionbar_background_item = JabbrMobile.Android.Resource.Styleable.actionbar_background_item;
-			LegacyBar.Library.Resource.Styleable.actionbar_is_bottom = JabbrMobile.Android.Resource.Styleable.actionbar_is_bottom;
-			LegacyBar.Library.Resource.Styleable.actionbar_light_icons = JabbrMobile.Android.Resource.Styleable.actionbar_light_icons;
-			LegacyBar.Library.Resource.Styleable.actionbar_separator = JabbrMobile.Android.Resource.Styleable.actionbar_separator;
-			LegacyBar.Library.Resource.Styleable.actionbar_theme = JabbrMobile.Android.Resource.Styleable.actionbar_theme;
-			LegacyBar.Library.Resource.Styleable.actionbar_title = JabbrMobile.Android.Resource.Styleable.actionbar_title;
-			LegacyBar.Library.Resource.Styleable.actionbar_title_color = JabbrMobile.Android.Resource.Styleable.actionbar_title_color;
-			JabbR.Client.Android.Resource.String.library_name = JabbrMobile.Android.Resource.String.library_name;
+			global::Cirrious.MvvmCross.Plugins.Network.Droid.Resource.String.ApplicationName = global::JabbrMobile.Android.Resource.String.ApplicationName;
+			global::Cirrious.MvvmCross.Plugins.Network.Droid.Resource.String.Hello = global::JabbrMobile.Android.Resource.String.Hello;
+			global::SlidingMenuSharp.Resource.Attribute.behindOffset = global::JabbrMobile.Android.Resource.Attribute.behindOffset;
+			global::SlidingMenuSharp.Resource.Attribute.behindScrollScale = global::JabbrMobile.Android.Resource.Attribute.behindScrollScale;
+			global::SlidingMenuSharp.Resource.Attribute.behindWidth = global::JabbrMobile.Android.Resource.Attribute.behindWidth;
+			global::SlidingMenuSharp.Resource.Attribute.fadeDegree = global::JabbrMobile.Android.Resource.Attribute.fadeDegree;
+			global::SlidingMenuSharp.Resource.Attribute.fadeEnabled = global::JabbrMobile.Android.Resource.Attribute.fadeEnabled;
+			global::SlidingMenuSharp.Resource.Attribute.mode = global::JabbrMobile.Android.Resource.Attribute.mode;
+			global::SlidingMenuSharp.Resource.Attribute.selectorDrawable = global::JabbrMobile.Android.Resource.Attribute.selectorDrawable;
+			global::SlidingMenuSharp.Resource.Attribute.selectorEnabled = global::JabbrMobile.Android.Resource.Attribute.selectorEnabled;
+			global::SlidingMenuSharp.Resource.Attribute.shadowDrawable = global::JabbrMobile.Android.Resource.Attribute.shadowDrawable;
+			global::SlidingMenuSharp.Resource.Attribute.shadowWidth = global::JabbrMobile.Android.Resource.Attribute.shadowWidth;
+			global::SlidingMenuSharp.Resource.Attribute.touchModeAbove = global::JabbrMobile.Android.Resource.Attribute.touchModeAbove;
+			global::SlidingMenuSharp.Resource.Attribute.touchModeBehind = global::JabbrMobile.Android.Resource.Attribute.touchModeBehind;
+			global::SlidingMenuSharp.Resource.Attribute.viewAbove = global::JabbrMobile.Android.Resource.Attribute.viewAbove;
+			global::SlidingMenuSharp.Resource.Attribute.viewBehind = global::JabbrMobile.Android.Resource.Attribute.viewBehind;
+			global::SlidingMenuSharp.Resource.Id.fullscreen = global::JabbrMobile.Android.Resource.Id.fullscreen;
+			global::SlidingMenuSharp.Resource.Id.left = global::JabbrMobile.Android.Resource.Id.left;
+			global::SlidingMenuSharp.Resource.Id.margin = global::JabbrMobile.Android.Resource.Id.margin;
+			global::SlidingMenuSharp.Resource.Id.right = global::JabbrMobile.Android.Resource.Id.right;
+			global::SlidingMenuSharp.Resource.Id.selected_view = global::JabbrMobile.Android.Resource.Id.selected_view;
+			global::SlidingMenuSharp.Resource.Id.slidingmenumain = global::JabbrMobile.Android.Resource.Id.slidingmenumain;
+			global::SlidingMenuSharp.Resource.Layout.slidingmenumain = global::JabbrMobile.Android.Resource.Layout.slidingmenumain;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindOffset = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindOffset;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindScrollScale = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindScrollScale;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_behindWidth = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_behindWidth;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeDegree = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_fadeDegree;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_fadeEnabled = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_fadeEnabled;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_mode = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_mode;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorDrawable = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_selectorDrawable;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_selectorEnabled = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_selectorEnabled;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowDrawable = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_shadowDrawable;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_shadowWidth = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_shadowWidth;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeAbove = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_touchModeAbove;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_touchModeBehind = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_touchModeBehind;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewAbove = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_viewAbove;
+			global::SlidingMenuSharp.Resource.Styleable.SlidingMenu_viewBehind = global::JabbrMobile.Android.Resource.Styleable.SlidingMenu_viewBehind;
+			global::JabbrMobile.Common.Resource.String.library_name = global::JabbrMobile.Android.Resource.String.library_name;
+			global::LegacyBar.Library.Resource.Attribute.background = global::JabbrMobile.Android.Resource.Attribute.background;
+			global::LegacyBar.Library.Resource.Attribute.background_item = global::JabbrMobile.Android.Resource.Attribute.background_item;
+			global::LegacyBar.Library.Resource.Attribute.is_bottom = global::JabbrMobile.Android.Resource.Attribute.is_bottom;
+			global::LegacyBar.Library.Resource.Attribute.light_icons = global::JabbrMobile.Android.Resource.Attribute.light_icons;
+			global::LegacyBar.Library.Resource.Attribute.separator = global::JabbrMobile.Android.Resource.Attribute.separator;
+			global::LegacyBar.Library.Resource.Attribute.theme = global::JabbrMobile.Android.Resource.Attribute.theme;
+			global::LegacyBar.Library.Resource.Attribute.title = global::JabbrMobile.Android.Resource.Attribute.title;
+			global::LegacyBar.Library.Resource.Attribute.title_color = global::JabbrMobile.Android.Resource.Attribute.title_color;
+			global::LegacyBar.Library.Resource.Color.Red = global::JabbrMobile.Android.Resource.Color.Red;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_black = global::JabbrMobile.Android.Resource.Color.actionbar_accentcolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_blue = global::JabbrMobile.Android.Resource.Color.actionbar_accentcolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkblue = global::JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkblue;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_darkgray = global::JabbrMobile.Android.Resource.Color.actionbar_accentcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_accentcolor_lightgray = global::JabbrMobile.Android.Resource.Color.actionbar_accentcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_end = global::JabbrMobile.Android.Resource.Color.actionbar_background_end;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_end_alt = global::JabbrMobile.Android.Resource.Color.actionbar_background_end_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end = global::JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_end;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_end_alt = global::JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_end_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start = global::JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_start;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_item_pressed_start_alt = global::JabbrMobile.Android.Resource.Color.actionbar_background_item_pressed_start_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_start = global::JabbrMobile.Android.Resource.Color.actionbar_background_start;
+			global::LegacyBar.Library.Resource.Color.actionbar_background_start_alt = global::JabbrMobile.Android.Resource.Color.actionbar_background_start_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_black = global::JabbrMobile.Android.Resource.Color.actionbar_maincolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_blue = global::JabbrMobile.Android.Resource.Color.actionbar_maincolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_darkblue = global::JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkblue;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_darkgray = global::JabbrMobile.Android.Resource.Color.actionbar_maincolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_maincolor_lightgray = global::JabbrMobile.Android.Resource.Color.actionbar_maincolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_black = global::JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_blue = global::JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkblue = global::JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkblue;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_darkgray = global::JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_pressedcolor_lightgray = global::JabbrMobile.Android.Resource.Color.actionbar_pressedcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator = global::JabbrMobile.Android.Resource.Color.actionbar_separator;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_alt = global::JabbrMobile.Android.Resource.Color.actionbar_separator_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_black = global::JabbrMobile.Android.Resource.Color.actionbar_separator_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_blue = global::JabbrMobile.Android.Resource.Color.actionbar_separator_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_darkblue = global::JabbrMobile.Android.Resource.Color.actionbar_separator_darkblue;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_darkgray = global::JabbrMobile.Android.Resource.Color.actionbar_separator_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_separator_lightgray = global::JabbrMobile.Android.Resource.Color.actionbar_separator_lightgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_title = global::JabbrMobile.Android.Resource.Color.actionbar_title;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_alt = global::JabbrMobile.Android.Resource.Color.actionbar_title_alt;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_black = global::JabbrMobile.Android.Resource.Color.actionbar_title_black;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_blue = global::JabbrMobile.Android.Resource.Color.actionbar_title_blue;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_darkblue = global::JabbrMobile.Android.Resource.Color.actionbar_title_darkblue;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_darkgray = global::JabbrMobile.Android.Resource.Color.actionbar_title_darkgray;
+			global::LegacyBar.Library.Resource.Color.actionbar_title_lightgray = global::JabbrMobile.Android.Resource.Color.actionbar_title_lightgray;
+			global::LegacyBar.Library.Resource.Color.black = global::JabbrMobile.Android.Resource.Color.black;
+			global::LegacyBar.Library.Resource.Color.blue = global::JabbrMobile.Android.Resource.Color.blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_end = global::JabbrMobile.Android.Resource.Color.bottomactionbar_background_end;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_end = global::JabbrMobile.Android.Resource.Color.bottomactionbar_background_item_pressed_end;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_item_pressed_start = global::JabbrMobile.Android.Resource.Color.bottomactionbar_background_item_pressed_start;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_background_start = global::JabbrMobile.Android.Resource.Color.bottomactionbar_background_start;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_black = global::JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_black;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_blue = global::JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkblue = global::JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkblue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_darkgray = global::JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_maincolor_lightgray = global::JabbrMobile.Android.Resource.Color.bottomactionbar_maincolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_black = global::JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_black;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_blue = global::JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_blue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkblue = global::JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkblue;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_darkgray = global::JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_darkgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_pressedcolor_lightgray = global::JabbrMobile.Android.Resource.Color.bottomactionbar_pressedcolor_lightgray;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_separator = global::JabbrMobile.Android.Resource.Color.bottomactionbar_separator;
+			global::LegacyBar.Library.Resource.Color.bottomactionbar_title = global::JabbrMobile.Android.Resource.Color.bottomactionbar_title;
+			global::LegacyBar.Library.Resource.Color.green = global::JabbrMobile.Android.Resource.Color.green;
+			global::LegacyBar.Library.Resource.Color.grey = global::JabbrMobile.Android.Resource.Color.grey;
+			global::LegacyBar.Library.Resource.Color.pager_black = global::JabbrMobile.Android.Resource.Color.pager_black;
+			global::LegacyBar.Library.Resource.Color.pager_blue = global::JabbrMobile.Android.Resource.Color.pager_blue;
+			global::LegacyBar.Library.Resource.Color.pager_darkblue = global::JabbrMobile.Android.Resource.Color.pager_darkblue;
+			global::LegacyBar.Library.Resource.Color.pager_darkgray = global::JabbrMobile.Android.Resource.Color.pager_darkgray;
+			global::LegacyBar.Library.Resource.Color.pager_lightgray = global::JabbrMobile.Android.Resource.Color.pager_lightgray;
+			global::LegacyBar.Library.Resource.Color.red = global::JabbrMobile.Android.Resource.Color.red;
+			global::LegacyBar.Library.Resource.Color.white = global::JabbrMobile.Android.Resource.Color.white;
+			global::LegacyBar.Library.Resource.Color.yellow = global::JabbrMobile.Android.Resource.Color.yellow;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_accentheight = global::JabbrMobile.Android.Resource.Dimension.actionbar_accentheight;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_height = global::JabbrMobile.Android.Resource.Dimension.actionbar_height;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_home_item_width = global::JabbrMobile.Android.Resource.Dimension.actionbar_home_item_width;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height = global::JabbrMobile.Android.Resource.Dimension.actionbar_item_height;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height_over = global::JabbrMobile.Android.Resource.Dimension.actionbar_item_height_over;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_height_overflow = global::JabbrMobile.Android.Resource.Dimension.actionbar_item_height_overflow;
+			global::LegacyBar.Library.Resource.Dimension.actionbar_item_width = global::JabbrMobile.Android.Resource.Dimension.actionbar_item_width;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_back_indicator = global::JabbrMobile.Android.Resource.Drawable.actionbar_back_indicator;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_back_indicator_dark = global::JabbrMobile.Android.Resource.Drawable.actionbar_back_indicator_dark;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background = global::JabbrMobile.Android.Resource.Drawable.actionbar_background;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_alt = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_black = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_black;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_blue = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_blue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_darkblue = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_darkblue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_darkgray = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_background_lightgray = global::JabbrMobile.Android.Resource.Drawable.actionbar_background_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_alt = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_black = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_black;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_blue = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_blue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_darkblue = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkblue;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_darkgray = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_lightgray = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_normal = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_normal;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_normal_alt = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_normal_alt;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_pressed;
+			global::LegacyBar.Library.Resource.Drawable.actionbar_btn_pressed_alt = global::JabbrMobile.Android.Resource.Drawable.actionbar_btn_pressed_alt;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_black = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_black;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_blue = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_blue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkblue = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkblue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_darkgray = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_background_lightgray = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_background_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_black = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_black;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_blue = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_blue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkblue = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkblue;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_darkgray = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_darkgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_lightgray = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_lightgray;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_normal = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_normal;
+			global::LegacyBar.Library.Resource.Drawable.bottomactionbar_btn_pressed = global::JabbrMobile.Android.Resource.Drawable.bottomactionbar_btn_pressed;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_dark = global::JabbrMobile.Android.Resource.Drawable.dropdown_btn_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_btn_holo_light = global::JabbrMobile.Android.Resource.Drawable.dropdown_btn_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_dark = global::JabbrMobile.Android.Resource.Drawable.dropdown_disabled_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_disabled_holo_light = global::JabbrMobile.Android.Resource.Drawable.dropdown_disabled_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_dark = global::JabbrMobile.Android.Resource.Drawable.dropdown_focused_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_focused_holo_light = global::JabbrMobile.Android.Resource.Drawable.dropdown_focused_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_dark = global::JabbrMobile.Android.Resource.Drawable.dropdown_normal_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_normal_holo_light = global::JabbrMobile.Android.Resource.Drawable.dropdown_normal_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_dark = global::JabbrMobile.Android.Resource.Drawable.dropdown_pressed_holo_dark;
+			global::LegacyBar.Library.Resource.Drawable.dropdown_pressed_holo_light = global::JabbrMobile.Android.Resource.Drawable.dropdown_pressed_holo_light;
+			global::LegacyBar.Library.Resource.Drawable.ic_action_overflow = global::JabbrMobile.Android.Resource.Drawable.ic_action_overflow;
+			global::LegacyBar.Library.Resource.Drawable.ic_action_overflow_dark = global::JabbrMobile.Android.Resource.Drawable.ic_action_overflow_dark;
+			global::LegacyBar.Library.Resource.Id.actionbar_actions = global::JabbrMobile.Android.Resource.Id.actionbar_actions;
+			global::LegacyBar.Library.Resource.Id.actionbar_home = global::JabbrMobile.Android.Resource.Id.actionbar_home;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_bg = global::JabbrMobile.Android.Resource.Id.actionbar_home_bg;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_btn = global::JabbrMobile.Android.Resource.Id.actionbar_home_btn;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_is_back = global::JabbrMobile.Android.Resource.Id.actionbar_home_is_back;
+			global::LegacyBar.Library.Resource.Id.actionbar_home_logo = global::JabbrMobile.Android.Resource.Id.actionbar_home_logo;
+			global::LegacyBar.Library.Resource.Id.actionbar_item = global::JabbrMobile.Android.Resource.Id.actionbar_item;
+			global::LegacyBar.Library.Resource.Id.actionbar_progress = global::JabbrMobile.Android.Resource.Id.actionbar_progress;
+			global::LegacyBar.Library.Resource.Id.actionbar_spinner = global::JabbrMobile.Android.Resource.Id.actionbar_spinner;
+			global::LegacyBar.Library.Resource.Id.actionbar_title = global::JabbrMobile.Android.Resource.Id.actionbar_title;
+			global::LegacyBar.Library.Resource.Id.actionbar_title_layout = global::JabbrMobile.Android.Resource.Id.actionbar_title_layout;
+			global::LegacyBar.Library.Resource.Id.custom = global::JabbrMobile.Android.Resource.Id.custom;
+			global::LegacyBar.Library.Resource.Id.holo_black = global::JabbrMobile.Android.Resource.Id.holo_black;
+			global::LegacyBar.Library.Resource.Id.holo_blue = global::JabbrMobile.Android.Resource.Id.holo_blue;
+			global::LegacyBar.Library.Resource.Id.holo_darkblue = global::JabbrMobile.Android.Resource.Id.holo_darkblue;
+			global::LegacyBar.Library.Resource.Id.holo_gray = global::JabbrMobile.Android.Resource.Id.holo_gray;
+			global::LegacyBar.Library.Resource.Id.holo_light = global::JabbrMobile.Android.Resource.Id.holo_light;
+			global::LegacyBar.Library.Resource.Id.overflow_spinner = global::JabbrMobile.Android.Resource.Id.overflow_spinner;
+			global::LegacyBar.Library.Resource.Id.screen = global::JabbrMobile.Android.Resource.Id.screen;
+			global::LegacyBar.Library.Resource.Layout.actionbar = global::JabbrMobile.Android.Resource.Layout.actionbar;
+			global::LegacyBar.Library.Resource.Layout.actionbar_item = global::JabbrMobile.Android.Resource.Layout.actionbar_item;
+			global::LegacyBar.Library.Resource.Layout.blankspinner = global::JabbrMobile.Android.Resource.Layout.blankspinner;
+			global::LegacyBar.Library.Resource.Layout.overflowactionbar_item = global::JabbrMobile.Android.Resource.Layout.overflowactionbar_item;
+			global::LegacyBar.Library.Resource.Layout.spinneritem = global::JabbrMobile.Android.Resource.Layout.spinneritem;
+			global::LegacyBar.Library.Resource.String.actionbar_activity_not_found = global::JabbrMobile.Android.Resource.String.actionbar_activity_not_found;
+			global::LegacyBar.Library.Resource.Style.actionbar = global::JabbrMobile.Android.Resource.Style.actionbar;
+			global::LegacyBar.Library.Resource.Style.actionbarhomeitem = global::JabbrMobile.Android.Resource.Style.actionbarhomeitem;
+			global::LegacyBar.Library.Resource.Style.actionbarhomelogo = global::JabbrMobile.Android.Resource.Style.actionbarhomelogo;
+			global::LegacyBar.Library.Resource.Style.actionbaritem = global::JabbrMobile.Android.Resource.Style.actionbaritem;
+			global::LegacyBar.Library.Resource.Style.actionbarprogressbar = global::JabbrMobile.Android.Resource.Style.actionbarprogressbar;
+			global::LegacyBar.Library.Resource.Style.clearbutton = global::JabbrMobile.Android.Resource.Style.clearbutton;
+			global::LegacyBar.Library.Resource.Styleable.actionbar = global::JabbrMobile.Android.Resource.Styleable.actionbar;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_background = global::JabbrMobile.Android.Resource.Styleable.actionbar_background;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_background_item = global::JabbrMobile.Android.Resource.Styleable.actionbar_background_item;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_is_bottom = global::JabbrMobile.Android.Resource.Styleable.actionbar_is_bottom;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_light_icons = global::JabbrMobile.Android.Resource.Styleable.actionbar_light_icons;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_separator = global::JabbrMobile.Android.Resource.Styleable.actionbar_separator;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_theme = global::JabbrMobile.Android.Resource.Styleable.actionbar_theme;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_title = global::JabbrMobile.Android.Resource.Styleable.actionbar_title;
+			global::LegacyBar.Library.Resource.Styleable.actionbar_title_color = global::JabbrMobile.Android.Resource.Styleable.actionbar_title_color;
+			global::JabbR.Client.Android.Resource.String.library_name = global::JabbrMobile.Android.Resource.String.library_name;
 		}
 		
 		public partial class Attribute
@@ -1131,6 +1133,9 @@ namespace JabbrMobile.Android
 		public partial class String
 		{
 			
+			// aapt resource value: 0x7f040003
+			public const int ApplicationName = 2130968579;
+			
 			// aapt resource value: 0x7f040002
 			public const int Hello = 2130968578;
 			
@@ -1140,38 +1145,38 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f040000
 			public const int library_name = 2130968576;
 			
-			// aapt resource value: 0x7f04000d
-			public const int menu_string_delete = 2130968589;
-			
-			// aapt resource value: 0x7f040006
-			public const int menu_string_down = 2130968582;
-			
-			// aapt resource value: 0x7f04000c
-			public const int menu_string_exit = 2130968588;
+			// aapt resource value: 0x7f04000e
+			public const int menu_string_delete = 2130968590;
 			
 			// aapt resource value: 0x7f040007
-			public const int menu_string_left = 2130968583;
+			public const int menu_string_down = 2130968583;
 			
-			// aapt resource value: 0x7f040009
-			public const int menu_string_refresh = 2130968585;
+			// aapt resource value: 0x7f04000d
+			public const int menu_string_exit = 2130968589;
 			
 			// aapt resource value: 0x7f040008
-			public const int menu_string_right = 2130968584;
-			
-			// aapt resource value: 0x7f04000b
-			public const int menu_string_save = 2130968587;
-			
-			// aapt resource value: 0x7f040004
-			public const int menu_string_search = 2130968580;
+			public const int menu_string_left = 2130968584;
 			
 			// aapt resource value: 0x7f04000a
-			public const int menu_string_sort = 2130968586;
+			public const int menu_string_refresh = 2130968586;
+			
+			// aapt resource value: 0x7f040009
+			public const int menu_string_right = 2130968585;
+			
+			// aapt resource value: 0x7f04000c
+			public const int menu_string_save = 2130968588;
 			
 			// aapt resource value: 0x7f040005
-			public const int menu_string_up = 2130968581;
+			public const int menu_string_search = 2130968581;
 			
-			// aapt resource value: 0x7f040003
-			public const int some_title = 2130968579;
+			// aapt resource value: 0x7f04000b
+			public const int menu_string_sort = 2130968587;
+			
+			// aapt resource value: 0x7f040006
+			public const int menu_string_up = 2130968582;
+			
+			// aapt resource value: 0x7f040004
+			public const int some_title = 2130968580;
 			
 			static String()
 			{

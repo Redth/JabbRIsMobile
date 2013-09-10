@@ -206,13 +206,17 @@ namespace JabbrMobile.Common.Messages
 
 	public class JabbrTopicChangedMessage : JabbrMessage
 	{
-		public JabbrTopicChangedMessage(object sender, JabbrConnection jabbr, Room room)
+		public JabbrTopicChangedMessage(object sender, JabbrConnection jabbr, string roomName, string topic, string who)
 			: base(sender, jabbr)
 		{
-			this.Room = room;
+			this.RoomName = roomName;
+			this.Topic = topic;
+			this.Who = who;
 		}
 
-		public Room Room { get;set; }
+		public string RoomName { get;set; }
+		public string Topic { get;set; }
+		public string Who { get;set; }
 	}
 
 	public class JabbrUserActivityChangedMessage : JabbrMessage
