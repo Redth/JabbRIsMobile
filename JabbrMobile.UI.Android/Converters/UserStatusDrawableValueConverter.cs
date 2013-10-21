@@ -13,9 +13,9 @@ namespace JabbrMobile.Android
 		protected override int Convert (UserStatus value, Type targetType, object parameter, System.Globalization.CultureInfo culture)
 		{
 			if (value == UserStatus.Active)
-				return Resource.Drawable.icon_green_circle_small;
+				return Resource.Drawable.status_green; //.icon_green_circle_small;
 			else
-				return Resource.Drawable.icon_yellow_circle_small;
+				return Resource.Drawable.status_yellow; //.icon_yellow_circle_small;
 		}
 
 		protected override UserStatus ConvertBack (int value, Type targetType, object parameter, System.Globalization.CultureInfo culture)

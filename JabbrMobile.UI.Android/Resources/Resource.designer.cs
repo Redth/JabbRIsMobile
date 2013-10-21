@@ -28,6 +28,43 @@ namespace JabbrMobile.Android
 		{
 			global::Cirrious.MvvmCross.Plugins.Network.Droid.Resource.String.ApplicationName = global::JabbrMobile.Android.Resource.String.ApplicationName;
 			global::Cirrious.MvvmCross.Plugins.Network.Droid.Resource.String.Hello = global::JabbrMobile.Android.Resource.String.Hello;
+			global::AndroidHUD.Resource.Attribute.barColor = global::JabbrMobile.Android.Resource.Attribute.barColor;
+			global::AndroidHUD.Resource.Attribute.barLength = global::JabbrMobile.Android.Resource.Attribute.barLength;
+			global::AndroidHUD.Resource.Attribute.barWidth = global::JabbrMobile.Android.Resource.Attribute.barWidth;
+			global::AndroidHUD.Resource.Attribute.circleColor = global::JabbrMobile.Android.Resource.Attribute.circleColor;
+			global::AndroidHUD.Resource.Attribute.delayMillis = global::JabbrMobile.Android.Resource.Attribute.delayMillis;
+			global::AndroidHUD.Resource.Attribute.radius = global::JabbrMobile.Android.Resource.Attribute.radius;
+			global::AndroidHUD.Resource.Attribute.rimColor = global::JabbrMobile.Android.Resource.Attribute.rimColor;
+			global::AndroidHUD.Resource.Attribute.rimWidth = global::JabbrMobile.Android.Resource.Attribute.rimWidth;
+			global::AndroidHUD.Resource.Attribute.spinSpeed = global::JabbrMobile.Android.Resource.Attribute.spinSpeed;
+			global::AndroidHUD.Resource.Attribute.text = global::JabbrMobile.Android.Resource.Attribute.text;
+			global::AndroidHUD.Resource.Attribute.textColor = global::JabbrMobile.Android.Resource.Attribute.textColor;
+			global::AndroidHUD.Resource.Attribute.textSize = global::JabbrMobile.Android.Resource.Attribute.textSize;
+			global::AndroidHUD.Resource.Drawable.ic_errorstatus = global::JabbrMobile.Android.Resource.Drawable.ic_errorstatus;
+			global::AndroidHUD.Resource.Drawable.ic_successstatus = global::JabbrMobile.Android.Resource.Drawable.ic_successstatus;
+			global::AndroidHUD.Resource.Drawable.roundedbg = global::JabbrMobile.Android.Resource.Drawable.roundedbg;
+			global::AndroidHUD.Resource.Drawable.roundedbgdark = global::JabbrMobile.Android.Resource.Drawable.roundedbgdark;
+			global::AndroidHUD.Resource.Id.loadingImage = global::JabbrMobile.Android.Resource.Id.loadingImage;
+			global::AndroidHUD.Resource.Id.loadingProgressBar = global::JabbrMobile.Android.Resource.Id.loadingProgressBar;
+			global::AndroidHUD.Resource.Id.loadingProgressWheel = global::JabbrMobile.Android.Resource.Id.loadingProgressWheel;
+			global::AndroidHUD.Resource.Id.textViewStatus = global::JabbrMobile.Android.Resource.Id.textViewStatus;
+			global::AndroidHUD.Resource.Layout.loading = global::JabbrMobile.Android.Resource.Layout.loading;
+			global::AndroidHUD.Resource.Layout.loadingimage = global::JabbrMobile.Android.Resource.Layout.loadingimage;
+			global::AndroidHUD.Resource.Layout.loadingprogress = global::JabbrMobile.Android.Resource.Layout.loadingprogress;
+			global::AndroidHUD.Resource.String.library_name = global::JabbrMobile.Android.Resource.String.library_name;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_barColor = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_barColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_barLength = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_barLength;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_barWidth = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_barWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_circleColor = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_circleColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_delayMillis = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_delayMillis;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_radius = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_radius;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_rimColor = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_rimColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_rimWidth = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_rimWidth;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_spinSpeed = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_spinSpeed;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_text = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_text;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_textColor = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_textColor;
+			global::AndroidHUD.Resource.Styleable.ProgressWheel_textSize = global::JabbrMobile.Android.Resource.Styleable.ProgressWheel_textSize;
 			global::SlidingMenuSharp.Resource.Attribute.behindOffset = global::JabbrMobile.Android.Resource.Attribute.behindOffset;
 			global::SlidingMenuSharp.Resource.Attribute.behindScrollScale = global::JabbrMobile.Android.Resource.Attribute.behindScrollScale;
 			global::SlidingMenuSharp.Resource.Attribute.behindWidth = global::JabbrMobile.Android.Resource.Attribute.behindWidth;
@@ -238,23 +275,32 @@ namespace JabbrMobile.Android
 		public partial class Attribute
 		{
 			
-			// aapt resource value: 0x7f010016
-			public const int MvxBind = 2130771990;
+			// aapt resource value: 0x7f010022
+			public const int MvxBind = 2130772002;
 			
-			// aapt resource value: 0x7f010018
-			public const int MvxDropDownItemTemplate = 2130771992;
+			// aapt resource value: 0x7f010024
+			public const int MvxDropDownItemTemplate = 2130772004;
 			
-			// aapt resource value: 0x7f010017
-			public const int MvxItemTemplate = 2130771991;
+			// aapt resource value: 0x7f010023
+			public const int MvxItemTemplate = 2130772003;
 			
-			// aapt resource value: 0x7f010019
-			public const int MvxSource = 2130771993;
+			// aapt resource value: 0x7f010025
+			public const int MvxSource = 2130772005;
 			
 			// aapt resource value: 0x7f010003
 			public const int background = 2130771971;
 			
 			// aapt resource value: 0x7f010004
 			public const int background_item = 2130771972;
+			
+			// aapt resource value: 0x7f010019
+			public const int barColor = 2130771993;
+			
+			// aapt resource value: 0x7f010021
+			public const int barLength = 2130772001;
+			
+			// aapt resource value: 0x7f010020
+			public const int barWidth = 2130772000;
 			
 			// aapt resource value: 0x7f01000b
 			public const int behindOffset = 2130771979;
@@ -264,6 +310,12 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f01000c
 			public const int behindWidth = 2130771980;
+			
+			// aapt resource value: 0x7f01001e
+			public const int circleColor = 2130771998;
+			
+			// aapt resource value: 0x7f01001d
+			public const int delayMillis = 2130771997;
 			
 			// aapt resource value: 0x7f010013
 			public const int fadeDegree = 2130771987;
@@ -280,6 +332,15 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f010008
 			public const int mode = 2130771976;
 			
+			// aapt resource value: 0x7f01001f
+			public const int radius = 2130771999;
+			
+			// aapt resource value: 0x7f01001a
+			public const int rimColor = 2130771994;
+			
+			// aapt resource value: 0x7f01001b
+			public const int rimWidth = 2130771995;
+			
 			// aapt resource value: 0x7f010015
 			public const int selectorDrawable = 2130771989;
 			
@@ -294,6 +355,18 @@ namespace JabbrMobile.Android
 			
 			// aapt resource value: 0x7f010011
 			public const int shadowWidth = 2130771985;
+			
+			// aapt resource value: 0x7f01001c
+			public const int spinSpeed = 2130771996;
+			
+			// aapt resource value: 0x7f010016
+			public const int text = 2130771990;
+			
+			// aapt resource value: 0x7f010017
+			public const int textColor = 2130771991;
+			
+			// aapt resource value: 0x7f010018
+			public const int textSize = 2130771992;
 			
 			// aapt resource value: 0x7f010005
 			public const int theme = 2130771973;
@@ -767,73 +840,91 @@ namespace JabbrMobile.Android
 			public const int ic_action_up_dark = 2130837566;
 			
 			// aapt resource value: 0x7f02003f
-			public const int ic_menu_down = 2130837567;
+			public const int ic_errorstatus = 2130837567;
 			
 			// aapt resource value: 0x7f020040
-			public const int ic_menu_left = 2130837568;
+			public const int ic_menu_down = 2130837568;
 			
 			// aapt resource value: 0x7f020041
-			public const int ic_menu_refresh = 2130837569;
+			public const int ic_menu_left = 2130837569;
 			
 			// aapt resource value: 0x7f020042
-			public const int ic_menu_right = 2130837570;
+			public const int ic_menu_refresh = 2130837570;
 			
 			// aapt resource value: 0x7f020043
-			public const int ic_menu_search = 2130837571;
+			public const int ic_menu_right = 2130837571;
 			
 			// aapt resource value: 0x7f020044
-			public const int ic_menu_up = 2130837572;
+			public const int ic_menu_search = 2130837572;
 			
 			// aapt resource value: 0x7f020045
-			public const int Icon = 2130837573;
+			public const int ic_menu_up = 2130837573;
 			
 			// aapt resource value: 0x7f020046
-			public const int icon_accounts = 2130837574;
+			public const int ic_successstatus = 2130837574;
 			
 			// aapt resource value: 0x7f020047
-			public const int icon_add = 2130837575;
+			public const int Icon = 2130837575;
 			
 			// aapt resource value: 0x7f020048
-			public const int icon_delete = 2130837576;
+			public const int icon_accounts = 2130837576;
 			
 			// aapt resource value: 0x7f020049
-			public const int icon_exit = 2130837577;
+			public const int icon_add = 2130837577;
 			
 			// aapt resource value: 0x7f02004a
-			public const int icon_green_circle_small = 2130837578;
+			public const int icon_delete = 2130837578;
 			
 			// aapt resource value: 0x7f02004b
-			public const int icon_save = 2130837579;
+			public const int icon_exit = 2130837579;
 			
 			// aapt resource value: 0x7f02004c
-			public const int icon_settings = 2130837580;
+			public const int icon_green_circle_small = 2130837580;
 			
 			// aapt resource value: 0x7f02004d
-			public const int icon_users_grey = 2130837581;
+			public const int icon_save = 2130837581;
 			
 			// aapt resource value: 0x7f02004e
-			public const int icon_yellow_circle_small = 2130837582;
+			public const int icon_settings = 2130837582;
 			
 			// aapt resource value: 0x7f02004f
-			public const int jabbr_bg = 2130837583;
+			public const int icon_users_grey = 2130837583;
 			
 			// aapt resource value: 0x7f020050
-			public const int jabbr_home_icon = 2130837584;
+			public const int icon_yellow_circle_small = 2130837584;
 			
 			// aapt resource value: 0x7f020051
-			public const int launchericon = 2130837585;
+			public const int jabbr_bg = 2130837585;
 			
 			// aapt resource value: 0x7f020052
-			public const int ListItem_Menu_Room_Selector = 2130837586;
+			public const int jabbr_home_icon = 2130837586;
 			
 			// aapt resource value: 0x7f020053
-			public const int loadingbar = 2130837587;
+			public const int launchericon = 2130837587;
 			
 			// aapt resource value: 0x7f020054
-			public const int SlidingMenuShadow = 2130837588;
+			public const int ListItem_Menu_Room_Selector = 2130837588;
 			
 			// aapt resource value: 0x7f020055
-			public const int SlidingMenuShadowRight = 2130837589;
+			public const int loadingbar = 2130837589;
+			
+			// aapt resource value: 0x7f020056
+			public const int roundedbg = 2130837590;
+			
+			// aapt resource value: 0x7f020057
+			public const int roundedbgdark = 2130837591;
+			
+			// aapt resource value: 0x7f020058
+			public const int SlidingMenuShadow = 2130837592;
+			
+			// aapt resource value: 0x7f020059
+			public const int SlidingMenuShadowRight = 2130837593;
+			
+			// aapt resource value: 0x7f02005a
+			public const int status_green = 2130837594;
+			
+			// aapt resource value: 0x7f02005b
+			public const int status_yellow = 2130837595;
 			
 			static Drawable()
 			{
@@ -890,8 +981,8 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05001c
 			public const int chatText = 2131034140;
 			
-			// aapt resource value: 0x7f050033
-			public const int checkBox1 = 2131034163;
+			// aapt resource value: 0x7f050037
+			public const int checkBox1 = 2131034167;
 			
 			// aapt resource value: 0x7f050019
 			public const int content_frame = 2131034137;
@@ -899,14 +990,14 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050000
 			public const int custom = 2131034112;
 			
-			// aapt resource value: 0x7f05002e
-			public const int editText1 = 2131034158;
-			
-			// aapt resource value: 0x7f050030
-			public const int editText2 = 2131034160;
-			
 			// aapt resource value: 0x7f050032
-			public const int editText3 = 2131034162;
+			public const int editText1 = 2131034162;
+			
+			// aapt resource value: 0x7f050034
+			public const int editText2 = 2131034164;
+			
+			// aapt resource value: 0x7f050036
+			public const int editText3 = 2131034166;
 			
 			// aapt resource value: 0x7f050009
 			public const int fullscreen = 2131034121;
@@ -938,35 +1029,44 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05001b
 			public const int linearLayout1 = 2131034139;
 			
-			// aapt resource value: 0x7f050026
-			public const int loadingBar = 2131034150;
+			// aapt resource value: 0x7f050028
+			public const int loadingBar = 2131034152;
 			
-			// aapt resource value: 0x7f050027
-			public const int loadingBarMessage = 2131034151;
+			// aapt resource value: 0x7f050029
+			public const int loadingBarMessage = 2131034153;
+			
+			// aapt resource value: 0x7f05002a
+			public const int loadingImage = 2131034154;
+			
+			// aapt resource value: 0x7f050026
+			public const int loadingProgressBar = 2131034150;
+			
+			// aapt resource value: 0x7f05002b
+			public const int loadingProgressWheel = 2131034155;
 			
 			// aapt resource value: 0x7f050008
 			public const int margin = 2131034120;
 			
-			// aapt resource value: 0x7f050034
-			public const int menu_add = 2131034164;
-			
-			// aapt resource value: 0x7f050037
-			public const int menu_connection = 2131034167;
-			
-			// aapt resource value: 0x7f050035
-			public const int menu_delete = 2131034165;
-			
-			// aapt resource value: 0x7f050028
-			public const int menu_frame = 2131034152;
-			
 			// aapt resource value: 0x7f050038
-			public const int menu_leave_room = 2131034168;
+			public const int menu_add = 2131034168;
 			
-			// aapt resource value: 0x7f050036
-			public const int menu_save = 2131034166;
+			// aapt resource value: 0x7f05003b
+			public const int menu_connection = 2131034171;
+			
+			// aapt resource value: 0x7f050039
+			public const int menu_delete = 2131034169;
 			
 			// aapt resource value: 0x7f05002c
-			public const int mvxListViewAccounts = 2131034156;
+			public const int menu_frame = 2131034156;
+			
+			// aapt resource value: 0x7f05003c
+			public const int menu_leave_room = 2131034172;
+			
+			// aapt resource value: 0x7f05003a
+			public const int menu_save = 2131034170;
+			
+			// aapt resource value: 0x7f050030
+			public const int mvxListViewAccounts = 2131034160;
 			
 			// aapt resource value: 0x7f05001a
 			public const int mvxListViewMessages = 2131034138;
@@ -977,8 +1077,8 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05001f
 			public const int mvxListViewUsers = 2131034143;
 			
-			// aapt resource value: 0x7f050029
-			public const int overflow_spinner = 2131034153;
+			// aapt resource value: 0x7f05002d
+			public const int overflow_spinner = 2131034157;
 			
 			// aapt resource value: 0x7f050007
 			public const int right = 2131034119;
@@ -989,17 +1089,17 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f05000a
 			public const int selected_view = 2131034122;
 			
-			// aapt resource value: 0x7f05002a
-			public const int slidingmenumain = 2131034154;
-			
-			// aapt resource value: 0x7f05002d
-			public const int textView1 = 2131034157;
-			
-			// aapt resource value: 0x7f05002f
-			public const int textView2 = 2131034159;
+			// aapt resource value: 0x7f05002e
+			public const int slidingmenumain = 2131034158;
 			
 			// aapt resource value: 0x7f050031
-			public const int textView3 = 2131034161;
+			public const int textView1 = 2131034161;
+			
+			// aapt resource value: 0x7f050033
+			public const int textView2 = 2131034163;
+			
+			// aapt resource value: 0x7f050035
+			public const int textView3 = 2131034165;
 			
 			// aapt resource value: 0x7f050023
 			public const int textViewMessageBody = 2131034147;
@@ -1013,8 +1113,11 @@ namespace JabbrMobile.Android
 			// aapt resource value: 0x7f050021
 			public const int textViewServer = 2131034145;
 			
-			// aapt resource value: 0x7f05002b
-			public const int userlist_frame = 2131034155;
+			// aapt resource value: 0x7f050027
+			public const int textViewStatus = 2131034151;
+			
+			// aapt resource value: 0x7f05002f
+			public const int userlist_frame = 2131034159;
 			
 			// aapt resource value: 0x7f050024
 			public const int view1 = 2131034148;
@@ -1072,31 +1175,40 @@ namespace JabbrMobile.Android
 			public const int ListItem_Room = 2130903052;
 			
 			// aapt resource value: 0x7f03000d
-			public const int LoadingBar = 2130903053;
+			public const int loading = 2130903053;
 			
 			// aapt resource value: 0x7f03000e
-			public const int Menu_Frame = 2130903054;
+			public const int LoadingBar = 2130903054;
 			
 			// aapt resource value: 0x7f03000f
-			public const int overflowactionbar_item = 2130903055;
+			public const int loadingimage = 2130903055;
 			
 			// aapt resource value: 0x7f030010
-			public const int slidingmenumain = 2130903056;
+			public const int loadingprogress = 2130903056;
 			
 			// aapt resource value: 0x7f030011
-			public const int spinneritem = 2130903057;
+			public const int Menu_Frame = 2130903057;
 			
 			// aapt resource value: 0x7f030012
-			public const int UserList_Frame = 2130903058;
+			public const int overflowactionbar_item = 2130903058;
 			
 			// aapt resource value: 0x7f030013
-			public const int View_Accounts = 2130903059;
+			public const int slidingmenumain = 2130903059;
 			
 			// aapt resource value: 0x7f030014
-			public const int View_EditAccount = 2130903060;
+			public const int spinneritem = 2130903060;
 			
 			// aapt resource value: 0x7f030015
-			public const int View_RoomList = 2130903061;
+			public const int UserList_Frame = 2130903061;
+			
+			// aapt resource value: 0x7f030016
+			public const int View_Accounts = 2130903062;
+			
+			// aapt resource value: 0x7f030017
+			public const int View_EditAccount = 2130903063;
+			
+			// aapt resource value: 0x7f030018
+			public const int View_RoomList = 2130903064;
 			
 			static Layout()
 			{
@@ -1230,28 +1342,79 @@ namespace JabbrMobile.Android
 			
 			public static int[] MvxBinding = new int[]
 			{
-					2130771990};
+					2130772002};
 			
 			// aapt resource value: 0
 			public const int MvxBinding_MvxBind = 0;
 			
 			public static int[] MvxImageView = new int[]
 			{
-					2130771993};
+					2130772005};
 			
 			// aapt resource value: 0
 			public const int MvxImageView_MvxSource = 0;
 			
 			public static int[] MvxListView = new int[]
 			{
-					2130771991,
-					2130771992};
+					2130772003,
+					2130772004};
 			
 			// aapt resource value: 1
 			public const int MvxListView_MvxDropDownItemTemplate = 1;
 			
 			// aapt resource value: 0
 			public const int MvxListView_MvxItemTemplate = 0;
+			
+			public static int[] ProgressWheel = new int[]
+			{
+					2130771990,
+					2130771991,
+					2130771992,
+					2130771993,
+					2130771994,
+					2130771995,
+					2130771996,
+					2130771997,
+					2130771998,
+					2130771999,
+					2130772000,
+					2130772001};
+			
+			// aapt resource value: 3
+			public const int ProgressWheel_barColor = 3;
+			
+			// aapt resource value: 11
+			public const int ProgressWheel_barLength = 11;
+			
+			// aapt resource value: 10
+			public const int ProgressWheel_barWidth = 10;
+			
+			// aapt resource value: 8
+			public const int ProgressWheel_circleColor = 8;
+			
+			// aapt resource value: 7
+			public const int ProgressWheel_delayMillis = 7;
+			
+			// aapt resource value: 9
+			public const int ProgressWheel_radius = 9;
+			
+			// aapt resource value: 4
+			public const int ProgressWheel_rimColor = 4;
+			
+			// aapt resource value: 5
+			public const int ProgressWheel_rimWidth = 5;
+			
+			// aapt resource value: 6
+			public const int ProgressWheel_spinSpeed = 6;
+			
+			// aapt resource value: 0
+			public const int ProgressWheel_text = 0;
+			
+			// aapt resource value: 1
+			public const int ProgressWheel_textColor = 1;
+			
+			// aapt resource value: 2
+			public const int ProgressWheel_textSize = 2;
 			
 			public static int[] SlidingMenu = new int[]
 			{

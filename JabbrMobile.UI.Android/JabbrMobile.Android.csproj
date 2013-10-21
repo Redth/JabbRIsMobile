@@ -103,6 +103,9 @@
     <Reference Include="Cirrious.MvvmCross.Plugins.File">
       <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
+    <Reference Include="AndHUD">
+      <HintPath>..\Components\AndHUD-1.2\lib\android\AndHUD.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -190,7 +193,6 @@
     <AndroidResource Include="Resources\drawable\ic_menu_right.png" />
     <AndroidResource Include="Resources\drawable\ic_menu_search.png" />
     <AndroidResource Include="Resources\drawable\ic_menu_up.png" />
-    <AndroidResource Include="Resources\Values-v11\themes.xml" />
     <AndroidResource Include="Resources\Values-v14\themes.xml" />
     <AndroidResource Include="Resources\layout\View_Accounts.axml" />
     <AndroidResource Include="Resources\layout\ListItem_Account.axml" />
@@ -227,6 +229,9 @@
     <AndroidResource Include="Resources\values\styles.xml" />
     <AndroidResource Include="Resources\drawable-xhdpi\loadingBar.9.png" />
     <AndroidResource Include="Resources\drawable-xhdpi\launchericon.png" />
+    <AndroidResource Include="Resources\drawable\status_green.xml" />
+    <AndroidResource Include="Resources\drawable\status_yellow.xml" />
+    <AndroidResource Include="Resources\Values-v11\themes.xml" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Novell\Novell.MonoDroid.CSharp.targets" />
   <ItemGroup>
@@ -257,9 +262,15 @@
     <Folder Include="Bootstrap\" />
     <Folder Include="Resources\drawable-hdpi\" />
     <Folder Include="Resources\drawable-xhdpi\" />
-    <Folder Include="Resources\Values-v11\" />
     <Folder Include="Resources\Values-v14\" />
     <Folder Include="Resources\Menu\" />
     <Folder Include="Converters\" />
+    <Folder Include="Resources\Values-v11\" />
+  </ItemGroup>
+  <ItemGroup>
+    <XamarinComponentReference Include="AndHUD">
+      <Version>1.2</Version>
+      <Visible>False</Visible>
+    </XamarinComponentReference>
   </ItemGroup>
 </Project>
