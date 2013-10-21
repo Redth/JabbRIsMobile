@@ -35,8 +35,10 @@ namespace JabbrMobile.Common.ViewModels
 			}
 		}
 
-		public string ServerDisplayName { 
-			get {
+		public string ServerDisplayName 
+		{ 
+			get 
+			{
 				return Jabbr.Account.Username + " @ " + Jabbr.Account.Url.Replace ("https:", "").Replace ("http:", "").Trim ('/');
 			}
 		} 

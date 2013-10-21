@@ -27,6 +27,9 @@ namespace JabbrMobile.Common.ViewModels
 			_mvxMsgTokenJoinedRoom = Messenger.Subscribe<JabbrJoinedRoomMessage> (msg => RaisePropertyChanged(() => Rooms));
 
 			Settings.Load ();
+
+			if (Settings.Accounts == null || !Settings.Accounts.Any ())
+				ShowViewModel<AccountsViewModel> ();
 		}
 
 		public ICommand ShowAccountsCommand
