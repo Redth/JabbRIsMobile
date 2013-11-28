@@ -9,7 +9,7 @@ using System.Reflection;
 using Cirrious.MvvmCross.Plugins.Visibility;
 
 
-namespace JabbrMobile.Android
+namespace JabbrMobile
 {
 	public class Setup : MvxAndroidSetup
 	{

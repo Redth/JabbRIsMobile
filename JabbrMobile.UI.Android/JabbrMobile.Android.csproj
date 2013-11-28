@@ -8,7 +8,7 @@
     <ProjectGuid>{D270B8EE-80E8-45EF-9739-729370259DB8}</ProjectGuid>
     <ProjectTypeGuids>{EFBA0AD7-5A72-4C68-AF49-83D382785DCF};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
-    <RootNamespace>JabbrMobile.Android</RootNamespace>
+    <RootNamespace>JabbrMobile</RootNamespace>
     <AndroidApplication>True</AndroidApplication>
     <AndroidResgenFile>Resources\Resource.designer.cs</AndroidResgenFile>
     <AndroidResgenClass>Resource</AndroidResgenClass>
@@ -47,67 +47,67 @@
     <Reference Include="Mono.Android.Support.v4" />
     <Reference Include="Mono.Android.Export" />
     <Reference Include="Cirrious.CrossCore.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.CrossCore.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.CrossCore">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.CrossCore.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.CrossCore.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Binding.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Binding">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Binding.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Binding.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.Color.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Color">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.Color.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Network.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Network.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.Network.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Network">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Network.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.Network.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Visibility">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.Visibility.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.dll</HintPath>
-    </Reference>
-    <Reference Include="System.Net.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\System.Net.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.dll</HintPath>
     </Reference>
     <Reference Include="System.Windows">
       <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\System.Windows.dll</HintPath>
     </Reference>
-    <Reference Include="System.Xml.Serialization.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\System.Xml.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="Cirrious.MvvmCross.Droid.Fragging">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Droid.Fragging.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.Messenger">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.Messenger.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.File.Droid">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.Droid.dll</HintPath>
     </Reference>
     <Reference Include="Cirrious.MvvmCross.Plugins.File">
-      <HintPath>..\MvvmCross-Binaries\XS-iOS-Mac\bin\Release\Mvx\Droid\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Portable\Cirrious.MvvmCross.Plugins.File.dll</HintPath>
     </Reference>
     <Reference Include="AndHUD">
       <HintPath>..\Components\AndHUD-1.2\lib\android\AndHUD.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>..\SignalR-Binaries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net">
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\System.Net.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Serialization">
+      <HintPath>..\MvvmCross-Binaries\VS2012\bin\Debug\Mvx\Droid\System.Xml.Serialization.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -127,6 +127,7 @@
     <Compile Include="Converters\UserStatusDrawableValueConverter.cs" />
     <Compile Include="Views\Fragments\EmptyFragment.cs" />
     <Compile Include="LoadingBar.cs" />
+    <Compile Include="BackgroundService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\AboutResources.txt" />

@@ -11,7 +11,7 @@ using Android.Widget;
 using Android.Util;
 using Android.Animation;
 
-namespace JabbrMobile.Android
+namespace JabbrMobile
 {
 	public class LoadingBar : LinearLayout
 	{
