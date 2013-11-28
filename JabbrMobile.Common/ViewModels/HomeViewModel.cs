@@ -29,7 +29,7 @@ namespace JabbrMobile.Common.ViewModels
 			Settings.Load ();
 
 			if (Settings.Accounts == null || !Settings.Accounts.Any ())
-				ShowViewModel<AccountsViewModel> ();
+				ShowAccountsCommand.Execute (null);
 		}
 
 		public ICommand ShowAccountsCommand

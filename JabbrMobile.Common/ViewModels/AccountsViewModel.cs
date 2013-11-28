@@ -16,7 +16,8 @@ namespace JabbrMobile.Common.ViewModels
 	{
 		public AccountsViewModel() : base()
 		{
-
+			if (Settings.Accounts == null || !Settings.Accounts.Any ())
+				AddCommand.Execute (null);
 		}
 
 		public ObservableCollection<Account> Accounts 
