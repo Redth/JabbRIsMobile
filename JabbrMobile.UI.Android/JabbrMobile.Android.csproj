@@ -106,6 +106,9 @@
     <Reference Include="AndHUD">
       <HintPath>..\Components\AndHUD-1.2\lib\android\AndHUD.dll</HintPath>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\SignalR-Binaries\Newtonsoft.Json.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Resources\Resource.designer.cs" />
@@ -250,10 +253,6 @@
     <ProjectReference Include="..\JabbR\JabbR.Client.Android\JabbR.Client.Android.csproj">
       <Project>{ECDB1073-5AA0-45B7-A2E6-4F2B9792FBF5}</Project>
       <Name>JabbR.Client.Android</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\SignalR\src\Microsoft.AspNet.SignalR.Client.Android\Microsoft.AspNet.SignalR.Client.Android.csproj">
-      <Project>{677A3843-1774-48D8-B00C-01F1151AF2BC}</Project>
-      <Name>Microsoft.AspNet.SignalR.Client.Android</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
